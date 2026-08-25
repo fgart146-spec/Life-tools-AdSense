@@ -18,6 +18,8 @@ import { Container } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { ToolCardGrid } from '@/components/tool/ToolCard';
+import { LifeCardGrid } from '@/components/life/LifeCard';
+import { lifeArticlesForTool } from '@/lib/life/registry';
 import {
   ExampleSection,
   FaqSection,
@@ -80,6 +82,8 @@ export default async function ToolPage({ params }: PageParams) {
   const category = categories[definition.category];
   const relatedTools = listTools(locale, { ids: definition.related, limit: 6 });
   const relatedGuides = listGuideLinks(locale, content.relatedGuides);
+  // 이 도구를 relatedTools로 선언한 생활백과 문서 (억지 연결 없음)
+  const relatedLife = lifeArticlesForTool(definition.id, locale, 3);
   // 관리자 기준값은 정적 생성 시점에만 조회한다(사용자 요청마다 조회하지 않는다).
   const basis = await getEffectiveBasis();
 
@@ -165,6 +169,16 @@ export default async function ToolPage({ params }: PageParams) {
             <h2 className="text-xl font-bold sm:text-[1.5rem]">{dict.tool.sectionRelatedTools}</h2>
             <div className="mt-3.5">
               <ToolCardGrid locale={locale} tools={relatedTools} columns={3} />
+            </div>
+          </section>
+        )}
+
+        {relatedLife.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-xl font-bold sm:text-[1.5rem]">{dict.life.homeSectionTitle}</h2>
+            <p className="mt-1.5 text-sm text-ink-500">{dict.life.homeSectionNote}</p>
+            <div className="mt-3.5">
+              <LifeCardGrid locale={locale} articles={relatedLife} columns={3} />
             </div>
           </section>
         )}

@@ -169,6 +169,7 @@ export function toolRouteParams(): { locale: Locale; slug: string }[] {
 const RESERVED_SLUGS = new Set([
   'tools',
   'guide',
+  'life',
   'category',
   'about',
   'contact',

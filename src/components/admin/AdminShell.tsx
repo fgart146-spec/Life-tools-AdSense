@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 const NAV = [
   { href: '/admin', label: '대시보드' },
   { href: '/admin/tools', label: '도구' },
+  { href: '/admin/life', label: '생활백과' },
   { href: '/admin/basis', label: '기준값' },
   { href: '/admin/seasonal', label: '시즌 추천' },
   { href: '/admin/insights', label: '검색·제안' },

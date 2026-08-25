@@ -4,6 +4,14 @@ import { localeMeta, localePath, locales, defaultLocale, type Locale } from '@/l
 import { categoryPath, orderedCategories } from '@/lib/tools/categories';
 import { toolDefinitions, toolsByCategory } from '@/lib/tools/definitions';
 import { guideIndex, guidePath } from '@/lib/guides';
+import { lifeIndex, lifeArticlesByCategory, hasLifeContent } from '@/lib/life';
+import {
+  LIFE_BASE_PATH,
+  lifeArticlePath,
+  lifeCategories,
+  lifeCategoryPath,
+  orderedLifeCategories,
+} from '@/lib/life/categories';
 import { staticPages } from '@/lib/nav';
 
 interface SitemapPage {
@@ -72,6 +80,42 @@ function collectPages(): SitemapPage[] {
         lastModified: guide.updatedAt,
         changeFrequency: 'monthly',
         priority: 0.6,
+      });
+    }
+  }
+
+  // 생활백과 ('어떻게 하지?' 축). published만 포함하고 draft는 제외한다.
+  const publishedLifeList = lifeIndex.filter((article) => article.status === 'published');
+  if (publishedLifeList.length > 0) {
+    const lifeHubLocales = locales.filter((locale) => hasLifeContent(locale));
+    if (lifeHubLocales.length > 0) {
+      pages.push({
+        path: LIFE_BASE_PATH,
+        pageLocales: lifeHubLocales,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
+    for (const category of orderedLifeCategories) {
+      // 문서가 없는 로케일은 라우트가 없으므로 사이트맵에서도 뺀다.
+      const categoryLocales = locales.filter(
+        (locale) => lifeArticlesByCategory(category.id, locale).length > 0,
+      );
+      if (categoryLocales.length === 0) continue;
+      pages.push({
+        path: lifeCategoryPath(category),
+        pageLocales: categoryLocales,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+    for (const article of publishedLifeList) {
+      pages.push({
+        path: lifeArticlePath(lifeCategories[article.category].slug, article.slug),
+        pageLocales: article.locales,
+        lastModified: article.updatedAt,
+        changeFrequency: 'monthly',
+        priority: 0.8,
       });
     }
   }

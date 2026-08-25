@@ -13,6 +13,11 @@ import { getSeasonalToolIds } from '@/lib/admin/seasonal';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { ToolCardGrid } from '@/components/tool/ToolCard';
+import { LifeCardGrid } from '@/components/life/LifeCard';
+import { hasLifeContent } from '@/lib/life';
+import { LIFE_BASE_PATH } from '@/lib/life/categories';
+import { listLifeArticles } from '@/lib/life/registry';
+import { seasonalLifeSlugs } from '@/lib/life/seasonal';
 
 /** 시즌 추천이 달마다 바뀌므로 하루 한 번 재생성한다(요청당 서버 연산 없음). */
 export const revalidate = 86400;
@@ -50,6 +55,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     allTools.some((tool) => tool.id === action.toolId),
   );
   const guides = listGuides(locale, 4);
+
+  // '어떻게 하지?' 축. 콘텐츠가 있는 로케일에만 노출한다.
+  const month = new Date().getMonth() + 1;
+  const lifeArticles = hasLifeContent(locale)
+    ? (() => {
+        const seasonalPicks = listLifeArticles(locale, {
+          slugs: seasonalLifeSlugs(month),
+          limit: 2,
+        });
+        const rest = listLifeArticles(locale, { limit: 6 }).filter(
+          (item) => !seasonalPicks.some((pick) => pick.slug === item.slug),
+        );
+        return [...seasonalPicks, ...rest].slice(0, 4);
+      })()
+    : [];
 
   return (
     <>
@@ -115,6 +135,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             }
           >
             <ToolCardGrid locale={locale} tools={popular} columns={4} />
+          </Section>
+        )}
+
+        {lifeArticles.length > 0 && (
+          <Section
+            title={dict.life.homeSectionTitle}
+            description={dict.life.homeSectionNote}
+            action={
+              <Link
+                href={localePath(locale, LIFE_BASE_PATH)}
+                className="-mr-2 flex min-h-11 shrink-0 items-center rounded-lg px-2 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+              >
+                {dict.life.homeCta}
+              </Link>
+            }
+          >
+            <LifeCardGrid locale={locale} articles={lifeArticles} columns={4} />
           </Section>
         )}
 

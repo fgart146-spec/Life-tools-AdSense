@@ -2,6 +2,8 @@ import { locales, type Locale } from '@/lib/i18n/config';
 import { findToolBySlug, toolsByCategory } from '@/lib/tools/definitions';
 import { findCategoryBySlug } from '@/lib/tools/categories';
 import { findGuideBySlug } from '@/lib/guides';
+import { findLifeArticleBySlug, hasLifeContent, lifeArticlesByCategory } from '@/lib/life';
+import { findLifeCategoryBySlug } from '@/lib/life/categories';
 
 /**
  * 로케일 접두사를 제외한 경로에 대해 "실제로 존재하는" 로케일 목록을 돌려준다.
@@ -15,6 +17,20 @@ export function availableLocalesForPath(path: string): readonly Locale[] {
   if (segments.length === 0) return locales;
 
   const [first, second] = segments;
+
+  // 생활백과: 허브 / 카테고리 / 문서 각각 존재하는 로케일이 다르다.
+  if (first === 'life') {
+    if (!second) return locales.filter((locale) => hasLifeContent(locale));
+
+    const third = segments[2];
+    if (third) {
+      return findLifeArticleBySlug(third)?.locales ?? locales;
+    }
+
+    const category = findLifeCategoryBySlug(second);
+    if (!category) return locales;
+    return locales.filter((locale) => lifeArticlesByCategory(category.id, locale).length > 0);
+  }
 
   if (first === 'guide') {
     if (!second) return locales;

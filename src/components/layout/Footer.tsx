@@ -5,6 +5,8 @@ import { interpolate } from '@/lib/i18n/dictionary';
 import type { Dictionary } from '@/lib/i18n/types';
 import { categoryPath } from '@/lib/tools/categories';
 import { categoriesForLocale } from '@/lib/tools/definitions';
+import { hasLifeContent } from '@/lib/life';
+import { LIFE_BASE_PATH } from '@/lib/life/categories';
 import { staticPageLabel, staticPages } from '@/lib/nav';
 import { Container } from '@/components/ui/Container';
 
@@ -48,6 +50,16 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                   {dict.nav.tools}
                 </Link>
               </li>
+              {hasLifeContent(locale) && (
+                <li>
+                  <Link
+                    href={localePath(locale, LIFE_BASE_PATH)}
+                    className="inline-block py-0.5 text-sm text-ink-600 transition-colors hover:text-brand-700"
+                  >
+                    {dict.nav.life}
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link
                   href={localePath(locale, '/guide')}

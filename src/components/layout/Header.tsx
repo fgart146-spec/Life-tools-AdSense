@@ -3,6 +3,8 @@ import { localePath, type Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/types';
 import { categoryPath } from '@/lib/tools/categories';
 import { categoriesForLocale } from '@/lib/tools/definitions';
+import { hasLifeContent } from '@/lib/life';
+import { LIFE_BASE_PATH } from '@/lib/life/categories';
 import { Container } from '@/components/ui/Container';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 
@@ -13,8 +15,12 @@ import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
  * 높이를 낮게 유지하고 장식을 두지 않아 본문이 먼저 보이게 한다.
  */
 export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  // 생활백과는 해당 로케일에 문서가 있을 때만 노출한다 (없는 페이지로 보내지 않는다).
   const mainLinks = [
     { href: localePath(locale, '/tools'), label: dict.nav.tools },
+    ...(hasLifeContent(locale)
+      ? [{ href: localePath(locale, LIFE_BASE_PATH), label: dict.nav.life }]
+      : []),
     { href: localePath(locale, '/guide'), label: dict.nav.guides },
   ];
 
@@ -45,7 +51,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </nav>
 
           <div className="flex shrink-0 items-center gap-0.5">
-            <div className="hidden items-center gap-0.5 lg:flex">
+            <div className="hidden items-center gap-0.5 md:flex">
               {mainLinks.map((link) => (
                 <Link
                   key={link.href}

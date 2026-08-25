@@ -31,6 +31,7 @@ export interface Dictionary {
   nav: {
     tools: string;
     guides: string;
+    life: string;
     about: string;
     categories: string;
     openMenu: string;
@@ -92,6 +93,53 @@ export interface Dictionary {
     tableOfContents: string;
     publishedAt: string;
     updatedAt: string;
+  };
+  life: {
+    /** 허브 */
+    indexMetaTitle: string;
+    indexMetaDescription: string;
+    indexHeading: string;
+    indexLead: string;
+    /** 탐색 UI */
+    searchHeading: string;
+    searchPlaceholder: string;
+    searchLabel: string;
+    searchNoResult: string;
+    searchResultCount: string;
+    searchClear: string;
+    pickerHeading: string;
+    pickerPlace: string;
+    pickerProblem: string;
+    pickerAll: string;
+    pickerReset: string;
+    /** 목록 */
+    popularHeading: string;
+    categoriesHeading: string;
+    seasonalHeading: string;
+    seasonalNote: string;
+    allArticles: string;
+    articleCount: string;
+    /** 카테고리 허브 */
+    categoryMetaTitleSuffix: string;
+    articlesInCategory: string;
+    otherCategories: string;
+    /** 문서 */
+    quickAnswer: string;
+    supplies: string;
+    steps: string;
+    cautions: string;
+    situationTips: string;
+    cause: string;
+    prevention: string;
+    faq: string;
+    relatedArticles: string;
+    relatedTools: string;
+    backToLife: string;
+    safetyNote: string;
+    /** 홈 연결 */
+    homeSectionTitle: string;
+    homeSectionNote: string;
+    homeCta: string;
   };
   footer: {
     tagline: string;
