@@ -1,0 +1,145 @@
+/**
+ * 한국어 사전. 구조 정의는 @/lib/i18n/types.ts 의 Dictionary 이다.
+ * 새 키를 추가하면 en/ja 사전도 같이 채워야 타입 검사를 통과한다.
+ */
+import type { Dictionary } from '@/lib/i18n/types';
+
+export const ko: Dictionary = {
+  common: {
+    calculate: '계산하기',
+    reset: '초기화',
+    result: '계산 결과',
+    resultDetail: '결과 해석',
+    copy: '결과 복사',
+    copied: '복사했습니다',
+    viewAll: '전체 보기',
+    home: '홈',
+    updatedAt: '업데이트 기준일',
+    sources: '자료 출처·기준',
+    loading: '불러오는 중',
+    required: '필수',
+    optional: '선택',
+    skipToContent: '본문 바로가기',
+  },
+  nav: {
+    tools: '전체 도구',
+    guides: '가이드',
+    about: '소개',
+    categories: '카테고리',
+    openMenu: '메뉴 열기',
+    closeMenu: '메뉴 닫기',
+    language: '언어',
+    changeLanguage: '언어 변경',
+  },
+  home: {
+    metaTitle: '생활·경제 실용도구 — 돈 쓰기 전에 한 번 계산해보세요',
+    metaDescription:
+      '단가 비교, 할인율, 전기요금, 생활비, 실수령액, 판매 마진까지. 회원가입 없이 바로 쓰는 무료 생활·경제 계산기 모음.',
+    heading: '오늘 뭐 계산해볼까요?',
+    subheading:
+      '돈 쓰기 전에 한 번. 장보기 단가부터 전기요금, 급여, 판매 마진까지 회원가입 없이 바로 계산합니다.',
+    quickActionsTitle: '자주 찾는 계산',
+    popularTitle: '지금 많이 쓰는 도구',
+    seasonalTitle: '이번 달 추천',
+    seasonalNote: '계절·시기에 따라 자주 찾는 계산을 먼저 보여드립니다.',
+    categoriesTitle: '카테고리별로 찾기',
+    guidesTitle: '최신 가이드',
+    allToolsCta: '전체 도구 보기',
+    trustTitle: '이 사이트를 쓰는 이유',
+    trustPoints: [
+      {
+        title: '설치도 로그인도 없음',
+        body: '입력하면 즉시 결과가 나옵니다. 입력한 값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다.',
+      },
+      {
+        title: '숫자만 던지지 않습니다',
+        body: '결과가 무슨 뜻인지, 어떤 기준으로 계산했는지, 조건이 바뀌면 어떻게 되는지 함께 설명합니다.',
+      },
+      {
+        title: '기준과 출처를 밝힙니다',
+        body: '요금·세금처럼 제도가 바뀌는 계산은 적용 기준일과 근거를 페이지에 표시합니다.',
+      },
+    ],
+    quickActions: [
+      { toolId: 'compare-price', emoji: '🛒', label: '뭐가 더 싸지?' },
+      { toolId: 'discount-price', emoji: '💸', label: '할인 얼마나 되지?' },
+      { toolId: 'electricity-cost', emoji: '⚡', label: '전기료 얼마 나오지?' },
+      { toolId: 'meat-per-person', emoji: '🍖', label: '고기 얼마나 사야 하지?' },
+      { toolId: 'salary-net', emoji: '💰', label: '실수령액 얼마지?' },
+      { toolId: 'margin', emoji: '📦', label: '얼마에 팔아야 남지?' },
+    ],
+  },
+  toolsIndex: {
+    metaTitle: '전체 계산기 목록',
+    metaDescription:
+      '장보기·생활비·가족·급여·사업·집 관련 실용 계산기를 한 곳에서 찾아보세요.',
+    heading: '전체 도구',
+    lead: '필요한 계산을 카테고리에서 골라보세요. 모든 계산은 브라우저에서 즉시 처리됩니다.',
+    countLabel: '개 도구',
+  },
+  tool: {
+    sectionHowItWorks: '계산 기준',
+    sectionFormula: '계산 공식',
+    sectionExample: '실제 예시',
+    sectionNotes: '주의사항',
+    sectionFaq: '자주 묻는 질문',
+    sectionRelatedTools: '함께 쓰면 좋은 도구',
+    sectionRelatedGuides: '관련 가이드',
+    inputTitle: '값 입력',
+    resultPlaceholder: '값을 입력하면 결과가 바로 표시됩니다.',
+    inputIssues: '입력값을 확인해 주세요',
+    breakdownTitle: '계산 과정',
+    savingsTitle: '절약 효과',
+    disclaimer:
+      '계산 결과는 참고용입니다. 실제 요금·세금·급여는 계약 조건과 공식 기준에 따라 달라질 수 있습니다.',
+  },
+  category: {
+    metaTitleSuffix: '계산기',
+    toolsInCategory: '이 카테고리의 도구',
+    otherCategories: '다른 카테고리',
+  },
+  guide: {
+    indexMetaTitle: '생활·경제 가이드',
+    indexMetaDescription:
+      '단가 비교, 할인 계산, 전기요금, 급여, 마진 계산의 원리를 쉽게 정리했습니다.',
+    indexHeading: '가이드',
+    indexLead: '계산기만으로 부족한 배경 지식을 정리했습니다.',
+    readingTime: '읽는 데 약 %{minutes}분',
+    relatedTools: '이 글과 함께 쓰면 좋은 도구',
+    backToGuides: '가이드 목록으로',
+    tableOfContents: '목차',
+    publishedAt: '작성일',
+    updatedAt: '수정일',
+  },
+  footer: {
+    tagline: '돈 쓰기 전에 한 번 계산해보세요.',
+    sections: {
+      tools: '도구',
+      content: '콘텐츠',
+      site: '사이트',
+    },
+    about: '사이트 소개',
+    contact: '문의',
+    privacy: '개인정보처리방침',
+    terms: '이용약관',
+    disclaimer: '면책조항',
+    disclaimerShort:
+      '모든 계산 결과는 참고용이며, 실제 금액은 공식 기관·계약 조건에 따라 달라질 수 있습니다.',
+    copyright: '© %{year} %{brand}. All rights reserved.',
+  },
+  notFound: {
+    title: '페이지를 찾을 수 없습니다',
+    description:
+      '주소가 바뀌었거나 삭제된 페이지입니다. 아래에서 필요한 계산기를 찾아보세요.',
+    cta: '전체 도구 보기',
+    homeCta: '홈으로',
+  },
+  error: {
+    title: '문제가 발생했습니다',
+    description: '잠시 후 다시 시도해 주세요. 계속 같은 문제가 생기면 알려주세요.',
+    retry: '다시 시도',
+  },
+  breadcrumb: {
+    label: '경로',
+  },
+};

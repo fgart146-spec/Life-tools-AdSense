@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+/* =============================================================================
+   디자인 토큰
+   - 친근하고 신뢰감 있는 톤. 과한 장식/그라데이션을 쓰지 않는다.
+   - 40~60대 사용자를 고려해 본문 기본 크기를 키우고 대비를 확보한다.
+   ========================================================================== */
+@theme {
+  --color-brand-50: #eefaf4;
+  --color-brand-100: #d3f2e3;
+  --color-brand-200: #a9e4c9;
+  --color-brand-300: #74d0a9;
+  --color-brand-400: #41b686;
+  --color-brand-500: #1f9a6b;
+  --color-brand-600: #157c56;
+  --color-brand-700: #126346;
+  --color-brand-800: #114f39;
+  --color-brand-900: #0f4130;
+
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0f172a;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo',
+    'Malgun Gothic', 'Hiragino Sans', 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'Cascadia Mono', Menlo, monospace;
+
+  --radius-card: 0.875rem;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink-50);
+    color: var(--color-ink-800);
+    font-family: var(--font-sans);
+    /* 본문 기본 17px: 모바일 가독성 우선 */
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink-900);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  /* 숫자 입력에서 스피너 제거: 모바일에서 오조작을 유발한다 */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* 계산 결과처럼 자릿수 비교가 중요한 숫자에 사용 */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
