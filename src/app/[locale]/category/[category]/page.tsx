@@ -5,19 +5,17 @@ import { isLocale, localePath, locales, type Locale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionary';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { breadcrumbJsonLd, serializeJsonLd } from '@/lib/seo/jsonld';
-import {
-  categoryPath,
-  findCategoryBySlug,
-  orderedCategories,
-} from '@/lib/tools/categories';
+import { categoryPath, findCategoryBySlug } from '@/lib/tools/categories';
+import { categoriesForLocale, toolsByCategory } from '@/lib/tools/definitions';
 import { listTools } from '@/lib/tools/registry';
 import { Container } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { ToolCardGrid } from '@/components/tool/ToolCard';
 
 export function generateStaticParams() {
+  // 도구가 없는 로케일/카테고리 조합은 라우트를 만들지 않는다(빈 페이지 방지).
   return locales.flatMap((locale) =>
-    orderedCategories.map((category) => ({ locale, category: category.slug })),
+    categoriesForLocale(locale).map((category) => ({ locale, category: category.slug })),
   );
 }
 
@@ -39,6 +37,8 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
     title: `${category.label[locale]} ${dict.category.metaTitleSuffix}`,
     description: category.description[locale],
     path: categoryPath(category),
+    // 도구가 없는 로케일에는 라우트가 없으므로 hreflang에서도 뺀다.
+    availableLocales: locales.filter((item) => toolsByCategory(category.id, item).length > 0),
   });
 }
 
@@ -52,7 +52,7 @@ export default async function CategoryPage({ params }: PageParams) {
 
   const dict = getDictionary(locale);
   const tools = listTools(locale, { category: category.id });
-  const others = orderedCategories.filter((item) => item.id !== category.id);
+  const others = categoriesForLocale(locale).filter((item) => item.id !== category.id);
 
   const breadcrumbItems = [
     { name: dict.common.home, path: '/' },

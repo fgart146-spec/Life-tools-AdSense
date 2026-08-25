@@ -1,5 +1,6 @@
 import { locales, type Locale } from '@/lib/i18n/config';
-import { findToolBySlug } from '@/lib/tools/definitions';
+import { findToolBySlug, toolsByCategory } from '@/lib/tools/definitions';
+import { findCategoryBySlug } from '@/lib/tools/categories';
 import { findGuideBySlug } from '@/lib/guides';
 
 /**
@@ -20,10 +21,17 @@ export function availableLocalesForPath(path: string): readonly Locale[] {
     return findGuideBySlug(second)?.locales ?? locales;
   }
 
-  // /tools, /category/..., /about 등 정적 페이지
+  // 카테고리 허브: 그 로케일에 도구가 있는 언어에만 존재한다.
+  if (first === 'category') {
+    if (!second) return locales;
+    const category = findCategoryBySlug(second);
+    if (!category) return locales;
+    return locales.filter((locale) => toolsByCategory(category.id, locale).length > 0);
+  }
+
+  // /tools, /about 등 모든 로케일에 존재하는 정적 페이지
   if (
     first === 'tools' ||
-    first === 'category' ||
     first === 'about' ||
     first === 'contact' ||
     first === 'privacy' ||

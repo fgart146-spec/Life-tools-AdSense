@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { absoluteUrl } from '@/config/site';
 import { localeMeta, localePath, locales, defaultLocale, type Locale } from '@/lib/i18n/config';
 import { categoryPath, orderedCategories } from '@/lib/tools/categories';
-import { toolDefinitions } from '@/lib/tools/definitions';
+import { toolDefinitions, toolsByCategory } from '@/lib/tools/definitions';
 import { guideIndex, guidePath } from '@/lib/guides';
 import { staticPages } from '@/lib/nav';
 
@@ -34,9 +34,14 @@ function collectPages(): SitemapPage[] {
       priority: 0.8,
     });
     for (const category of orderedCategories) {
+      // 도구가 없는 로케일은 라우트가 없으므로 사이트맵에서도 뺀다.
+      const categoryLocales = locales.filter(
+        (locale) => toolsByCategory(category.id, locale).length > 0,
+      );
+      if (categoryLocales.length === 0) continue;
       pages.push({
         path: categoryPath(category),
-        pageLocales: locales,
+        pageLocales: categoryLocales,
         changeFrequency: 'weekly',
         priority: 0.7,
       });

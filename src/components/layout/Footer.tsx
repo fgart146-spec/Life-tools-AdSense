@@ -3,7 +3,8 @@ import { brandName, siteConfig } from '@/config/site';
 import { localePath, type Locale } from '@/lib/i18n/config';
 import { interpolate } from '@/lib/i18n/dictionary';
 import type { Dictionary } from '@/lib/i18n/types';
-import { orderedCategories, categoryPath } from '@/lib/tools/categories';
+import { categoryPath } from '@/lib/tools/categories';
+import { categoriesForLocale } from '@/lib/tools/definitions';
 import { staticPageLabel, staticPages } from '@/lib/nav';
 import { Container } from '@/components/ui/Container';
 
@@ -25,7 +26,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <div>
             <h2 className="text-sm font-semibold text-ink-900">{dict.footer.sections.tools}</h2>
             <ul className="mt-3 space-y-2">
-              {orderedCategories.map((category) => (
+              {categoriesForLocale(locale).map((category) => (
                 <li key={category.id}>
                   <Link
                     href={localePath(locale, categoryPath(category))}

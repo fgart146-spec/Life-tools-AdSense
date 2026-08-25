@@ -1,5 +1,5 @@
 import type { Locale } from '@/lib/i18n/config';
-import type { CategoryId } from '@/lib/tools/categories';
+import { orderedCategories, type CategoryDefinition, type CategoryId } from '@/lib/tools/categories';
 import type { ToolDefinition } from '@/lib/tools/types';
 // 장보기·쇼핑
 import { definition as bogo1plus1 } from '@/tools/bogo-1plus1/definition';
@@ -116,4 +116,15 @@ export function findToolById(id: string): ToolDefinition | undefined {
 /** 도구 URL 경로 (로케일 접두사 제외) */
 export function toolPath(tool: ToolDefinition): string {
   return `/${tool.slug}`;
+}
+
+/**
+ * 해당 로케일에 공개된 도구가 1개 이상 있는 카테고리만 반환한다.
+ *
+ * 도구가 없는 카테고리는 제목만 있는 빈 페이지가 되므로 라우트를 만들지 않는다.
+ * (로케일 본문이 없으면 라우트를 만들지 않는 도구/가이드 규칙과 동일하다.)
+ * 내비게이션·사이트맵도 이 목록을 기준으로 삼아야 링크가 깨지지 않는다.
+ */
+export function categoriesForLocale(locale: Locale): CategoryDefinition[] {
+  return orderedCategories.filter((category) => toolsByCategory(category.id, locale).length > 0);
 }

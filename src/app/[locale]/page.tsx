@@ -5,7 +5,8 @@ import { isLocale, localePath, type Locale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionary';
 import { buildMetadata } from '@/lib/seo/metadata';
 import { serializeJsonLd, webSiteJsonLd } from '@/lib/seo/jsonld';
-import { categoryPath, orderedCategories } from '@/lib/tools/categories';
+import { categoryPath } from '@/lib/tools/categories';
+import { categoriesForLocale } from '@/lib/tools/definitions';
 import { listTools } from '@/lib/tools/registry';
 import { listGuides } from '@/lib/guides/registry';
 import { getSeasonalToolIds } from '@/lib/admin/seasonal';
@@ -113,7 +114,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
         <Section title={dict.home.categoriesTitle}>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {orderedCategories.map((category) => {
+            {categoriesForLocale(locale).map((category) => {
               const count = listTools(locale, { category: category.id }).length;
               return (
                 <li key={category.id}>

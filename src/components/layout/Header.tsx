@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { brandName } from '@/config/site';
 import { localePath, type Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/types';
-import { orderedCategories, categoryPath } from '@/lib/tools/categories';
+import { categoryPath } from '@/lib/tools/categories';
+import { categoriesForLocale } from '@/lib/tools/definitions';
 import { Container } from '@/components/ui/Container';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 
@@ -30,7 +31,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </Link>
 
           <nav aria-label={dict.nav.categories} className="hidden items-center gap-1 md:flex">
-            {orderedCategories.map((category) => (
+            {categoriesForLocale(locale).map((category) => (
               <Link
                 key={category.id}
                 href={localePath(locale, categoryPath(category))}
@@ -73,7 +74,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               </summary>
               <div className="absolute right-0 top-12 w-64 rounded-xl border border-ink-200 bg-white p-2 shadow-lg">
                 <ul className="flex flex-col">
-                  {orderedCategories.map((category) => (
+                  {categoriesForLocale(locale).map((category) => (
                     <li key={category.id}>
                       <Link
                         href={localePath(locale, categoryPath(category))}
