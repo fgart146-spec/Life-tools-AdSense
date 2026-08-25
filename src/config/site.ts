@@ -21,19 +21,21 @@ export const siteConfig = {
   /** 운영 주체 표기 (About/Privacy/Terms에 사용) */
   publisher: 'LifeCalc',
   analytics: {
-    gaId: process.env.NEXT_PUBLIC_GA_ID ?? '',
+    gaId: process.env.NEXT_PUBLIC_GA_ID?.trim() ?? '',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',
     naver: process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION ?? '',
   },
   ads: {
-    client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? '',
+    // 게시자 ID는 비밀값이 아니다(모든 AdSense 페이지 소스에 노출된다).
+    // 환경변수가 있으면 그쪽이 우선한다 — 프리뷰 배포에서 끄고 싶을 때 빈 값으로 덮어쓴다.
+    client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() || 'ca-pub-4960740109673485',
     slots: {
-      toolTop: process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL_TOP ?? '',
-      toolMiddle: process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL_MIDDLE ?? '',
-      toolBottom: process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL_BOTTOM ?? '',
-      content: process.env.NEXT_PUBLIC_ADSENSE_SLOT_CONTENT ?? '',
+      toolTop: process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL_TOP?.trim() ?? '',
+      toolMiddle: process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL_MIDDLE?.trim() ?? '',
+      toolBottom: process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL_BOTTOM?.trim() ?? '',
+      content: process.env.NEXT_PUBLIC_ADSENSE_SLOT_CONTENT?.trim() ?? '',
     },
   },
 } as const;
