@@ -76,7 +76,7 @@ export default async function ToolsIndexPage({
           <h1 className="text-2xl font-bold sm:text-3xl">{dict.toolsIndex.heading}</h1>
           <p className="mt-2 max-w-2xl text-base text-ink-600">{dict.toolsIndex.lead}</p>
           {total > 0 && (
-            <p className="mt-1 text-sm text-ink-400">
+            <p className="mt-1 text-sm text-ink-500">
               {total} {dict.toolsIndex.countLabel}
             </p>
           )}

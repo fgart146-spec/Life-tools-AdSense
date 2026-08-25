@@ -18,14 +18,16 @@ export function FieldGroup({
 }) {
   return (
     <fieldset className={`min-w-0 ${className}`}>
-      {title && <legend className="mb-2 text-sm font-semibold text-ink-700">{title}</legend>}
-      <div className="grid gap-4">{children}</div>
+      {title && (
+        <legend className="mb-2.5 text-sm font-semibold text-ink-700">{title}</legend>
+      )}
+      <div className="grid gap-5">{children}</div>
     </fieldset>
   );
 }
 
 export function FieldRow({ children }: { children: ReactNode }) {
-  return <div className="grid gap-4 sm:grid-cols-2">{children}</div>;
+  return <div className="grid gap-5 sm:grid-cols-2">{children}</div>;
 }
 
 function FieldFrame({
@@ -47,23 +49,28 @@ function FieldFrame({
     <div className="min-w-0">
       <label
         htmlFor={htmlFor}
-        className="mb-1.5 flex items-baseline gap-2 text-sm font-medium text-ink-700"
+        className="mb-2 flex items-baseline gap-2 text-[0.9375rem] font-semibold text-ink-800"
       >
         <span>{label}</span>
-        {optional && <span className="text-xs font-normal text-ink-400">{optional}</span>}
+        {optional && <span className="text-xs font-normal text-ink-500">{optional}</span>}
       </label>
       {children}
       {error ? (
-        <p className="mt-1.5 text-sm text-red-600">{error}</p>
+        <p className="mt-2 text-sm font-medium text-red-600">{error}</p>
       ) : hint ? (
-        <p className="mt-1.5 text-sm text-ink-500">{hint}</p>
+        <p className="mt-2 text-sm leading-relaxed text-ink-500">{hint}</p>
       ) : null}
     </div>
   );
 }
 
+/**
+ * 입력창 공통 스타일.
+ * 높이 56px는 모바일 터치 타깃과 40~60대 가독성을 함께 고려한 값이다.
+ * focus 상태는 테두리+링을 함께 써서 어디에 입력 중인지 분명히 보이게 한다.
+ */
 const inputClass =
-  'h-12 w-full rounded-lg border bg-white px-3 text-base text-ink-900 tabular placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200';
+  'h-14 w-full rounded-[var(--radius-field)] border bg-white px-4 text-lg text-ink-900 tabular transition-colors placeholder:text-base placeholder:text-ink-400 focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-100';
 
 /* -------------------------------------------------------------------------- */
 /* 숫자 입력                                                                    */
@@ -179,14 +186,14 @@ export function NumberField({
           onChange={handleChange}
           placeholder={placeholder}
           aria-invalid={error ? true : undefined}
-          className={`${inputClass} ${unit ? 'pr-12' : ''} ${
+          className={`${inputClass} ${unit ? 'pr-14' : ''} ${
             error ? 'border-red-400' : 'border-ink-300'
           }`}
         />
         {unit && (
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-ink-500"
+            className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-base font-medium text-ink-500"
           >
             {unit}
           </span>
@@ -229,7 +236,7 @@ export function SelectField({
         id={fieldId}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className={`${inputClass} border-ink-300 pr-8`}
+        className={`${inputClass} cursor-pointer border-ink-300 pr-10`}
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -259,13 +266,13 @@ export function SegmentedField({
 
   return (
     <div className="min-w-0">
-      <p id={groupId} className="mb-1.5 text-sm font-medium text-ink-700">
+      <p id={groupId} className="mb-2 text-[0.9375rem] font-semibold text-ink-800">
         {label}
       </p>
       <div
         role="radiogroup"
         aria-labelledby={groupId}
-        className="flex flex-wrap gap-2 rounded-lg bg-ink-100 p-1"
+        className="flex flex-wrap gap-1 rounded-[var(--radius-field)] bg-ink-100 p-1"
       >
         {options.map((option) => {
           const selected = option.value === value;
@@ -276,8 +283,10 @@ export function SegmentedField({
               role="radio"
               aria-checked={selected}
               onClick={() => onChange(option.value)}
-              className={`min-h-11 flex-1 rounded-md px-3 text-sm font-medium transition-colors ${
-                selected ? 'bg-white text-brand-700 shadow-sm' : 'text-ink-600 hover:text-ink-900'
+              className={`min-h-12 flex-1 rounded-lg px-3 text-[0.9375rem] font-semibold transition-colors ${
+                selected
+                  ? 'bg-white text-brand-700 shadow-[var(--shadow-card)]'
+                  : 'text-ink-600 hover:text-ink-900'
               }`}
             >
               {option.label}
@@ -285,7 +294,7 @@ export function SegmentedField({
           );
         })}
       </div>
-      {hint && <p className="mt-1.5 text-sm text-ink-500">{hint}</p>}
+      {hint && <p className="mt-2 text-sm leading-relaxed text-ink-500">{hint}</p>}
     </div>
   );
 }
@@ -309,17 +318,20 @@ export function CheckboxField({
 
   return (
     <div className="min-w-0">
-      <label htmlFor={fieldId} className="flex min-h-11 items-center gap-3 text-base text-ink-800">
+      <label
+        htmlFor={fieldId}
+        className="flex min-h-12 cursor-pointer items-center gap-3 text-base text-ink-800"
+      >
         <input
           id={fieldId}
           type="checkbox"
           checked={checked}
           onChange={(event) => onChange(event.target.checked)}
-          className="h-5 w-5 rounded border-ink-300 text-brand-600 focus:ring-brand-200"
+          className="h-5 w-5 shrink-0 rounded border-ink-300 text-brand-600 focus:ring-brand-200"
         />
         {label}
       </label>
-      {hint && <p className="mt-1 text-sm text-ink-500">{hint}</p>}
+      {hint && <p className="mt-1 text-sm leading-relaxed text-ink-500">{hint}</p>}
     </div>
   );
 }

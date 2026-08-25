@@ -82,7 +82,7 @@ export default async function GuideIndexPage({
                 <span className="mt-2 text-sm leading-relaxed text-ink-600">
                   {guide.description}
                 </span>
-                <span className="mt-3 text-xs text-ink-400">
+                <span className="mt-3 text-xs text-ink-500">
                   {dict.guide.updatedAt} {formatDate(guide.updatedAt, locale)}
                 </span>
               </Link>

@@ -15,12 +15,14 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section className={`mt-10 ${className}`}>
+    <section className={`mt-12 ${className}`}>
       {(title || action) && (
         <div className="mb-4 flex items-end justify-between gap-3">
-          <div>
+          <div className="min-w-0">
             {title && <h2 className="text-xl font-bold sm:text-2xl">{title}</h2>}
-            {description && <p className="mt-1 text-sm text-ink-500">{description}</p>}
+            {description && (
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-500">{description}</p>
+            )}
           </div>
           {action}
         </div>

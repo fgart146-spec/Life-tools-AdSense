@@ -130,51 +130,60 @@ export default async function ToolPage({ params }: PageParams) {
         <Breadcrumbs locale={locale} items={breadcrumbItems} label={dict.breadcrumb.label} />
 
         <header className="mt-4">
-          <h1 className="text-2xl font-bold sm:text-3xl">
-            <span aria-hidden="true" className="mr-2">
+          <h1 className="flex items-start gap-2.5 text-[1.625rem] font-bold leading-tight sm:text-[2rem]">
+            <span aria-hidden="true" className="shrink-0 leading-none">
               {definition.emoji}
             </span>
-            {content.title}
+            <span className="min-w-0">{content.title}</span>
           </h1>
-          <p className="mt-2 max-w-2xl text-base leading-relaxed text-ink-600">{content.lead}</p>
+          <p className="mt-2.5 max-w-2xl text-base leading-relaxed text-ink-600">{content.lead}</p>
         </header>
 
+        {/* 계산기: 이 페이지에서 가장 먼저 눈에 들어와야 한다. */}
         <div className="mt-6">{toolModule.render(locale, { basis })}</div>
 
         {/* 광고는 계산기/결과 다음에만 배치한다 (계산 흐름을 방해하지 않는다) */}
         <AdSlot name="toolTop" />
 
-        <HowItWorksSection title={dict.tool.sectionHowItWorks} items={content.howItWorks} />
-        <FormulaSection title={dict.tool.sectionFormula} lines={content.formula} />
-        <ExampleSection title={dict.tool.sectionExample} example={content.example} />
+        {/*
+          설명 영역은 읽기 좋은 폭으로 좁힌다.
+          계산기는 넓게, 본문은 좁게 두어 '도구 → 읽을거리'의 전환이 시각적으로 드러난다.
+        */}
+        <div className="mx-auto max-w-3xl">
+          <HowItWorksSection title={dict.tool.sectionHowItWorks} items={content.howItWorks} />
+          <FormulaSection title={dict.tool.sectionFormula} lines={content.formula} />
+          <ExampleSection title={dict.tool.sectionExample} example={content.example} />
 
-        <AdSlot name="toolMiddle" />
+          <AdSlot name="toolMiddle" />
 
-        <NotesSection title={dict.tool.sectionNotes} items={content.notes} />
-        <FaqSection title={dict.tool.sectionFaq} items={content.faq} />
+          <NotesSection title={dict.tool.sectionNotes} items={content.notes} />
+          <FaqSection title={dict.tool.sectionFaq} items={content.faq} />
+        </div>
 
         {relatedTools.length > 0 && (
-          <section className="mt-10">
-            <h2 className="text-xl font-bold sm:text-2xl">{dict.tool.sectionRelatedTools}</h2>
-            <div className="mt-3">
+          <section className="mt-12">
+            <h2 className="text-xl font-bold sm:text-[1.5rem]">{dict.tool.sectionRelatedTools}</h2>
+            <div className="mt-3.5">
               <ToolCardGrid locale={locale} tools={relatedTools} columns={3} />
             </div>
           </section>
         )}
 
-        <RelatedGuides
-          locale={locale}
-          title={dict.tool.sectionRelatedGuides}
-          guides={relatedGuides}
-        />
+        <div className="mx-auto max-w-3xl">
+          <RelatedGuides
+            locale={locale}
+            title={dict.tool.sectionRelatedGuides}
+            guides={relatedGuides}
+          />
 
-        <SourceInfo
-          locale={locale}
-          dict={dict}
-          updatedAt={definition.updatedAt}
-          basisDate={content.basisDate}
-          sources={content.sources}
-        />
+          <SourceInfo
+            locale={locale}
+            dict={dict}
+            updatedAt={definition.updatedAt}
+            basisDate={content.basisDate}
+            sources={content.sources}
+          />
+        </div>
 
         <AdSlot name="toolBottom" />
       </Container>

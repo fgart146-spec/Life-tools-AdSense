@@ -11,7 +11,7 @@ import type { FaqItem, FormulaLine, SourceRef, WorkedExample } from '@/lib/tools
 
 function SectionHeading({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
-    <h2 id={id} className="text-xl font-bold sm:text-2xl">
+    <h2 id={id} className="text-xl font-bold sm:text-[1.5rem]">
       {children}
     </h2>
   );
@@ -19,7 +19,7 @@ function SectionHeading({ children, id }: { children: React.ReactNode; id?: stri
 
 function SectionCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mt-3 rounded-[var(--radius-card)] border border-ink-200 bg-white p-4 sm:p-5">
+    <div className="mt-3.5 rounded-[var(--radius-card)] border border-ink-200 bg-white p-4 sm:p-6">
       {children}
     </div>
   );
@@ -28,16 +28,16 @@ function SectionCard({ children }: { children: React.ReactNode }) {
 export function HowItWorksSection({ title, items }: { title: string; items: readonly string[] }) {
   if (items.length === 0) return null;
   return (
-    <section className="mt-10">
+    <section className="mt-12">
       <SectionHeading id="how-it-works">{title}</SectionHeading>
       <SectionCard>
-        <ul className="grid gap-2.5">
+        <ul className="grid gap-3">
           {items.map((item) => (
-            <li key={item} className="flex gap-2 leading-relaxed text-ink-700">
-              <span aria-hidden="true" className="mt-1 text-brand-500">
+            <li key={item} className="flex gap-2.5 leading-relaxed text-ink-700">
+              <span aria-hidden="true" className="mt-0.5 shrink-0 font-bold text-brand-500">
                 ✓
               </span>
-              <span>{item}</span>
+              <span className="min-w-0">{item}</span>
             </li>
           ))}
         </ul>
@@ -55,15 +55,16 @@ export function FormulaSection({
 }) {
   if (lines.length === 0) return null;
   return (
-    <section className="mt-10">
+    <section className="mt-12">
       <SectionHeading id="formula">{title}</SectionHeading>
       <SectionCard>
+        {/* min-w-0: grid 아이템의 기본 min-width:auto 때문에 긴 수식이 컨테이너를 밀어낸다. */}
         <dl className="grid gap-4">
           {lines.map((line) => (
-            <div key={line.label}>
-              <dt className="text-sm font-semibold text-ink-700">{line.label}</dt>
-              <dd className="mt-1">
-                <code className="tabular block overflow-x-auto rounded-md bg-ink-100 px-3 py-2 font-mono text-sm text-ink-800">
+            <div key={line.label} className="min-w-0">
+              <dt className="text-[0.9375rem] font-semibold text-ink-800">{line.label}</dt>
+              <dd className="mt-1 min-w-0">
+                <code className="tabular block overflow-x-auto whitespace-pre rounded-[var(--radius-field)] bg-ink-100 px-3.5 py-2.5 font-mono text-sm leading-relaxed text-ink-800">
                   {line.expression}
                 </code>
                 {line.note && <p className="mt-1.5 text-sm text-ink-500">{line.note}</p>}
@@ -84,7 +85,7 @@ export function ExampleSection({
   example: WorkedExample;
 }) {
   return (
-    <section className="mt-10">
+    <section className="mt-12">
       <SectionHeading id="example">{title}</SectionHeading>
       <SectionCard>
         <p className="font-medium text-ink-800">{example.scenario}</p>
@@ -101,7 +102,7 @@ export function ExampleSection({
             </li>
           ))}
         </ol>
-        <p className="mt-4 rounded-lg bg-brand-50 px-3 py-2.5 font-semibold text-brand-800">
+        <p className="mt-5 rounded-[var(--radius-field)] border border-brand-200 bg-brand-50 px-4 py-3 font-bold leading-relaxed text-brand-800">
           {example.conclusion}
         </p>
       </SectionCard>
@@ -112,16 +113,16 @@ export function ExampleSection({
 export function NotesSection({ title, items }: { title: string; items: readonly string[] }) {
   if (items.length === 0) return null;
   return (
-    <section className="mt-10">
+    <section className="mt-12">
       <SectionHeading id="notes">{title}</SectionHeading>
       <SectionCard>
-        <ul className="grid gap-2.5">
+        <ul className="grid gap-3">
           {items.map((item) => (
-            <li key={item} className="flex gap-2 leading-relaxed text-ink-700">
-              <span aria-hidden="true" className="mt-0.5 text-amber-500">
+            <li key={item} className="flex gap-2.5 leading-relaxed text-ink-700">
+              <span aria-hidden="true" className="mt-0.5 shrink-0 font-bold text-amber-500">
                 !
               </span>
-              <span>{item}</span>
+              <span className="min-w-0">{item}</span>
             </li>
           ))}
         </ul>
@@ -134,21 +135,21 @@ export function NotesSection({ title, items }: { title: string; items: readonly 
 export function FaqSection({ title, items }: { title: string; items: readonly FaqItem[] }) {
   if (items.length === 0) return null;
   return (
-    <section className="mt-10">
+    <section className="mt-12">
       <SectionHeading id="faq">{title}</SectionHeading>
-      <div className="mt-3 divide-y divide-ink-200 overflow-hidden rounded-[var(--radius-card)] border border-ink-200 bg-white">
+      <div className="mt-3.5 divide-y divide-ink-200 overflow-hidden rounded-[var(--radius-card)] border border-ink-200 bg-white">
         {items.map((item) => (
           <details key={item.question} className="group">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-4 text-base font-semibold text-ink-800 hover:bg-ink-50">
+            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 px-4 py-4 text-base font-semibold text-ink-800 transition-colors hover:bg-ink-50 sm:px-5">
               <h3 className="text-base font-semibold">{item.question}</h3>
               <span
                 aria-hidden="true"
-                className="shrink-0 text-ink-400 transition-transform group-open:rotate-45"
+                className="shrink-0 text-xl font-normal text-ink-400 transition-transform group-open:rotate-45"
               >
                 +
               </span>
             </summary>
-            <div className="px-4 pb-4 leading-relaxed text-ink-700">{item.answer}</div>
+            <div className="px-4 pb-5 leading-relaxed text-ink-700 sm:px-5">{item.answer}</div>
           </details>
         ))}
       </div>
@@ -171,7 +172,7 @@ export function SourceInfo({
   sources?: readonly SourceRef[];
 }) {
   return (
-    <section className="mt-10 rounded-[var(--radius-card)] border border-ink-200 bg-ink-100/60 p-4 text-sm text-ink-600">
+    <section className="mt-12 rounded-[var(--radius-card)] border border-ink-200 bg-white p-4 text-sm leading-relaxed text-ink-600 sm:p-5">
       <p>
         <span className="font-semibold text-ink-700">{dict.common.updatedAt}:</span>{' '}
         {formatDate(basisDate ?? updatedAt, locale)}
@@ -187,7 +188,7 @@ export function SourceInfo({
                     href={source.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-700 underline underline-offset-2"
+                    className="text-brand-700 underline underline-offset-2 hover:text-brand-800"
                   >
                     {source.label}
                   </a>
@@ -216,14 +217,14 @@ export function RelatedGuides({
 }) {
   if (guides.length === 0) return null;
   return (
-    <section className="mt-10">
+    <section className="mt-12">
       <SectionHeading>{title}</SectionHeading>
-      <ul className="mt-3 grid gap-2">
+      <ul className="mt-3.5 grid gap-2.5">
         {guides.map((guide) => (
           <li key={guide.slug}>
             <Link
               href={localePath(locale, `/guide/${guide.slug}`)}
-              className="flex items-center gap-2 rounded-lg border border-ink-200 bg-white px-4 py-3 text-ink-800 hover:border-brand-300 hover:text-brand-700"
+              className="flex min-h-14 items-center gap-2.5 rounded-[var(--radius-card)] border border-ink-200 bg-white px-4 py-3 font-medium text-ink-800 transition-colors hover:border-brand-300 hover:text-brand-700"
             >
               <span aria-hidden="true">📄</span>
               {guide.title}

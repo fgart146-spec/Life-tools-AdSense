@@ -58,15 +58,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(webSiteJsonLd(locale)) }}
       />
 
+      {/* 히어로: 장식 없이 '무엇을 하는 곳인지' + '바로 쓸 수 있는 입구'만 둔다. */}
       <div className="border-b border-ink-200 bg-white">
-        <Container className="py-10 sm:py-14">
-          <h1 className="text-3xl font-bold sm:text-4xl">{dict.home.heading}</h1>
-          <p className="mt-3 max-w-2xl text-base text-ink-600 sm:text-lg">
+        <Container className="py-10 text-center sm:py-14">
+          <p aria-hidden="true" className="wordmark text-base text-brand-600">
+            eolmaji
+          </p>
+          <h1 className="mt-2 text-[1.75rem] font-bold leading-tight sm:text-[2.5rem]">
+            {dict.home.heading}
+          </h1>
+          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-ink-600 sm:text-lg">
             {dict.home.subheading}
           </p>
 
           {quickActions.length > 0 && (
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mx-auto mt-8 grid max-w-3xl gap-2.5 text-left sm:grid-cols-2 sm:gap-3">
               {quickActions.map((action) => {
                 const tool = allTools.find((item) => item.id === action.toolId);
                 if (!tool) return null;
@@ -74,12 +80,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <li key={action.toolId}>
                     <Link
                       href={localePath(locale, `/${tool.slug}`)}
-                      className="flex min-h-14 items-center gap-3 rounded-[var(--radius-card)] border border-ink-200 bg-white px-4 py-3 text-base font-semibold text-ink-800 transition-colors hover:border-brand-400 hover:bg-brand-50"
+                      className="flex min-h-14 items-center gap-3 rounded-[var(--radius-card)] border border-ink-200 bg-white px-4 py-3 text-[1.0625rem] font-semibold text-ink-800 shadow-[var(--shadow-card)] transition-colors hover:border-brand-400 hover:bg-brand-50"
                     >
-                      <span aria-hidden="true" className="text-xl">
+                      <span aria-hidden="true" className="text-xl leading-none">
                         {action.emoji}
                       </span>
-                      {action.label}
+                      <span className="min-w-0">{action.label}</span>
                     </Link>
                   </li>
                 );
@@ -89,7 +95,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </Container>
       </div>
 
-      <Container className="pb-4">
+      <Container className="pb-6">
         {seasonal.length > 0 && (
           <Section title={dict.home.seasonalTitle} description={dict.home.seasonalNote}>
             <ToolCardGrid locale={locale} tools={seasonal} columns={4} />
@@ -102,7 +108,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             action={
               <Link
                 href={localePath(locale, '/tools')}
-                className="shrink-0 text-sm font-medium text-brand-700 hover:underline"
+                className="-mr-2 flex min-h-11 shrink-0 items-center rounded-lg px-2 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50"
               >
                 {dict.home.allToolsCta}
               </Link>
@@ -120,13 +126,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <li key={category.id}>
                   <Link
                     href={localePath(locale, categoryPath(category))}
-                    className="flex h-full flex-col rounded-[var(--radius-card)] border border-ink-200 bg-white p-5 transition-colors hover:border-brand-300 hover:bg-brand-50/40"
+                    className="flex h-full flex-col rounded-[var(--radius-card)] border border-ink-200 bg-white p-5 transition-colors hover:border-brand-300 hover:bg-brand-50/30"
                   >
-                    <span className="flex items-center gap-2 text-lg font-semibold text-ink-900">
+                    <span className="flex items-center gap-2 text-[1.0625rem] font-bold text-ink-900">
                       <span aria-hidden="true">{category.emoji}</span>
-                      {category.label[locale]}
+                      <span className="min-w-0">{category.label[locale]}</span>
                       {count > 0 && (
-                        <span className="text-sm font-normal text-ink-400">
+                        <span className="shrink-0 text-sm font-normal text-ink-500">
                           {count}
                           {locale === 'ko' ? '개' : ''}
                         </span>
@@ -148,7 +154,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             action={
               <Link
                 href={localePath(locale, '/guide')}
-                className="shrink-0 text-sm font-medium text-brand-700 hover:underline"
+                className="-mr-2 flex min-h-11 shrink-0 items-center rounded-lg px-2 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50"
               >
                 {dict.common.viewAll}
               </Link>
@@ -159,9 +165,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <li key={guide.slug}>
                   <Link
                     href={localePath(locale, `/guide/${guide.slug}`)}
-                    className="flex h-full flex-col rounded-[var(--radius-card)] border border-ink-200 bg-white p-5 transition-colors hover:border-brand-300 hover:bg-brand-50/40"
+                    className="flex h-full flex-col rounded-[var(--radius-card)] border border-ink-200 bg-white p-5 transition-colors hover:border-brand-300 hover:bg-brand-50/30"
                   >
-                    <span className="text-base font-semibold text-ink-900">{guide.title}</span>
+                    <span className="text-[1.0625rem] font-bold leading-snug text-ink-900">
+                      {guide.title}
+                    </span>
                     <span className="mt-2 text-sm leading-relaxed text-ink-500">
                       {guide.description}
                     </span>
@@ -179,7 +187,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 key={point.title}
                 className="rounded-[var(--radius-card)] border border-ink-200 bg-white p-5"
               >
-                <h3 className="text-base font-semibold text-ink-900">{point.title}</h3>
+                <h3 className="text-[1.0625rem] font-bold text-ink-900">{point.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-600">{point.body}</p>
               </li>
             ))}

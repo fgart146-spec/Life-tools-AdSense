@@ -114,7 +114,7 @@ export default async function GuidePage({ params }: PageParams) {
             <p className="text-sm font-medium text-brand-700">{category.label[locale]}</p>
             <h1 className="mt-1 text-2xl font-bold sm:text-3xl">{content.title}</h1>
             <p className="mt-3 text-base leading-relaxed text-ink-600">{content.lead}</p>
-            <p className="mt-3 text-sm text-ink-400">
+            <p className="mt-3 text-sm text-ink-500">
               {dict.guide.updatedAt} {formatDate(meta.updatedAt, locale)} ·{' '}
               {interpolate(dict.guide.readingTime, { minutes })}
             </p>

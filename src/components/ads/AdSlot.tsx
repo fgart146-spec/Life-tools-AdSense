@@ -30,7 +30,7 @@ export function AdSlot({ name, className = '' }: { name: AdSlotName; className?:
   if (!client || !slotId) return null;
 
   return (
-    <div className={`my-8 ${className}`}>
+    <div className={`my-10 border-y border-ink-200 py-4 ${className}`}>
       <ins
         className="adsbygoogle block"
         style={{ display: 'block' }}

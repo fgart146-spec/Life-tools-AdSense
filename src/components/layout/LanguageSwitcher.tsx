@@ -33,7 +33,7 @@ export function LanguageSwitcher({
             href={target}
             hrefLang={localeMeta[locale].htmlLang}
             aria-current={isCurrent ? 'true' : undefined}
-            className={`rounded-md px-2 py-1.5 text-sm font-medium transition-colors ${
+            className={`flex min-h-11 min-w-11 items-center justify-center rounded-lg px-1.5 text-sm font-semibold transition-colors ${
               isCurrent
                 ? 'bg-brand-50 text-brand-700'
                 : 'text-ink-500 hover:bg-ink-100 hover:text-ink-800'
