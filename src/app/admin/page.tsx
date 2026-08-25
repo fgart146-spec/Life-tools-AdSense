@@ -7,8 +7,10 @@ import { orderedCategories } from '@/lib/tools/categories';
 import { toolDefinitions } from '@/lib/tools/definitions';
 import { guideIndex } from '@/lib/guides';
 import { getEffectiveBasis } from '@/lib/admin/basis';
+import { getTrafficData } from '@/lib/admin/traffic';
 import { AdminCard, AdminShell, SetupNotice } from '@/components/admin/AdminShell';
 import { RevalidateButton } from '@/components/admin/RevalidateButton';
+import { TrafficSection } from '@/components/admin/TrafficSection';
 import type { UpdateLogRow } from '@/lib/supabase/types';
 
 export const dynamic = 'force-dynamic';
@@ -27,6 +29,7 @@ export default async function AdminDashboardPage() {
     .limit(10)) ?? { data: null };
 
   const basis = await getEffectiveBasis();
+  const traffic = await getTrafficData();
 
   const published = toolDefinitions.filter((tool) => tool.status === 'published');
   const byCategory = orderedCategories.map((category) => ({
@@ -47,6 +50,10 @@ export default async function AdminDashboardPage() {
 
   return (
     <AdminShell email={admin.profile.email} active="/admin">
+      <div className="mb-6">
+        <TrafficSection data={traffic} />
+      </div>
+
       <div className="grid gap-4 lg:grid-cols-2">
         <AdminCard title="도구 현황" description="코드 레지스트리 기준">
           <p className="text-3xl font-bold text-ink-900">{published.length}개 공개</p>

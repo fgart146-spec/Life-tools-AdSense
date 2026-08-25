@@ -87,10 +87,19 @@ export interface SearchConsoleQuery {
   rowLimit?: number;
 }
 
-/** 검색어별 성과를 가져온다. 설정이 없으면 null. */
-export async function fetchSearchAnalytics(
+interface RawRow {
+  keys: string[];
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
+}
+
+/** searchAnalytics.query 공통 호출. dimensions만 바꿔 재사용한다. */
+async function querySearchAnalytics(
+  dimensions: string[],
   params: SearchConsoleQuery,
-): Promise<SearchConsoleRow[] | null> {
+): Promise<RawRow[] | null> {
   const account = readServiceAccount();
   const siteUrl = process.env.GSC_SITE_URL;
   if (!account || !siteUrl) return null;
@@ -111,18 +120,25 @@ export async function fetchSearchAnalytics(
     body: JSON.stringify({
       startDate: params.startDate,
       endDate: params.endDate,
-      dimensions: ['query', 'page'],
+      dimensions,
       rowLimit: params.rowLimit ?? 500,
     }),
   });
 
   if (!response.ok) return null;
 
-  const data = (await response.json()) as {
-    rows?: { keys: string[]; clicks: number; impressions: number; ctr: number; position: number }[];
-  };
+  const data = (await response.json()) as { rows?: RawRow[] };
+  return data.rows ?? [];
+}
 
-  return (data.rows ?? []).map((row) => ({
+/** 검색어별 성과를 가져온다. 설정이 없으면 null. */
+export async function fetchSearchAnalytics(
+  params: SearchConsoleQuery,
+): Promise<SearchConsoleRow[] | null> {
+  const rows = await querySearchAnalytics(['query', 'page'], params);
+  if (!rows) return null;
+
+  return rows.map((row) => ({
     query: row.keys[0] ?? '',
     page: row.keys[1] ?? null,
     impressions: row.impressions,
@@ -130,4 +146,36 @@ export async function fetchSearchAnalytics(
     ctr: row.ctr,
     position: row.position,
   }));
+}
+
+export interface SearchConsoleDailyRow {
+  /** YYYY-MM-DD */
+  date: string;
+  impressions: number;
+  clicks: number;
+  ctr: number;
+  position: number;
+}
+
+/**
+ * 일별 성과를 가져온다 (대시보드 시계열용).
+ * Search Console 데이터는 2~3일 지연되므로, 최근 며칠은 값이 나중에 올라갈 수 있다.
+ * cron이 매번 같은 구간을 다시 upsert하는 이유다.
+ */
+export async function fetchSearchAnalyticsDaily(
+  params: SearchConsoleQuery,
+): Promise<SearchConsoleDailyRow[] | null> {
+  const rows = await querySearchAnalytics(['date'], { ...params, rowLimit: params.rowLimit ?? 400 });
+  if (!rows) return null;
+
+  return rows
+    .map((row) => ({
+      date: row.keys[0] ?? '',
+      impressions: row.impressions,
+      clicks: row.clicks,
+      ctr: row.ctr,
+      position: row.position,
+    }))
+    .filter((row) => row.date !== '')
+    .sort((a, b) => (a.date < b.date ? -1 : 1));
 }

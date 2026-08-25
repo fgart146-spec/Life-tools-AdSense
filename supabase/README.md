@@ -10,7 +10,7 @@ SUPABASE_SERVICE_ROLE_KEY=...   # 서버 전용. 절대 클라이언트에 노�
 ```
 
 ## 2. 마이그레이션 적용
-Supabase SQL Editor에서 `migrations/0001_init.sql` 내용을 실행하거나, Supabase CLI를 사용합니다.
+Supabase SQL Editor에서 `migrations/ 안의 SQL 파일을 번호 순서대로 전부` 내용을 실행하거나, Supabase CLI를 사용합니다.
 
 ```bash
 supabase db push

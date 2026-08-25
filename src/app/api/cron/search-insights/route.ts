@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { createSupabaseReadOnlyClient } from '@/lib/supabase/read-only';
 import {
   fetchSearchAnalytics,
+  fetchSearchAnalyticsDaily,
   isSearchConsoleConfigured,
 } from '@/lib/automation/search-console';
 import { buildSuggestions } from '@/lib/automation/analyze';
@@ -78,11 +79,42 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: false, reason: 'insight_save_failed' }, { status: 500 });
   }
 
-  // 2) 규칙 기반 제안 생성 → (설정된 경우) AI가 설명만 보강
-  const drafts = buildSuggestions(rows).slice(0, 20);
-  const enriched = await enrichSuggestions(drafts);
+  // 1-2) 일별 지표 저장 (관리자 대시보드 그래프용)
+  //      같은 구간을 매번 다시 upsert해 Search Console의 지연 반영을 보정한다.
+  const dailyRows = await fetchSearchAnalyticsDaily({
+    startDate: periodStart,
+    endDate: periodEnd,
+  });
 
-  // 3) 이미 대기 중인 같은 제안은 다시 만들지 않는다.
+  let dailySaved = 0;
+  let dailyFailure: string | null = null;
+  if (dailyRows && dailyRows.length > 0) {
+    const { error: dailyError } = await supabase.from('search_daily').upsert(
+      dailyRows.map((row) => ({
+        date: row.date,
+        clicks: row.clicks,
+        impressions: row.impressions,
+        ctr: row.ctr,
+        position: row.position,
+        updated_at: new Date().toISOString(),
+      })),
+      { onConflict: 'date' },
+    );
+    // 저장 실패해도 배치는 계속 진행하되, 실패 사실은 응답과 로그에 남긴다.
+    // (0002 마이그레이션 미적용처럼 흔한 실수가 조용히 묻히면 대시보드가 영원히 빈 상태가 된다.)
+    if (dailyError) dailyFailure = dailyError.message;
+    else dailySaved = dailyRows.length;
+  }
+
+  // 오래된 기간 데이터는 정리한다. 없으면 매주 최대 500행씩 무한히 쌓인다.
+  await supabase.from('search_insights').delete().lt('period_end', isoDaysAgo(180));
+
+  // 2) 규칙 기반 제안 생성
+  const drafts = buildSuggestions(rows).slice(0, 20);
+
+  // 3) 이미 대기 중인 같은 제안은 먼저 걸러낸다.
+  //    AI 보강보다 앞에 두어야 한다. 뒤에 두면 어차피 버릴 제안에도 API 요금이 나간다
+  //    (관리자가 검토를 미루는 주마다 같은 제안이 다시 만들어져 매주 과금된다).
   const { data: pending } = await supabase
     .from('ai_suggestions')
     .select('kind, source_query')
@@ -92,8 +124,12 @@ export async function GET(request: Request) {
     (pending ?? []).map((row) => `${row.kind}:${row.source_query ?? ''}`),
   );
 
+  const fresh = drafts.filter((draft) => !existing.has(`${draft.kind}:${draft.sourceQuery}`));
+
+  // 4) 살아남은 제안만 AI가 설명을 보강한다.
+  const enriched = fresh.length > 0 ? await enrichSuggestions(fresh) : [];
+
   const newSuggestions = enriched
-    .filter((draft) => !existing.has(`${draft.kind}:${draft.sourceQuery}`))
     .map((draft) => ({
       kind: draft.kind,
       title: draft.title,
@@ -116,6 +152,8 @@ export async function GET(request: Request) {
     action: 'sync',
     detail: {
       rows: rows.length,
+      dailyRows: dailySaved,
+      dailyError: dailyFailure,
       suggestions: newSuggestions.length,
       aiEnabled: isAiConfigured(),
     },
@@ -125,6 +163,9 @@ export async function GET(request: Request) {
     ok: true,
     period: { start: periodStart, end: periodEnd },
     rows: rows.length,
+    dailyRows: dailySaved,
+    // 일별 저장이 실패하면 대시보드 그래프가 채워지지 않는다. 응답에서 바로 확인할 수 있게 한다.
+    ...(dailyFailure ? { dailyError: dailyFailure } : {}),
     newSuggestions: newSuggestions.length,
     aiEnabled: isAiConfigured(),
   });

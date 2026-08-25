@@ -54,6 +54,16 @@ export interface SearchInsightRow {
   created_at: string;
 }
 
+export interface SearchDailyRow {
+  /** YYYY-MM-DD */
+  date: string;
+  clicks: number;
+  impressions: number;
+  ctr: number | null;
+  position: number | null;
+  updated_at: string;
+}
+
 export interface AiSuggestionRow {
   id: string;
   kind: 'new_tool' | 'improve_tool' | 'new_guide' | 'seo_fix';

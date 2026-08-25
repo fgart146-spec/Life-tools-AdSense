@@ -66,14 +66,18 @@ export function AdminCard({
   title,
   description,
   children,
+  /** 상위 섹션(h2) 안에 놓일 때는 h3로 내려 제목 계층이 평평해지지 않게 한다. */
+  headingLevel = 2,
 }: {
   title: string;
   description?: string;
   children: ReactNode;
+  headingLevel?: 2 | 3;
 }) {
+  const Heading = headingLevel === 3 ? 'h3' : 'h2';
   return (
     <section className="rounded-[var(--radius-card)] border border-ink-200 bg-white p-5">
-      <h2 className="text-base font-bold text-ink-900">{title}</h2>
+      <Heading className="text-base font-bold text-ink-900">{title}</Heading>
       {description && <p className="mt-1 text-sm text-ink-500">{description}</p>}
       <div className="mt-4">{children}</div>
     </section>
