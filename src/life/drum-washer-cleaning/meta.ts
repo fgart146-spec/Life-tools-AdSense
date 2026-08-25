@@ -4,7 +4,7 @@ export const meta: LifeArticleMeta = {
   slug: 'drum-washer-cleaning',
   category: 'cleaning',
   status: 'published',
-  locales: ['ko', 'en'],
+  locales: ['ko', 'en', 'ja'],
   publishedAt: '2026-08-25',
   updatedAt: '2026-08-25',
   weight: 82,

@@ -49,6 +49,10 @@ import { article as condensation } from '@/life/condensation';
 import { article as humidityControl } from '@/life/humidity-control';
 import { article as balconyMold } from '@/life/balcony-mold';
 import { article as beddingStorage } from '@/life/bedding-storage';
+import { article as wineStain } from '@/life/wine-stain';
+import { article as dishwasherCleaning } from '@/life/dishwasher-cleaning';
+import { article as tatamiMold } from '@/life/tatami-mold';
+import { article as airconCleaning } from '@/life/aircon-cleaning';
 
 /** 본문까지 포함한 생활백과 모듈 목록 (서버 전용). */
 export const lifeArticleModules: readonly LifeArticleModule[] = [
@@ -102,4 +106,8 @@ export const lifeArticleModules: readonly LifeArticleModule[] = [
   humidityControl,
   balconyMold,
   beddingStorage,
+  wineStain,
+  dishwasherCleaning,
+  tatamiMold,
+  airconCleaning,
 ];

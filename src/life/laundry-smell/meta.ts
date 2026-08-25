@@ -4,7 +4,7 @@ export const meta: LifeArticleMeta = {
   slug: 'laundry-smell',
   category: 'laundry',
   status: 'published',
-  locales: ['ko'],
+  locales: ['ko', 'en', 'ja'],
   publishedAt: '2026-08-25',
   updatedAt: '2026-08-25',
   weight: 94,

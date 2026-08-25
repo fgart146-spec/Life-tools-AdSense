@@ -49,6 +49,10 @@ import { meta as condensation } from '@/life/condensation/meta';
 import { meta as humidityControl } from '@/life/humidity-control/meta';
 import { meta as balconyMold } from '@/life/balcony-mold/meta';
 import { meta as beddingStorage } from '@/life/bedding-storage/meta';
+import { meta as wineStain } from '@/life/wine-stain/meta';
+import { meta as dishwasherCleaning } from '@/life/dishwasher-cleaning/meta';
+import { meta as tatamiMold } from '@/life/tatami-mold/meta';
+import { meta as airconCleaning } from '@/life/aircon-cleaning/meta';
 
 /**
  * 생활백과 문서 메타데이터 목록 (가벼움 · 클라이언트 안전).
@@ -106,4 +110,8 @@ export const lifeArticleMetas: readonly LifeArticleMeta[] = [
   humidityControl,
   balconyMold,
   beddingStorage,
+  wineStain,
+  dishwasherCleaning,
+  tatamiMold,
+  airconCleaning,
 ];
