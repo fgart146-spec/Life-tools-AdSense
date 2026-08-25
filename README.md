@@ -14,12 +14,13 @@
 
 | 항목 | 값 |
 | --- | --- |
-| 도구 | 35개 (ko 35 / en 10 / ja 10) |
+| 도구 | 35개 (ko 35 / en 10 / ja 10) — "얼마지?" |
+| 생활백과 | 12편 · 카테고리 7개 (ko) — "어떻게 하지?" |
 | 가이드 | 15편 (ko 15 / en 4 / ja 4) |
 | 정적 페이지 | 소개·문의·개인정보·약관·면책 (3언어) |
-| 생성 페이지 | 122개 (전부 정적 생성 · 공개 라우트 114) |
+| 생성 페이지 | 142개 (전부 정적 생성 · 공개 라우트 134) |
 | 단위 테스트 | 275개 |
-| 내부 링크 | 2,268건 · 깨진 링크 0 |
+| 내부 링크 | 2,836건 · 깨진 링크 0 |
 
 ---
 
@@ -85,12 +86,13 @@ src/
   config/site.ts           # 브랜드·도메인·광고·분석 단일 소스
   content/site-pages/      # 정책 페이지 본문(3언어)
   guides/<slug>/           # 가이드: meta.ts / content.<locale>.ts / index.ts
+  life/<slug>/             # 생활백과: meta.ts / content.<locale>.ts / index.ts
   lib/
     calc/                  # 순수 계산 엔진 (테스트 대상)
     data/                  # 제도 종속 기준값 (전기요금·급여)
     admin/                 # 기준값·시즌 로더 (빌드/ISR 시점 조회)
     automation/            # Search Console · 분석 · AI 보강
-    guides/ i18n/ seo/ format/ math/ supabase/ tools/
+    guides/ life/ i18n/ seo/ format/ math/ supabase/ tools/
   tools/<tool-id>/
     definition.ts          # 가벼운 메타(클라이언트 안전)
     calc.ts calc.test.ts   # 순수 계산 + 단위 테스트
