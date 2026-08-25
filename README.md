@@ -106,6 +106,7 @@ docs/                      # 아키텍처·컨벤션·Phase 로그
 - [`docs/CONVENTIONS.md`](./docs/CONVENTIONS.md) — 코딩 규칙
 - [`docs/PHASE-LOG.md`](./docs/PHASE-LOG.md) — Phase별 완료 점검 기록
 - [`supabase/README.md`](./supabase/README.md) — DB 설정과 관리자 계정 등록 절차
+- [`docs/DEPLOY.md`](./docs/DEPLOY.md) — GitHub → Vercel 배포와 환경변수 설정
 
 ---
 
