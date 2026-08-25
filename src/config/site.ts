@@ -5,7 +5,8 @@
  */
 import type { Locale } from '@/lib/i18n/config';
 
-const rawUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+// 환경변수에 공백/개행이 섞여 들어와도 URL이 오염되지 않게 정리한다.
+const rawUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'http://localhost:3000';
 
 export const siteConfig = {
   /** 로케일별 표시 브랜드명 */

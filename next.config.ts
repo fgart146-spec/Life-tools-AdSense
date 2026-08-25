@@ -9,11 +9,12 @@ import type { NextConfig } from 'next';
  * next.config의 env로 넘겨 서버·클라이언트 번들에 같은 값이 박히게 한다.
  * (서버에서만 읽으면 클라이언트에서 undefined가 되어 하이드레이션이 어긋난다.)
  */
+const explicitUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+
+// 값이 공백뿐이면 미설정으로 취급한다(?? 는 빈 문자열을 걸러내지 못한다).
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'http://localhost:3000');
+  explicitUrl || (vercelUrl ? `https://${vercelUrl}` : 'http://localhost:3000');
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
