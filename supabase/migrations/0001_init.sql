@@ -8,7 +8,8 @@
 --  * 관리자 여부는 admin_profiles 테이블로 판단한다.
 -- =============================================================================
 
-create extension if not exists "uuid-ossp";
+-- uuid-ossp는 새 프로젝트에서 extensions 스키마에 설치돼 search_path에 안 잡힌다.
+-- Postgres 13+ 코어 내장 gen_random_uuid()를 쓰므로 확장이 필요 없다.
 
 -- 관리자 계정 -----------------------------------------------------------------
 create table if not exists public.admin_profiles (
@@ -62,7 +63,7 @@ comment on table public.tool_notes is '도구별 운영 메모. 라우팅에는 
 
 -- 시즌 추천 구성 --------------------------------------------------------------
 create table if not exists public.seasonal_slots (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   month smallint not null check (month between 1 and 12),
   tool_id text not null,
   position smallint not null default 0,
@@ -86,7 +87,7 @@ comment on table public.site_settings is '사이트명·연락처 등 운영 설
 
 -- 검색 데이터 (PHASE 10) -------------------------------------------------------
 create table if not exists public.search_insights (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   query text not null,
   page text,
   impressions integer not null default 0,
@@ -101,7 +102,7 @@ create table if not exists public.search_insights (
 
 -- AI 제안 (PHASE 10) -----------------------------------------------------------
 create table if not exists public.ai_suggestions (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   kind text not null check (kind in ('new_tool', 'improve_tool', 'new_guide', 'seo_fix')),
   title text not null,
   rationale text,
@@ -117,7 +118,7 @@ comment on table public.ai_suggestions is 'AI가 만든 제안. 관리자가 승
 
 -- 변경 이력 -------------------------------------------------------------------
 create table if not exists public.update_log (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   entity text not null,
   entity_id text,
   action text not null,
