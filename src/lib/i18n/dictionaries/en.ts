@@ -171,6 +171,19 @@ export const en: Dictionary = {
       'All results are for guidance only. Real amounts can differ depending on official rules and your own contract.',
     copyright: '© %{year} %{brand}. All rights reserved.',
   },
+  social: {
+    footerHeading: 'Social',
+    ctaTitle: 'Follow for new calculators',
+    ctaDescription: 'See new calculators and everyday tips first on Instagram and Threads.',
+    accountAria: 'View %{brand} on %{platform} (opens in a new tab)',
+    shareHeading: 'Share this calculator',
+    shareDescription: 'Only the link is shared — the numbers you enter stay on your device.',
+    share: 'Share',
+    copyLink: 'Copy link',
+    copied: 'Link copied',
+    copyFailed: 'Could not copy',
+    shareText: '%{title} — try it on %{brand}.',
+  },
   notFound: {
     title: 'Page not found',
     description:

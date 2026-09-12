@@ -50,6 +50,19 @@ export function buildMetadata({
     languages['x-default'] = absoluteUrl(localePath(fallbackLocale, path));
   }
 
+  /*
+    로케일 대표 OG 이미지.
+    app/[locale]/opengraph-image.tsx가 빌드 시점에 PNG를 만들어 두지만,
+    파일 컨벤션은 로케일 루트 페이지에만 자동으로 붙는다. 하위 라우트
+    (계산기·가이드·생활백과)를 SNS에 공유해도 카드 이미지가 나오도록 여기서 명시한다.
+  */
+  const ogImage = {
+    url: absoluteUrl(`${localePath(locale)}/opengraph-image`),
+    width: 1200,
+    height: 630,
+    alt: brand,
+  };
+
   return {
     title: absoluteTitle ? { absolute: `${title} | ${brand}` } : title,
     description,
@@ -61,6 +74,7 @@ export function buildMetadata({
       description,
       url: canonical,
       siteName: brand,
+      images: [ogImage],
       locale: localeMeta[locale].ogLocale,
       alternateLocale: availableLocales
         .filter((item) => item !== locale)
@@ -71,6 +85,7 @@ export function buildMetadata({
       card: 'summary_large_image',
       title: `${title} | ${brand}`,
       description,
+      images: [ogImage.url],
     },
   };
 }

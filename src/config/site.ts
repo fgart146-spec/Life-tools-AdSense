@@ -27,6 +27,14 @@ export const siteConfig = {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',
     naver: process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION ?? '',
   },
+  /**
+   * SNS 계정 주소. 값이 없으면 관련 UI가 전부 숨겨진다.
+   * 컴포넌트에 프로필 주소를 하드코딩하지 않는다 (@/lib/social 에서 검증 후 사용).
+   */
+  social: {
+    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() ?? '',
+    threads: process.env.NEXT_PUBLIC_THREADS_URL?.trim() ?? '',
+  },
   ads: {
     // 게시자 ID는 비밀값이 아니다(모든 AdSense 페이지 소스에 노출된다).
     // 환경변수가 있으면 그쪽이 우선한다 — 프리뷰 배포에서 끄고 싶을 때 빈 값으로 덮어쓴다.

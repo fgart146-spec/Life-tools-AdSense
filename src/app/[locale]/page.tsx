@@ -18,6 +18,9 @@ import { hasLifeContent } from '@/lib/life';
 import { LIFE_BASE_PATH } from '@/lib/life/categories';
 import { listLifeArticles } from '@/lib/life/registry';
 import { seasonalLifeSlugs } from '@/lib/life/seasonal';
+import { SocialLinks } from '@/components/social/SocialLinks';
+import { socialLinks } from '@/lib/social';
+import { brandName } from '@/config/site';
 
 /** 시즌 추천이 달마다 바뀌므로 하루 한 번 재생성한다(요청당 서버 연산 없음). */
 export const revalidate = 86400;
@@ -55,6 +58,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     allTools.some((tool) => tool.id === action.toolId),
   );
   const guides = listGuides(locale, 4);
+  const social = socialLinks();
 
   // '어떻게 하지?' 축. 콘텐츠가 있는 로케일에만 노출한다.
   const month = new Date().getMonth() + 1;
@@ -230,6 +234,32 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             ))}
           </ul>
         </Section>
+
+        {/*
+          SNS 안내는 페이지 맨 아래에 둔다. 계산기 CTA보다 약하게 보이도록
+          섹션 제목(text-xl~2xl) 대신 카드 안의 작은 제목을 쓴다.
+        */}
+        {social.length > 0 && (
+          <Section>
+            <div className="rounded-[var(--radius-card)] border border-ink-200 bg-white px-5 py-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+              <div className="min-w-0">
+                <h2 className="text-base font-bold text-ink-900">{dict.social.ctaTitle}</h2>
+                <p className="mt-1 text-sm leading-relaxed text-ink-600">
+                  {dict.social.ctaDescription}
+                </p>
+              </div>
+              <div className="mt-3 shrink-0 sm:mt-0">
+                <SocialLinks
+                  links={social}
+                  variant="pill"
+                  ariaTemplate={dict.social.accountAria}
+                  brand={brandName(locale)}
+                  placement="home_cta"
+                />
+              </div>
+            </div>
+          </Section>
+        )}
       </Container>
     </>
   );

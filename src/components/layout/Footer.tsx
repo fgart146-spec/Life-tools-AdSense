@@ -9,9 +9,12 @@ import { hasLifeContent } from '@/lib/life';
 import { LIFE_BASE_PATH } from '@/lib/life/categories';
 import { staticPageLabel, staticPages } from '@/lib/nav';
 import { Container } from '@/components/ui/Container';
+import { SocialLinks } from '@/components/social/SocialLinks';
+import { socialLinks } from '@/lib/social';
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const year = new Date().getFullYear();
+  const social = socialLinks();
 
   return (
     <footer className="mt-20 border-t border-ink-200 bg-white">
@@ -21,6 +24,22 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <p className="wordmark text-xl text-ink-900">eolmaji</p>
             <p className="mt-0.5 text-sm font-medium text-ink-600">{brandName(locale)}</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-500">{dict.footer.tagline}</p>
+
+            {social.length > 0 && (
+              <div className="mt-4">
+                <h2 className="text-xs font-semibold uppercase tracking-wide text-ink-500">
+                  {dict.social.footerHeading}
+                </h2>
+                <div className="mt-2">
+                  <SocialLinks
+                    links={social}
+                    ariaTemplate={dict.social.accountAria}
+                    brand={brandName(locale)}
+                    placement="footer"
+                  />
+                </div>
+              </div>
+            )}
           </div>
 
           <div>

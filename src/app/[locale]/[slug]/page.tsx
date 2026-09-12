@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { isLocale, type Locale } from '@/lib/i18n/config';
-import { getDictionary } from '@/lib/i18n/dictionary';
+import { isLocale, localePath, type Locale } from '@/lib/i18n/config';
+import { getDictionary, interpolate } from '@/lib/i18n/dictionary';
 import { buildMetadata } from '@/lib/seo/metadata';
 import {
   breadcrumbJsonLd,
@@ -20,6 +20,8 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { ToolCardGrid } from '@/components/tool/ToolCard';
 import { LifeCardGrid } from '@/components/life/LifeCard';
 import { lifeArticlesForTool } from '@/lib/life/registry';
+import { ShareButtons } from '@/components/social/ShareButtons';
+import { absoluteUrl, brandName } from '@/config/site';
 import {
   ExampleSection,
   FaqSection,
@@ -145,6 +147,30 @@ export default async function ToolPage({ params }: PageParams) {
 
         {/* 계산기: 이 페이지에서 가장 먼저 눈에 들어와야 한다. */}
         <div className="mt-6">{toolModule.render(locale, { basis })}</div>
+
+        {/*
+          결과 공유. 공유되는 건 canonical 주소뿐이며, 사용자가 입력한 값은
+          URL에도 공유 문구에도 들어가지 않는다.
+        */}
+        <div className="mx-auto max-w-3xl">
+          <ShareButtons
+            url={absoluteUrl(localePath(locale, `/${slug}`))}
+            title={content.title}
+            text={interpolate(dict.social.shareText, {
+              title: content.title,
+              brand: brandName(locale),
+            })}
+            labels={{
+              heading: dict.social.shareHeading,
+              description: dict.social.shareDescription,
+              share: dict.social.share,
+              copyLink: dict.social.copyLink,
+              copied: dict.social.copied,
+              copyFailed: dict.social.copyFailed,
+            }}
+            itemId={definition.id}
+          />
+        </div>
 
         {/* 광고는 계산기/결과 다음에만 배치한다 (계산 흐름을 방해하지 않는다) */}
         <AdSlot name="toolTop" />

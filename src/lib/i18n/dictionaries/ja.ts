@@ -170,6 +170,19 @@ export const ja: Dictionary = {
       '計算結果はすべて目安です。実際の金額は公式基準や契約内容により異なる場合があります。',
     copyright: '© %{year} %{brand}. All rights reserved.',
   },
+  social: {
+    footerHeading: 'SNS',
+    ctaTitle: '新しい計算ツールのお知らせ',
+    ctaDescription: '新着の計算ツールと暮らしの情報をInstagram・Threadsでいち早くお届けします。',
+    accountAria: '%{platform}で%{brand}を見る（新しいタブ）',
+    shareHeading: 'この計算ツールを共有',
+    shareDescription: '入力した数値は共有されず、ツールのリンクだけが送られます。',
+    share: '共有する',
+    copyLink: 'リンクをコピー',
+    copied: 'リンクをコピーしました',
+    copyFailed: 'コピーできませんでした',
+    shareText: '%{title} — %{brand}で計算できます。',
+  },
   notFound: {
     title: 'ページが見つかりません',
     description:

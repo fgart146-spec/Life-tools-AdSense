@@ -171,6 +171,20 @@ export const ko: Dictionary = {
       '모든 계산 결과는 참고용이며, 실제 금액은 공식 기관·계약 조건에 따라 달라질 수 있습니다.',
     copyright: '© %{year} %{brand}. All rights reserved.',
   },
+  social: {
+    footerHeading: 'SNS',
+    ctaTitle: '새 계산기 소식 받아보기',
+    ctaDescription:
+      '새로 올라온 계산기와 생활 정보를 인스타그램·스레드에서 먼저 확인할 수 있습니다.',
+    accountAria: '%{platform}에서 %{brand} 보기 (새 탭)',
+    shareHeading: '이 계산기 공유하기',
+    shareDescription: '입력한 값은 공유되지 않고, 계산기 주소만 전달됩니다.',
+    share: '공유하기',
+    copyLink: '링크 복사',
+    copied: '링크를 복사했습니다',
+    copyFailed: '복사하지 못했습니다',
+    shareText: '%{title} — %{brand}에서 바로 계산해 보세요.',
+  },
   notFound: {
     title: '페이지를 찾을 수 없습니다',
     description:

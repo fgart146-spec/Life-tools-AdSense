@@ -156,6 +156,25 @@ export interface Dictionary {
     disclaimerShort: string;
     copyright: string;
   };
+  /** SNS 연동 (계정 링크 · 결과 공유) */
+  social: {
+    /** Footer 섹션 제목 */
+    footerHeading: string;
+    /** 메인 하단 CTA */
+    ctaTitle: string;
+    ctaDescription: string;
+    /** 계정 링크 설명. %{platform}, %{brand} */
+    accountAria: string;
+    /** 공유 영역 */
+    shareHeading: string;
+    shareDescription: string;
+    share: string;
+    copyLink: string;
+    copied: string;
+    copyFailed: string;
+    /** 공유 문구. %{title}, %{brand} — 계산값은 넣지 않는다. */
+    shareText: string;
+  };
   notFound: {
     title: string;
     description: string;
