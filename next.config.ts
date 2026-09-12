@@ -32,7 +32,9 @@ const nextConfig: NextConfig = {
     return [
       // 루트 진입은 기본 로케일로 보낸다.
       // 미들웨어를 쓰지 않기 위해 라우팅 레이어 리다이렉트를 사용한다(함수 실행 비용 0).
-      { source: '/', destination: '/ko', permanent: false },
+      // 로케일 감지가 없어 / 는 항상 /ko 다. 영구(308)여야 검색엔진이 신호를 /ko 로 통합한다.
+      // (브라우저가 308을 영구 캐시하므로, 훗날 / 에 로케일 감지를 넣으려면 이 점을 고려한다.)
+      { source: '/', destination: '/ko', permanent: true },
       // slug 변경 시 여기에 301을 누적한다.
     ];
   },
