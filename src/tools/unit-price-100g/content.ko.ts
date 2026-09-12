@@ -3,16 +3,20 @@ import type { UnitPriceToolCopy } from '@/lib/tools/shared/unit-price-copy';
 
 export const contentKo: ToolContent<UnitPriceToolCopy> = {
   title: '100g당 가격 계산기',
-  seoTitle: '100g당 가격 계산기 — 그램당 단가 바로 계산',
+  seoTitle: '100g당 가격 계산기 — 가격·중량만 넣으면 100g당·1kg당 단가 즉시',
   seoDescription:
-    '가격과 중량만 넣으면 100g당 가격과 1kg당 가격이 바로 나옵니다. 용량이 다른 상품을 같은 기준으로 비교할 때 쓰세요.',
+    '가격과 중량만 넣으면 100g당·1kg당·1개당 단가가 바로 나옵니다. 묶음·1+1은 수량만 넣으면 실제 단가로 환산됩니다. 삼겹살 600g 16,800원과 1.2kg 30,000원 중 어느 쪽이 싼지 3초면 압니다. 회원가입 없음.',
   lead: '가격과 중량을 넣으면 100g당 가격을 바로 계산합니다. 용량이 제각각인 상품도 같은 기준으로 놓고 비교할 수 있습니다.',
   summary: '가격과 중량으로 100g당·1kg당 단가를 계산합니다.',
   keywords: {
     primaryKeyword: '100g당 가격 계산기',
     secondaryKeywords: [
+      '100g당 가격 계산',
+      '100g 당 가격 계산기',
       '100g 가격 계산',
       '그램당 가격',
+      '그람당 가격',
+      'g당 가격 계산기',
       '단가 계산',
       '용량 가격 비교',
       '고기 100g 가격',
@@ -60,6 +64,11 @@ export const contentKo: ToolContent<UnitPriceToolCopy> = {
     '배송비가 붙는 온라인 구매라면 배송비까지 더한 금액으로 계산해야 실제 단가가 나옵니다.',
   ],
   faq: [
+    {
+      question: '100g당 가격은 손으로 어떻게 계산하나요?',
+      answer:
+        '가격을 중량(g)으로 나눈 뒤 100을 곱합니다. 600g에 16,800원이면 16,800 ÷ 600 × 100 = 2,800원이 100g당 가격입니다. kg 단위 상품은 먼저 1,000을 곱해 g으로 바꾸고, 묶음 상품은 총 중량으로 나눕니다. 위 계산기에 그대로 넣으면 같은 결과가 바로 나옵니다.',
+    },
     {
       question: '100g당 가격은 왜 비교 기준으로 쓰나요?',
       answer:

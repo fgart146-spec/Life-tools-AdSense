@@ -6,7 +6,7 @@ export const meta: LifeArticleMeta = {
   status: 'published',
   locales: ['ko', 'en', 'ja'],
   publishedAt: '2026-08-25',
-  updatedAt: '2026-08-25',
+  updatedAt: '2026-09-12',
   weight: 68,
   relatedArticles: ['coffee-stain', 'food-stain-basics', 'oil-stain-clothes'],
   relatedTools: [],

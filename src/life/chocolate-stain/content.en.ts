@@ -1,12 +1,16 @@
 import type { LifeContent } from '@/lib/life/types';
 
 export const content: LifeContent = {
-  title: 'Chocolate on Fabric: Harden It, Scrape It, Then Flush Cold',
-  seoTitle: 'How to Get Chocolate Out of Clothes Without Setting It',
+  title: 'How to Get Chocolate Out of Clothes, Sheets and Fabric',
+  seoTitle: 'How to Get Chocolate Out of Clothes, Sheets and Fabric (Fresh or Dried)',
   seoDescription:
-    'Melted chocolate spreads when you wipe it. Chill it solid, scrape the bulk away, flush cold water from the back, then use dish soap on the cocoa butter. Hot water sets the milk protein permanently.',
+    'Chill the chocolate solid, scrape it off, flush cold water from the back, then dish soap for the cocoa butter and an enzyme soak for the milk protein. Works on clothes, bed sheets, white fabric, upholstery and dried stains — and why hot water first ruins it.',
   primaryKeyword: 'how to get chocolate out of clothes',
   secondaryKeywords: [
+    'how to get chocolate out of sheets',
+    'how to remove chocolate from fabric',
+    'how to remove chocolate from clothes',
+    'chocolate stain on white',
     'melted chocolate on clothes',
     'chocolate stain removal',
     'chocolate stain on shirt',
@@ -77,6 +81,21 @@ export const content: LifeContent = {
   ],
   situationTips: [
     {
+      title: 'Chocolate on bed sheets and duvet covers',
+      description:
+        'Sheets are usually cotton and easy to treat, but the stain is often found hours later, dried and spread by body heat. Scrape off anything raised, hold the spot under a cold tap from the back, work in dish soap, then wash the whole sheet on a cool cycle with an enzyme detergent. Check it before the dryer — a set chocolate mark on bedding is almost always one that was tumble-dried too early.',
+    },
+    {
+      title: 'Chocolate stain on white clothes',
+      description:
+        'On white cotton or linen, follow the normal steps, then soak in oxygen bleach dissolved in warm water for one to two hours to clear the brown tannin shadow. Skip chlorine bleach: it does not touch the fat and can leave a yellow ring. White wool or silk gets a wool-safe detergent, and a professional cleaner if the shadow remains.',
+    },
+    {
+      title: 'Chocolate on a sofa, car seat or carpet',
+      description:
+        'You cannot flush fabric that stays put, so work from the outside in with a damp cloth instead. Chill it with ice in a bag, scrape, then dab — never rub — with cold water and a drop of dish soap, blotting with a dry towel between passes. Finish with a clean damp cloth to lift the soap and let it air dry. Test any cleaner on a hidden seam first.',
+    },
+    {
       title: 'Chocolate that dried days ago',
       description:
         'Rehydrate before treating. Lay a cold wet cloth over the mark for 20 to 30 minutes so the hardened fat and sugar soften, then scrape gently and proceed as normal. Dried chocolate often comes out, but plan for two rounds.',
@@ -107,6 +126,11 @@ export const content: LifeContent = {
   ],
   faq: [
     {
+      question: 'How do you get dried chocolate out of clothes?',
+      answer:
+        'Rehydrate it first. Lay a cold, wet cloth over the mark for 20 to 30 minutes so the hardened cocoa butter and sugar soften, scrape gently, then flush cold from the back and use dish soap followed by an enzyme soak. Dried chocolate usually comes out, but plan for two rounds and keep it away from heat until it is gone.',
+    },
+    {
       question: 'Can I ever use hot water on chocolate?',
       answer:
         'Only after the visible stain is gone, in a final wash on a fabric that tolerates it. Hot water at the start is the classic mistake — it coagulates the milk protein around the cocoa pigment and glues the color in place.',
@@ -131,6 +155,11 @@ export const content: LifeContent = {
     { label: 'Follow the care label for maximum wash temperature and the dosing instructions on your detergent and oxygen bleach products.' },
   ],
   searchTerms: [
+    'chocolate on sheets',
+    'chocolate on couch',
+    'chocolate stain white shirt',
+    'get chocolate out of fabric',
+    'chocolate stain removal clothes',
     'chocolate melted on shirt',
     'chocolate on white shirt',
     'cocoa stain fabric',

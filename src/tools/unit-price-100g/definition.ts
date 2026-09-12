@@ -9,6 +9,6 @@ export const definition: ToolDefinition = {
   status: 'published',
   locales: ['ko', 'en', 'ja'],
   related: ['compare-price', 'unit-price-ml', 'unit-price-each', 'bulk-vs-small'],
-  updatedAt: '2026-08-25',
+  updatedAt: '2026-09-12',
   weight: 90,
 };

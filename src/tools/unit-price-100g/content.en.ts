@@ -3,14 +3,17 @@ import type { UnitPriceToolCopy } from '@/lib/tools/shared/unit-price-copy';
 
 export const contentEn: ToolContent<UnitPriceToolCopy> = {
   title: 'Price per 100 g calculator',
-  seoTitle: 'Price per 100 g calculator — compare packs of any size',
+  seoTitle: 'Price per 100 g Calculator — Price per 100 Grams, per kg and per Pack',
   seoDescription:
-    'Enter a price and a weight to get the price per 100 g and per kilogram, so packs of different sizes can be compared on the same basis.',
+    'Type the price and pack weight to get the price per 100 grams, per kilogram and per pack instantly — multipacks and buy-one-get-one included. Free, no sign-up, and nothing leaves your browser.',
   lead: 'Enter the price and the weight, and you get the price per 100 g and per kilogram — the fastest way to compare packs that come in different sizes.',
   summary: 'Turn any price and pack weight into a price per 100 g and per kg.',
   keywords: {
     primaryKeyword: 'price per 100g calculator',
     secondaryKeywords: [
+      'price per 100 grams',
+      'price per 100 gram calculator',
+      'how to work out price per 100g',
       'cost per 100 grams',
       'price per gram',
       'unit price calculator',
@@ -59,6 +62,11 @@ export const contentEn: ToolContent<UnitPriceToolCopy> = {
     'For online orders, add delivery to the price before calculating, otherwise the unit price is understated.',
   ],
   faq: [
+    {
+      question: 'How do you work out the price per 100 g by hand?',
+      answer:
+        'Divide the price by the weight in grams, then multiply by 100. A 400 g jar at $18.00 is 18 ÷ 400 × 100 = $4.50 per 100 g. For kilograms, multiply by 1,000 first to get grams; for multipacks, divide by the total weight of all the packs together.',
+    },
     {
       question: 'Why compare per 100 g rather than per pack?',
       answer:

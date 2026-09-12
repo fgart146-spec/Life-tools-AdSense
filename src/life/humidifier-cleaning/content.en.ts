@@ -1,15 +1,17 @@
 import type { LifeContent } from '@/lib/life/types';
 
 export const content: LifeContent = {
-  title: 'Humidifier Cleaning: Whatever Is in the Tank Ends Up in the Air',
-  seoTitle: 'How to Clean a Humidifier — Daily Water, Weekly Descale',
+  title: 'How to Descale and Clean a Humidifier (Citric Acid Method)',
+  seoTitle: 'How to Descale a Humidifier With Citric Acid — Ratio, Soak Time, Rinse',
   seoDescription:
-    'A humidifier sprays whatever is growing in its tank into the room you breathe in. Change the water daily, dry the tank, and descale weekly with citric acid. Covers ultrasonic, evaporative, steam types and white dust.',
-  primaryKeyword: 'how to clean a humidifier',
+    'Descale a humidifier with 1 tablespoon of citric acid per quart of warm water: fill the tank and base, soak 30–60 minutes, scrub the base corners, rinse until odorless. Plus the daily rinse routine, the white-dust fix, and what never to mix.',
+  primaryKeyword: 'how to descale humidifier',
   secondaryKeywords: [
+    'how to clean a humidifier',
+    'how to clean humidifier with citric acid',
+    'citric acid humidifier ratio',
     'humidifier white dust',
     'humidifier smells bad',
-    'descale humidifier citric acid',
     'ultrasonic humidifier cleaning',
   ],
   searchIntent:
@@ -113,6 +115,16 @@ export const content: LifeContent = {
   ],
   faq: [
     {
+      question: 'What is the citric acid ratio for descaling a humidifier?',
+      answer:
+        'About 1 tablespoon (roughly 15 g) of citric acid per quart or liter of warm water. Heavy scale on a steam unit can take 2 tablespoons per liter. Dissolve it completely before pouring it in, and do not use boiling water — it can warp the tank and cloud the plastic.',
+    },
+    {
+      question: 'Citric acid or vinegar — which is better for descaling a humidifier?',
+      answer:
+        'Both are acids that dissolve calcium scale. Citric acid is odorless once rinsed and a little stronger on thick deposits, so it is the better weekly choice. White vinegar works for light scale: use it undiluted or half-and-half with water, soak the same 30 to 60 minutes, and expect to rinse longer to clear the smell. Never use either in the same session as bleach.',
+    },
+    {
       question: 'How often does a humidifier really need cleaning?',
       answer:
         'Rinse and dry daily, descale weekly while in use. That sounds like a lot, but the daily part takes under a minute and it is what prevents the weekly job from becoming a scrubbing session. Skipping the daily rinse is why units start smelling within a week.',
@@ -142,6 +154,10 @@ export const content: LifeContent = {
     { label: 'Follow your humidifier manufacturer manual for disassembly limits, approved cleaners and filter replacement intervals.' },
   ],
   searchTerms: [
+    'descale humidifier',
+    'humidifier descaler',
+    'humidifier citric acid',
+    'how to descale a humidifier',
     'humidifier mold',
     'clean humidifier tank',
     'humidifier maintenance',

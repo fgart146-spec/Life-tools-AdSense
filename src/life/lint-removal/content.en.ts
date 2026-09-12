@@ -1,12 +1,15 @@
 import type { LifeContent } from '@/lib/life/types';
 
 export const content: LifeContent = {
-  title: 'Removing Pills From Clothes Without Damaging the Fabric',
-  seoTitle: 'How to Remove Pilling From Sweaters and Coats Safely',
+  title: 'How to Remove Pilling From Clothes and Sweaters Without Thinning the Fabric',
+  seoTitle: 'How to Remove Pilling From Clothes, Wool Sweaters and Coats',
   seoDescription:
-    'Pills are fibers still attached to the garment, so pulling them off thins the fabric. Lay the item flat, use a fabric shaver with almost no pressure, and change the washing habits that cause pilling.',
+    'Pilling is fiber still anchored in the garment, so pulling it thins the knit. Lay the item flat, run a fabric shaver at the widest guard with no pressure — or a pill comb on wool and cashmere — then change the wash habits that cause it. Step-by-step for sweaters, fleece, coats and sheets.',
   primaryKeyword: 'how to remove pilling from clothes',
   secondaryKeywords: [
+    'how to remove pilling from wool sweater',
+    'pilling on sweaters',
+    'depilling',
     'remove pills from sweater',
     'fabric shaver how to use',
     'why do clothes pill',
@@ -77,9 +80,14 @@ export const content: LifeContent = {
   ],
   situationTips: [
     {
-      title: 'Wool and cashmere knits',
+      title: 'How to remove pilling from a wool sweater',
       description:
-        'Wool pills where it rubs — underarms, sides, and where a bag strap sits. On fine gauge cashmere, a pill comb drawn gently in one direction is safer than a powered shaver. A hand-knit or very loose gauge piece often looks better with light combing than with full removal.',
+        'Wool pills where it rubs — underarms, sides, and where a bag strap sits. Lay the sweater flat and, on a firm merino or lambswool knit, use the shaver at the widest guard in light passes. On fine gauge cashmere, a pill comb drawn gently in one direction is safer than a powered shaver. A hand-knit or very loose gauge piece often looks better with light combing than full removal, and every wool sweater pills less when it is washed inside out in a mesh bag and dried flat.',
+    },
+    {
+      title: 'Pilling on sweaters: does it mean poor quality?',
+      description:
+        'Not necessarily. Pilling depends on yarn construction more than price. Short, loosely spun fibers pill within a few wears, while a tightly twisted long-staple yarn may never pill. Soft, fluffy sweaters are soft precisely because the fibers are loose, so some pilling is the trade-off for that hand feel. Heavy pilling after one or two wears on a smooth, dense knit is the case that points to a weak yarn.',
     },
     {
       title: 'Fleece and synthetic pullovers',
@@ -113,6 +121,11 @@ export const content: LifeContent = {
   ],
   faq: [
     {
+      question: 'What is depilling, and what is the best depilling tool?',
+      answer:
+        'Depilling simply means removing the pills. For most sweaters and coats the best tool is an electric fabric shaver with an adjustable guard, because it cuts the pill at the surface without pulling. For cashmere, mohair and loose knits, a pill comb or a sweater stone is safer. Lint rollers only lift loose fluff and do nothing for anchored pills.',
+    },
+    {
       question: 'Is a fabric shaver safe on cashmere?',
       answer:
         'On a firm, fine gauge cashmere knit, yes, at the widest guard setting with no pressure. On a loose gauge or hand-knit piece, a pill comb is the safer choice because the stitches are large enough for the fabric to lift into the blade. Test on a hem either way.',
@@ -142,6 +155,12 @@ export const content: LifeContent = {
     { label: 'Check the garment care label and the instruction manual for your fabric shaver before use.' },
   ],
   searchTerms: [
+    'depilling',
+    'piling clothes',
+    'pilling clothes',
+    'fabric pills',
+    'de-pill sweater',
+    'how to get rid of pills on clothes',
     'fuzz balls on sweater',
     'clothes covered in bobbles',
     'lint balls on jumper',
