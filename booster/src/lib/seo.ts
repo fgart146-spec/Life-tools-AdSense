@@ -35,7 +35,7 @@ export function buildMetadata({
       locale: 'ko_KR',
       images: [
         {
-          url: absoluteUrl('/opengraph-image'),
+          url: absoluteUrl('/opengraph-image/'),
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} — ${siteConfig.tagline}`,
@@ -46,7 +46,7 @@ export function buildMetadata({
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [absoluteUrl('/opengraph-image')],
+      images: [absoluteUrl('/opengraph-image/')],
     },
   };
 }
