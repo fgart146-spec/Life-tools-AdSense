@@ -51,7 +51,12 @@ npm run verify       # typecheck → preview 빌드+검사 → production 빌드
 1. Vercel → **Add New → Project** → 같은 GitHub 저장소(`fgart146-spec/Life-tools-AdSense`) 선택
 2. **Root Directory** 를 `booster` 로 지정 (Edit 버튼) — 이게 핵심입니다
 3. Framework Preset: Next.js (자동 감지), Build Command: `next build`(기본), Output: 기본
-4. 환경변수: 필수 없음. 선택 `NEXT_PUBLIC_GA_ID`
+4. 환경변수: **필수 없음.** 가져오기 화면에 `Environment Variables — 20 Detected` 가 뜨는데, 이건 루트
+   `.env.example` 에서 읽은 **생활계산소의 키 목록**이다(Supabase·GSC·CRON_SECRET·ANTHROPIC·AdSense·GA…).
+   이웃부스터는 하나도 쓰지 않으므로 **전부 삭제**하고 만든다. 이미 만들어졌다면 `booster/` 에서
+   `npx vercel link` 후 `npx vercel env rm <이름> production --yes` 로 지운다(값을 볼 필요 없음).
+   특히 `NEXT_PUBLIC_GA_ID` 가 들어가면 이웃부스터 방문이 생활계산소 GA 로 섞여 잡힌다. 선택 항목은
+   이 사이트 전용 `NEXT_PUBLIC_GA_ID` 뿐이다.
 5. Deploy → `*.vercel.app` 미리보기 주소로 먼저 확인 (이때는 noindex 상태가 정상)
 6. 프로젝트 **Settings → Domains** 에 `booster.eolmaji.com` 추가 → Vercel 이 **필요한 DNS 레코드 값을 화면에 표시**합니다
 
