@@ -44,3 +44,9 @@ yarn-error.log*
 # Supabase CLI 로컬 상태 (링크 정보 — 저장소에 넣지 않는다)
 supabase/.temp/
 supabase/.branches/
+
+# 이웃부스터 독립 앱 (booster/) — 별도 설치·빌드 산출물
+booster/node_modules/
+booster/.next/
+booster/out/
+booster/.vercel

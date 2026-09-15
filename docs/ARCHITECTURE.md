@@ -123,3 +123,14 @@ ToolDefinition {
 
 - `/api/cron/search-insights` (주 1회, `vercel.json`): Search Console → 지표 저장 → 규칙 기반 제안 생성 → (선택) Claude API로 설명 보강 → `ai_suggestions`에 `pending` 저장.
 - 승인 흐름은 코드로 강제된다: **AI 초안 → 관리자 승인 → 코드 작업 → 배포**. 자동 공개 경로는 존재하지 않는다.
+
+## 이웃부스터 홈페이지 — `booster/` (별도 앱, booster.eolmaji.com)
+
+- `booster/` 는 자체 `package.json`·`next.config.ts`·`tsconfig.json`·Tailwind 설정을 가진 **독립 Next.js 앱**이다.
+  루트 앱(생활계산소)과 코드·브랜드·설정·비밀키·분석 ID 를 공유하지 않는다. 워크스페이스나 모노레포 도구를 쓰지 않는다.
+- 배포는 **같은 GitHub 저장소를 연결한 별도 Vercel 프로젝트**(Root Directory = `booster`)가 담당한다.
+  루트 프로젝트(eolmaji.com)의 빌드·도메인·robots·sitemap 은 변경하지 않는다.
+- 루트 도구가 `booster/` 를 집어삼키지 않도록 `tsconfig.json` exclude, `eslint.config.mjs` ignores, `.gitignore` 에 제외 항목을 두었다.
+  루트 `scripts/check-static-site.mjs` 는 루트 `.next` 만 읽으므로 영향이 없다.
+- 호스트 분기·미들웨어·클라이언트 측 주소 검사로 화면을 바꾸는 방식은 쓰지 않는다.
+- 상세 운영·배포 절차: `booster/README.md`.

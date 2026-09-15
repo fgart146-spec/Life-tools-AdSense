@@ -15,7 +15,8 @@ const eslintConfig = [
     },
   },
   {
-    ignores: ['.next/**', 'node_modules/**', 'out/**', 'next-env.d.ts'],
+    // booster/ 는 자체 설정을 가진 별도 앱이다 (booster.eolmaji.com).
+    ignores: ['.next/**', 'node_modules/**', 'out/**', 'next-env.d.ts', 'booster/**'],
   },
 ];
 
