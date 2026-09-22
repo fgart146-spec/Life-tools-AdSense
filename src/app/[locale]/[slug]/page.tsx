@@ -20,6 +20,12 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { ToolCardGrid } from '@/components/tool/ToolCard';
 import { LifeCardGrid } from '@/components/life/LifeCard';
 import { lifeArticlesForTool } from '@/lib/life/registry';
+import { referenceTableFor } from '@/lib/tools/reference-tables';
+import {
+  ElectricityReferenceTable,
+  SalaryReferenceTable,
+  WageReferenceTable,
+} from '@/components/tool/ReferenceTable';
 import { ShareButtons } from '@/components/social/ShareButtons';
 import { absoluteUrl, brandName } from '@/config/site';
 import {
@@ -88,6 +94,7 @@ export default async function ToolPage({ params }: PageParams) {
   const relatedLife = lifeArticlesForTool(definition.id, locale, 3);
   // 관리자 기준값은 정적 생성 시점에만 조회한다(사용자 요청마다 조회하지 않는다).
   const basis = await getEffectiveBasis();
+  const referenceTable = referenceTableFor(definition.id);
 
   const breadcrumbItems = [
     { name: dict.common.home, path: '/' },
@@ -183,6 +190,14 @@ export default async function ToolPage({ params }: PageParams) {
           <HowItWorksSection title={dict.tool.sectionHowItWorks} items={content.howItWorks} />
           <FormulaSection title={dict.tool.sectionFormula} lines={content.formula} />
           <ExampleSection title={dict.tool.sectionExample} example={content.example} />
+
+          {/*
+            기준 조견표. 계산기와 같은 함수로 만든 표라 숫자가 어긋나지 않는다.
+            한국 제도 종속 계산기(ko)에만 붙는다.
+          */}
+          {referenceTable === 'electricity' && <ElectricityReferenceTable locale={locale} />}
+          {referenceTable === 'salary' && <SalaryReferenceTable locale={locale} />}
+          {referenceTable === 'wage' && <WageReferenceTable locale={locale} />}
 
           <AdSlot name="toolMiddle" />
 

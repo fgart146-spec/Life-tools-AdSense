@@ -100,6 +100,15 @@ export default async function LifeCategoryPage({ params }: PageParams) {
           </p>
         </header>
 
+        {/* 목록만 있는 허브는 얇은 페이지로 취급된다. 판단 기준을 본문으로 둔다. */}
+        {category.intro[locale].length > 0 && (
+          <div className="mt-5 max-w-2xl space-y-3 text-[15px] leading-relaxed text-ink-700">
+            {category.intro[locale].map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        )}
+
         <section className="mt-8">
           <h2 className="sr-only">{dict.life.articlesInCategory}</h2>
           <LifeCardGrid locale={locale} articles={articles} columns={3} showCategory={false} />

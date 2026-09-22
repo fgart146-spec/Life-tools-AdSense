@@ -8,6 +8,6 @@ export const definition: ToolDefinition = {
   status: 'published',
   locales: ['ko'],
   related: ['monthly-salary', 'hourly-wage', 'severance-pay', 'living-cost'],
-  updatedAt: '2026-08-25',
+  updatedAt: '2026-09-23',
   weight: 99,
 };
