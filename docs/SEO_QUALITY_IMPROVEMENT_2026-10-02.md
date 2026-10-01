@@ -92,17 +92,17 @@ P0에서 먼저 검토할 순서는 ① 법정 요율·전기요금 계산기 �
 | 검사 | 실행 내용과 한계 |
 |---|---|
 | `check:site` | 기존 깨진 링크·H1·기본 메타·비밀키 검사에 공개 페이지의 내부 유입 링크, self canonical, noindex, hreflang 상호 연결, 사이트맵 경로 일치를 추가. 의미상 링크가 좋은지는 판단 못함 |
-| `check:urls` | 검토 시점 288개 경로와 빌드 사이트맵을 비교. **288 +3 −0 =291**; 10개 이상 증가·감소하면 경고. 기준은 현재 배포 상태라는 보장이 아니라 이번 변경 직전 스냅샷이며, 실제 배포 확인 후에만 갱신 |
+| `check:urls` | 배포 전 기준 288개와 비교해 **288 +3 −0 =291**을 확인했다. 운영 배포 후 실제 사이트맵 291개를 확인하고 기준을 갱신했다. 이후 10개 이상 증가·감소하면 경고 |
 | `check:sources` | 숫자·단위가 있고 원문 링크가 없는 파일을 검토 후보로 기록; 직접 입력된 비 HTTPS URL은 실패. 문장별 출처 적합성과 외부 링크의 생존은 사람 검토 필요 |
 | `check:topic-links` | 생활백과→계산기 추천 선언과 언어별 실제 표시 여부를 JSON으로 보고. 주제 관련성은 편집 검토 필요 |
 
 같은 H2 배열의 반복률이나 본문 길이는 기계적으로 셀 수 있으나, 그것만으로 품질이 낮다고 판정할 수 없다. 초기 감사의 150편 공통 배열은 알려진 검토 대상으로 유지하고, 앞으로는 유형별 본문 심사와 실제 원문 대조를 통해 판단한다.
 
-Google 재크롤링 후에는 **원본 Search Console에서** 기존 114개와 신규 174개를 구분하여 일별 색인 상태·노출·평균 순위·질의를 본다. 새 편집 원칙 3개 URL의 크롤·색인 여부도 확인하되 그 자체가 회복 지표는 아니다. 특히 기존 계산기에서 같은 국가·기기·질의의 노출이 돌아오는지, 수정한 2개 생활 글과 보관 허브가 재크롤되었는지, “크롤링됨·미색인” 115개 내역이 어떤 URL에서 변했는지 확인한다. 검색 노출 변화는 배포 직후가 아니라 Google의 재처리 뒤 나타날 수 있고, 이번 수정과 무관한 수요·경쟁 변화도 함께 대조해야 한다.
+Google 재크롤링 후에는 **원본 Search Console에서** 기존 114개와 신규 174개를 구분하여 일별 색인 상태·노출·평균 순위·질의를 본다. 새 편집 원칙 3개 URL의 크롤·색인 여부도 확인하되 그 자체가 회복 지표는 아니다. 특히 기존 계산기에서 같은 국가·기기·질의의 노출이 돌아오는지, 수정한 5개 생활 글과 1개 계산기, 보관 허브가 재크롤되었는지, “크롤링됨·미색인” 115개 내역이 어떤 URL에서 변했는지 확인한다. 검색 노출 변화는 배포 직후가 아니라 Google의 재처리 뒤 나타날 수 있고, 이번 수정과 무관한 수요·경쟁 변화도 함께 대조해야 한다.
 
 ## 8. 추가 실행: 우선 페이지 4개
 
-우선 목록의 다음 4개 URL을 더 수정했다. 이 시점에서는 모두 배포 전 로컬 변경이며 검색 회복을 보장하지 않는다.
+우선 목록의 다음 4개 URL을 더 수정했다. 검색 회복을 보장하지 않는다.
 
 | URL | 적용한 본문 개선 | 원문·적용 범위 |
 |---|---|---|
@@ -114,3 +114,9 @@ Google 재크롤링 후에는 **원본 Search Console에서** 기존 114개와 �
 생활백과는 일부 언어만 수정했으므로 변경된 언어에만 새 수정일을 표시한다. 상세 화면, Article 메타, 사이트맵이 같은 날짜를 사용한다. 기존 2편의 영어·일본어 단독 수정일도 함께 바로잡았다. 자동 출처 후보는 156개에서 153개로 줄었지만 이 수치만으로 각 문장의 근거가 충분하다고 판단하지 않는다.
 
 추가 원문: [CDC 세탁 안내](https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html), [ACI 수건 관리](https://www.cleaninginstitute.org/cleaning-tips/clothes/laundry-basics/do-i-need-wash), [象印 CK-DB 세척](https://www.zojirushi.co.jp/kakushiaji/article/000019/), [EPA 가습기 관리](https://www.epa.gov/indoor-air-quality-iaq/use-and-care-home-humidifiers), [한국에너지공단 효율관리](https://eep.energy.or.kr/business_introduction/effi_standard.aspx).
+
+## 9. 운영 배포 확인
+
+2026-10-02에 커밋 `0baea62`를 `main`에 올렸고 Vercel의 `life-tools-ad-sense` 운영 배포가 `Ready`인 것을 확인했다. `https://eolmaji.com/sitemap.xml`에는 291개 URL이 있으며, 신규 편집 원칙 3개가 포함된다. `/ko/editorial-policy`, `/ko/aircon-electricity`, `/ko/life/laundry/towel-smell`, `/ja/life/kitchen/kettle-limescale`, `/en/life/cleaning/humidifier-cleaning`은 운영 도메인에서 HTTP 200, self canonical, 해당 공식 출처 링크를 확인했다. 수정한 로케일만 사이트맵 수정일이 2026-10-02이고 나머지 로케일의 기존 날짜는 유지된다.
+
+운영 사이트맵과 로컬 빌드의 291개 경로가 일치함을 확인하고 `scripts/public-url-baseline.json`을 이 배포 기준으로 갱신했다. 배포 자체는 검색 색인이나 노출 회복을 의미하지 않으며, 이후 Search Console의 지연 반영 데이터를 같은 묶음으로 재측정해야 한다.

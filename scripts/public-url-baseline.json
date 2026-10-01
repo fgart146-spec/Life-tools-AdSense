@@ -1,6 +1,7 @@
 {
   "capturedAt": "2026-10-02",
-  "description": "Quality-change baseline from the 288 public routes in the Git and static-build audit; update only after reviewing a deployed release.",
+  "description": "Reviewed production sitemap after Vercel deployed commit 0baea62; this is the current public-route baseline.",
+  "sourceCommit": "0baea62084c4497bba89675f7452c8cda071b7dd",
   "paths": [
     "/en",
     "/en/about",
@@ -14,6 +15,7 @@
     "/en/contact",
     "/en/disclaimer",
     "/en/discount-price",
+    "/en/editorial-policy",
     "/en/guide",
     "/en/guide/break-even-guide",
     "/en/guide/bulk-not-always-cheaper",
@@ -97,6 +99,7 @@
     "/ja/contact",
     "/ja/disclaimer",
     "/ja/discount-price",
+    "/ja/editorial-policy",
     "/ja/guide",
     "/ja/guide/break-even-guide",
     "/ja/guide/bulk-not-always-cheaper",
@@ -191,6 +194,7 @@
     "/ko/cost-ratio",
     "/ko/disclaimer",
     "/ko/discount-price",
+    "/ko/editorial-policy",
     "/ko/electricity-cost",
     "/ko/grocery-budget",
     "/ko/guide",
