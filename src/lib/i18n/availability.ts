@@ -49,6 +49,7 @@ export function availableLocalesForPath(path: string): readonly Locale[] {
   if (
     first === 'tools' ||
     first === 'about' ||
+    first === 'editorial-policy' ||
     first === 'contact' ||
     first === 'privacy' ||
     first === 'terms' ||

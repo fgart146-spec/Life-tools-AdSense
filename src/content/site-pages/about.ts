@@ -1,21 +1,27 @@
-import { siteConfig } from '@/config/site';
+import { brandName, siteConfig } from '@/config/site';
 import type { SitePageContentMap } from './types';
-import { SITE_PAGE_UPDATED_AT } from './types';
 
 export const aboutContent: SitePageContentMap = {
   ko: {
     title: '사이트 소개',
     seoTitle: '사이트 소개',
     seoDescription:
-      '생활계산소는 돈 쓰기 전에 한 번 확인할 수 있는 무료 생활·경제 계산기를 제공합니다. 어떤 기준으로 계산하고 무엇을 하지 않는지 정리했습니다.',
-    lead: '생활계산소는 장보기·생활비·급여·판매처럼 돈과 관련된 결정을 내리기 전에 숫자를 확인할 수 있게 만든 사이트입니다.',
-    updatedAt: SITE_PAGE_UPDATED_AT,
+      `${brandName('ko')}는 가격·비용을 계산하는 도구와 얼룩·세탁·청소 문제를 살피는 생활 안내를 제공합니다. 두 영역의 역할과 정보 기준을 소개합니다.`,
+    lead: `${brandName('ko')}는 생활 속에서 숫자로 판단할 일에는 계산기를, 집안의 문제를 해결할 때에는 상황별 안내를 제공하는 사이트입니다.`,
+    updatedAt: '2026-10-02',
     sections: [
       {
         heading: '무엇을 하는 사이트인가요',
         paragraphs: [
           '용량이 다른 상품 중 어느 쪽이 실제로 싼지, 에어컨을 하루 몇 시간 켜면 전기요금이 얼마나 늘어나는지, 연봉에서 세금을 빼면 얼마가 남는지 — 이런 계산을 회원가입 없이 바로 할 수 있습니다.',
-          '단순히 숫자만 출력하지 않습니다. 어떤 기준으로 계산했는지, 결과가 무슨 뜻인지, 조건이 바뀌면 어떻게 되는지를 함께 설명합니다.',
+          '계산 결과와 함께 계산식·가정·예시를 보여주어 입력값이 달라질 때 결과를 이해할 수 있도록 돕습니다.',
+        ],
+      },
+      {
+        heading: '생활백과는 언제 쓰나요',
+        paragraphs: [
+          '옷에 얼룩이 묻었거나 세탁기에서 냄새가 날 때처럼 답이 숫자가 아닌 문제는 생활백과에서 찾을 수 있습니다. 먼저 할 일, 소재·제품에 따라 달라지는 방법, 피해야 할 행동을 단계별로 정리합니다.',
+          '청소나 세탁은 제품과 소재마다 허용되는 방법이 다릅니다. 글의 일반적인 순서를 참고하되 해당 제품의 라벨과 설명서를 먼저 확인하세요.',
         ],
       },
       {
@@ -28,13 +34,13 @@ export const aboutContent: SitePageContentMap = {
       {
         heading: '기준과 출처',
         paragraphs: [
-          '전기요금, 4대보험 요율, 최저임금처럼 제도에 따라 달라지는 값은 적용 기준일과 근거를 각 페이지에 표시합니다.',
+          '전기요금, 보험료율, 최저임금처럼 바뀔 수 있는 숫자는 페이지의 기준일을 확인하세요. 개별 페이지의 출처 링크가 없는 설명은 공식 자료로 검증된 사실이라고 표시하지 않습니다.',
           '음식량이나 이사비처럼 공식 표준이 없는 항목은 "일반적인 가정 기준"임을 명시하고, 사용자가 직접 값을 조정할 수 있게 만들었습니다.',
         ],
         bullets: [
-          '제도 종속 계산: 기준일 + 출처 표기',
+          '제도 종속 계산: 적용 기준일과 확인 가능한 자료를 함께 점검',
           '관행 기준 계산: 기준 근거 명시 + 사용자 조정 가능',
-          '요율 변경 시 관리자 화면에서 기준값을 갱신',
+          '제품별 청소·세탁: 라벨과 제조사 설명서 우선',
         ],
       },
       {
@@ -48,7 +54,7 @@ export const aboutContent: SitePageContentMap = {
         heading: '운영과 문의',
         paragraphs: [
           `계산 결과가 이상하거나 기준값이 오래되었다면 알려주세요. ${siteConfig.contactEmail} 으로 연락하실 수 있습니다.`,
-          '어떤 계산기가 더 필요한지에 대한 제안도 환영합니다. 실제로 반복해서 쓰이는 계산을 우선해서 추가하고 있습니다.',
+          '계산 도구와 생활백과에서 다뤘으면 하는 상황에 대한 제안도 환영합니다. 정보 작성과 수정 원칙은 편집 정책에서 확인할 수 있습니다.',
         ],
       },
     ],
@@ -57,15 +63,22 @@ export const aboutContent: SitePageContentMap = {
     title: 'About this site',
     seoTitle: 'About',
     seoDescription:
-      'Free everyday money calculators with the reasoning shown: what basis each result uses, what it means, and what this site deliberately does not do.',
-    lead: 'This site exists so you can check the numbers before a spending decision — groceries, household bills, pay and pricing.',
-    updatedAt: SITE_PAGE_UPDATED_AT,
+      'LifeCalc brings together calculators for prices and costs with practical guides to stains, laundry and household care. Learn how each area is written.',
+    lead: 'LifeCalc helps with two kinds of everyday decisions: calculating a number and working through a household problem.',
+    updatedAt: '2026-10-02',
     sections: [
       {
         heading: 'What it does',
         paragraphs: [
           'Work out which pack size is genuinely cheaper, what an appliance adds to your electricity bill, or what a price leaves you after fees — without creating an account.',
-          'Every tool explains the basis of the calculation, what the result means and how it changes when your inputs change.',
+          'Calculator pages show the formula, assumptions and an example so you can understand the result.',
+        ],
+      },
+      {
+        heading: 'When to use the life guides',
+        paragraphs: [
+          'For stains, laundry, cleaning and home care, the life guides give a first step, a sequence to follow and cautions for different materials and appliances.',
+          'Product instructions vary. Check the care label or manufacturer manual before using a cleaner or treating a sensitive material.',
         ],
       },
       {
@@ -78,7 +91,7 @@ export const aboutContent: SitePageContentMap = {
       {
         heading: 'Basis and sources',
         paragraphs: [
-          'Where rules or rates apply — electricity tariffs, social insurance rates, minimum wage — the page states the date the figures were checked and what they are based on.',
+          'For rates and rules that change, check the date shown on the individual page. A note without a linked source should not be mistaken for independent verification.',
           'Where no official standard exists, such as portion sizes, the page says so plainly and lets you adjust the assumptions yourself.',
         ],
       },
@@ -93,7 +106,7 @@ export const aboutContent: SitePageContentMap = {
         heading: 'Contact',
         paragraphs: [
           `If a result looks wrong or a figure is out of date, please tell us at ${siteConfig.contactEmail}.`,
-          'Suggestions for new calculators are welcome. Tools people use repeatedly are prioritised.',
+          'Suggestions for calculators or household guides are welcome. The editorial policy explains how we intend to check and update information.',
         ],
       },
     ],
@@ -102,15 +115,22 @@ export const aboutContent: SitePageContentMap = {
     title: 'サイトについて',
     seoTitle: 'サイトについて',
     seoDescription:
-      '暮らしとお金の計算を、根拠つきで確認できる無料ツール集です。何を基準に計算し、何をしないのかをまとめました。',
-    lead: '買い物・光熱費・給与・販売価格など、お金に関わる判断の前に数字を確認できるようにしたサイトです。',
-    updatedAt: SITE_PAGE_UPDATED_AT,
+      `${brandName('ja')}は価格・費用を確かめる計算ツールと、シミ・洗濯・掃除の手順を探せる暮らしのガイドを提供します。`,
+    lead: `${brandName('ja')}は、数字で判断する場面には計算ツールを、家の困りごとには状況別の手順を提供するサイトです。`,
+    updatedAt: '2026-10-02',
     sections: [
       {
         heading: 'できること',
         paragraphs: [
           '容量の違う商品のどちらが安いか、家電を使うと電気代がいくら増えるか、価格から手数料を引くといくら残るか。登録なしですぐ計算できます。',
-          '数字を出すだけでなく、どんな基準で計算したのか、結果が何を意味するのか、条件が変わるとどうなるかも合わせて説明します。',
+          '計算式・前提・例を示し、結果の意味を確認できるようにしています。',
+        ],
+      },
+      {
+        heading: '暮らしのガイドを使うとき',
+        paragraphs: [
+          'シミ・洗濯・掃除・住まいの手入れは、最初にすること、順番、素材や家電による注意点をまとめています。',
+          '使える洗剤や方法は製品によって異なります。衣類の表示やメーカーの取扱説明書を優先してください。',
         ],
       },
       {
@@ -123,7 +143,7 @@ export const aboutContent: SitePageContentMap = {
       {
         heading: '基準と出典',
         paragraphs: [
-          '電気料金や保険料率など制度によって変わる値は、適用基準日と根拠を各ページに表示します。',
+          '料金や保険料率など変わり得る数値は、各ページの基準日を確認してください。リンクのない確認案内は、独立した出典の証明として扱いません。',
           '食材の量のように公式な標準がないものは「一般的な家庭の目安」であることを明記し、利用者が値を調整できるようにしています。',
         ],
       },
@@ -138,7 +158,7 @@ export const aboutContent: SitePageContentMap = {
         heading: 'お問い合わせ',
         paragraphs: [
           `計算結果や基準値に誤りがあれば ${siteConfig.contactEmail} までご連絡ください。`,
-          '追加してほしい計算ツールのご要望も歓迎します。繰り返し使われる計算を優先して追加しています。',
+          '計算ツールや暮らしのガイドへのご提案も歓迎します。情報の確認・更新方針は編集方針に記載しています。',
         ],
       },
     ],

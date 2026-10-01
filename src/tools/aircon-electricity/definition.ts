@@ -8,6 +8,6 @@ export const definition: ToolDefinition = {
   status: 'published',
   locales: ['ko'],
   related: ['electricity-cost', 'appliance-electricity', 'heating-cost', 'living-cost'],
-  updatedAt: '2026-09-23',
+  updatedAt: '2026-10-02',
   weight: 94,
 };

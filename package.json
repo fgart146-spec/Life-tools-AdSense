@@ -12,7 +12,10 @@
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
     "check:site": "node scripts/check-static-site.mjs",
-    "verify": "npm run typecheck && npm run lint && npm run test && npm run build && npm run check:site"
+    "check:urls": "node scripts/report-public-url-delta.mjs",
+    "check:sources": "node scripts/report-source-gaps.mjs",
+    "check:topic-links": "node scripts/report-topic-links.mjs",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build && npm run check:site && npm run check:urls && npm run check:sources && npm run check:topic-links"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

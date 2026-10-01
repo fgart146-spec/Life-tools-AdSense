@@ -1,0 +1,289 @@
+﻿url,path,cohort,locale,type,review_class,reason,same_locale_exact_block_unique_char_ratio_proxy
+https://eolmaji.com/en,/en,baseline,en,home,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/about,/en/about,baseline,en,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/area-converter,/en/area-converter,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/bogo-1plus1,/en/bogo-1plus1,baseline,en,tool_article,,생활백과 추가 전 114개 URL,0.969
+https://eolmaji.com/en/break-even,/en/break-even,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/category/business,/en/category/business,baseline,en,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/category/home,/en/category/home,baseline,en,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/category/shopping,/en/category/shopping,baseline,en,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/compare-price,/en/compare-price,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/contact,/en/contact,baseline,en,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/disclaimer,/en/disclaimer,baseline,en,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/discount-price,/en/discount-price,baseline,en,tool_article,,생활백과 추가 전 114개 URL,0.971
+https://eolmaji.com/en/guide,/en/guide,baseline,en,guide_hub,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/guide/break-even-guide,/en/guide/break-even-guide,baseline,en,guide_article,,생활백과 추가 전 114개 URL,0.981
+https://eolmaji.com/en/guide/bulk-not-always-cheaper,/en/guide/bulk-not-always-cheaper,baseline,en,guide_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/en/guide/margin-basics,/en/guide/margin-basics,baseline,en,guide_article,,생활백과 추가 전 114개 URL,0.977
+https://eolmaji.com/en/guide/unit-price-basics,/en/guide/unit-price-basics,baseline,en,guide_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/en/life,/en/life,new,en,life_hub,A,문제 선택과 주제별 탐색 기능이 있는 진입점,
+https://eolmaji.com/en/life/cleaning,/en/life/cleaning,new,en,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/en/life/cleaning/airfryer-cleaning,/en/life/cleaning/airfryer-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.953
+https://eolmaji.com/en/life/cleaning/bathroom-cleaning,/en/life/cleaning/bathroom-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.976
+https://eolmaji.com/en/life/cleaning/dishwasher-cleaning,/en/life/cleaning/dishwasher-cleaning,new,en,life_article,A,영어권 식기세척기 관리 의도; 출처·실측 근거는 보강 필요,0.976
+https://eolmaji.com/en/life/cleaning/drum-washer-cleaning,/en/life/cleaning/drum-washer-cleaning,new,en,life_article,A,드럼세탁기 구조별 관리 순서; 출처·실측 근거는 보강 필요,0.936
+https://eolmaji.com/en/life/cleaning/fridge-cleaning,/en/life/cleaning/fridge-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/cleaning/gas-stove-cleaning,/en/life/cleaning/gas-stove-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.975
+https://eolmaji.com/en/life/cleaning/humidifier-cleaning,/en/life/cleaning/humidifier-cleaning,new,en,life_article,A,가습기 부품·재질별 관리; 출처·실측 근거는 보강 필요,0.976
+https://eolmaji.com/en/life/cleaning/microwave-cleaning,/en/life/cleaning/microwave-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/cleaning/range-hood-cleaning,/en/life/cleaning/range-hood-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.976
+https://eolmaji.com/en/life/cleaning/sink-cleaning,/en/life/cleaning/sink-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/cleaning/top-loader-cleaning,/en/life/cleaning/top-loader-cleaning,new,en,life_article,A,통돌이세탁기 구조별 관리 순서; 출처·실측 근거는 보강 필요,0.973
+https://eolmaji.com/en/life/cleaning/window-frame-cleaning,/en/life/cleaning/window-frame-cleaning,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/en/life/home-care,/en/life/home-care,new,en,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/en/life/home-care/balcony-mold,/en/life/home-care/balcony-mold,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.977
+https://eolmaji.com/en/life/home-care/bathroom-mold,/en/life/home-care/bathroom-mold,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.953
+https://eolmaji.com/en/life/home-care/condensation,/en/life/home-care/condensation,new,en,life_article,A,결로 원인별 진단과 대응; 출처·실측 근거는 보강 필요,0.978
+https://eolmaji.com/en/life/home-care/humidity-control,/en/life/home-care/humidity-control,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.977
+https://eolmaji.com/en/life/home-care/window-frame-mold,/en/life/home-care/window-frame-mold,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.976
+https://eolmaji.com/en/life/kitchen,/en/life/kitchen,new,en,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/en/life/kitchen/burnt-pot,/en/life/kitchen/burnt-pot,new,en,life_article,A,냄비 소재·탄 자국별 처리; 출처·실측 근거는 보강 필요,0.963
+https://eolmaji.com/en/life/kitchen/cutting-board-smell,/en/life/kitchen/cutting-board-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/kitchen/kettle-limescale,/en/life/kitchen/kettle-limescale,new,en,life_article,A,물때 특성·재질별 청소 절차; 출처·실측 근거는 보강 필요,0.973
+https://eolmaji.com/en/life/kitchen/pan-grease,/en/life/kitchen/pan-grease,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/en/life/kitchen/sponge-care,/en/life/kitchen/sponge-care,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/kitchen/stainless-stain,/en/life/kitchen/stainless-stain,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/laundry,/en/life/laundry,new,en,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/en/life/laundry/bedding-washing,/en/life/laundry/bedding-washing,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/laundry/black-clothes-fading,/en/life/laundry/black-clothes-fading,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.971
+https://eolmaji.com/en/life/laundry/indoor-drying,/en/life/laundry/indoor-drying,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/laundry/jeans-washing,/en/life/laundry/jeans-washing,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/en/life/laundry/knit-washing,/en/life/laundry/knit-washing,new,en,life_article,A,니트 소재·수축별 처리; 출처·실측 근거는 보강 필요,0.976
+https://eolmaji.com/en/life/laundry/laundry-smell,/en/life/laundry/laundry-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.975
+https://eolmaji.com/en/life/laundry/lint-removal,/en/life/laundry/lint-removal,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.976
+https://eolmaji.com/en/life/laundry/padding-washing,/en/life/laundry/padding-washing,new,en,life_article,A,패딩 충전재·건조별 처리; 출처·실측 근거는 보강 필요,0.974
+https://eolmaji.com/en/life/laundry/sneaker-washing,/en/life/laundry/sneaker-washing,new,en,life_article,A,운동화 소재별 세탁 판단; 출처·실측 근거는 보강 필요,0.955
+https://eolmaji.com/en/life/laundry/towel-smell,/en/life/laundry/towel-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.965
+https://eolmaji.com/en/life/laundry/white-clothes-care,/en/life/laundry/white-clothes-care,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.971
+https://eolmaji.com/en/life/odor,/en/life/odor,new,en,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/en/life/odor/drain-smell,/en/life/odor/drain-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.961
+https://eolmaji.com/en/life/odor/fridge-smell,/en/life/odor/fridge-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.977
+https://eolmaji.com/en/life/odor/room-food-smell,/en/life/odor/room-food-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.976
+https://eolmaji.com/en/life/odor/shoe-smell,/en/life/odor/shoe-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.975
+https://eolmaji.com/en/life/odor/washing-machine-smell,/en/life/odor/washing-machine-smell,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.936
+https://eolmaji.com/en/life/stains,/en/life/stains,new,en,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/en/life/stains/ballpen-stain,/en/life/stains/ballpen-stain,new,en,life_article,A,잉크 얼룩의 소재별 처리 경로; 출처·실측 근거는 보강 필요,0.970
+https://eolmaji.com/en/life/stains/chocolate-stain,/en/life/stains/chocolate-stain,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.956
+https://eolmaji.com/en/life/stains/coffee-stain,/en/life/stains/coffee-stain,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.935
+https://eolmaji.com/en/life/stains/food-stain-basics,/en/life/stains/food-stain-basics,new,en,life_article,A,얼룩 종류를 구분하는 진단 틀; 출처·실측 근거는 보강 필요,0.973
+https://eolmaji.com/en/life/stains/makeup-stain,/en/life/stains/makeup-stain,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.972
+https://eolmaji.com/en/life/stains/oil-stain-clothes,/en/life/stains/oil-stain-clothes,new,en,life_article,A,유분 얼룩의 전처리와 섬유별 조건; 출처·실측 근거는 보강 필요,0.950
+https://eolmaji.com/en/life/stains/sweat-stain,/en/life/stains/sweat-stain,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.957
+https://eolmaji.com/en/life/stains/white-clothes-yellowing,/en/life/stains/white-clothes-yellowing,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/en/life/stains/wine-stain,/en/life/stains/wine-stain,new,en,life_article,A,영어권에서 흔한 와인 얼룩 처리; 출처·실측 근거는 보강 필요,0.952
+https://eolmaji.com/en/life/storage,/en/life/storage,new,en,life_category_hub,C,하위 문서 2편만 연결되어 독립 허브 가치·통합 여부 검토,
+https://eolmaji.com/en/life/storage/bedding-storage,/en/life/storage/bedding-storage,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.976
+https://eolmaji.com/en/life/storage/seasonal-clothes-storage,/en/life/storage/seasonal-clothes-storage,new,en,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.963
+https://eolmaji.com/en/margin,/en/margin,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/privacy,/en/privacy,baseline,en,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/target-price,/en/target-price,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/terms,/en/terms,baseline,en,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/tools,/en/tools,baseline,en,tool_hub,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/en/unit-price-100g,/en/unit-price-100g,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/unit-price-each,/en/unit-price-each,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/en/unit-price-ml,/en/unit-price-ml,baseline,en,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja,/ja,baseline,ja,home,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/about,/ja/about,baseline,ja,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/area-converter,/ja/area-converter,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/bogo-1plus1,/ja/bogo-1plus1,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,0.963
+https://eolmaji.com/ja/break-even,/ja/break-even,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/category/business,/ja/category/business,baseline,ja,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/category/home,/ja/category/home,baseline,ja,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/category/shopping,/ja/category/shopping,baseline,ja,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/compare-price,/ja/compare-price,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/contact,/ja/contact,baseline,ja,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/disclaimer,/ja/disclaimer,baseline,ja,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/discount-price,/ja/discount-price,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,0.965
+https://eolmaji.com/ja/guide,/ja/guide,baseline,ja,guide_hub,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/guide/break-even-guide,/ja/guide/break-even-guide,baseline,ja,guide_article,,생활백과 추가 전 114개 URL,0.971
+https://eolmaji.com/ja/guide/bulk-not-always-cheaper,/ja/guide/bulk-not-always-cheaper,baseline,ja,guide_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/ja/guide/margin-basics,/ja/guide/margin-basics,baseline,ja,guide_article,,생활백과 추가 전 114개 URL,0.973
+https://eolmaji.com/ja/guide/unit-price-basics,/ja/guide/unit-price-basics,baseline,ja,guide_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/life,/ja/life,new,ja,life_hub,A,문제 선택과 주제별 탐색 기능이 있는 진입점,
+https://eolmaji.com/ja/life/cleaning,/ja/life/cleaning,new,ja,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ja/life/cleaning/aircon-cleaning,/ja/life/cleaning/aircon-cleaning,new,ja,life_article,A,일본 계절·가전 관리 의도; 출처·실측 근거는 보강 필요,0.974
+https://eolmaji.com/ja/life/cleaning/airfryer-cleaning,/ja/life/cleaning/airfryer-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/ja/life/cleaning/bathroom-cleaning,/ja/life/cleaning/bathroom-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/ja/life/cleaning/drum-washer-cleaning,/ja/life/cleaning/drum-washer-cleaning,new,ja,life_article,A,드럼세탁기 구조별 관리 순서; 출처·실측 근거는 보강 필요,0.969
+https://eolmaji.com/ja/life/cleaning/fridge-cleaning,/ja/life/cleaning/fridge-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.971
+https://eolmaji.com/ja/life/cleaning/gas-stove-cleaning,/ja/life/cleaning/gas-stove-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/ja/life/cleaning/humidifier-cleaning,/ja/life/cleaning/humidifier-cleaning,new,ja,life_article,A,가습기 부품·재질별 관리; 출처·실측 근거는 보강 필요,0.975
+https://eolmaji.com/ja/life/cleaning/microwave-cleaning,/ja/life/cleaning/microwave-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.970
+https://eolmaji.com/ja/life/cleaning/range-hood-cleaning,/ja/life/cleaning/range-hood-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.950
+https://eolmaji.com/ja/life/cleaning/sink-cleaning,/ja/life/cleaning/sink-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/cleaning/top-loader-cleaning,/ja/life/cleaning/top-loader-cleaning,new,ja,life_article,A,통돌이세탁기 구조별 관리 순서; 출처·실측 근거는 보강 필요,0.969
+https://eolmaji.com/ja/life/cleaning/window-frame-cleaning,/ja/life/cleaning/window-frame-cleaning,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.972
+https://eolmaji.com/ja/life/home-care,/ja/life/home-care,new,ja,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ja/life/home-care/balcony-mold,/ja/life/home-care/balcony-mold,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/ja/life/home-care/bathroom-mold,/ja/life/home-care/bathroom-mold,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.963
+https://eolmaji.com/ja/life/home-care/condensation,/ja/life/home-care/condensation,new,ja,life_article,A,결로 원인별 진단과 대응; 출처·실측 근거는 보강 필요,0.962
+https://eolmaji.com/ja/life/home-care/humidity-control,/ja/life/home-care/humidity-control,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/home-care/tatami-mold,/ja/life/home-care/tatami-mold,new,ja,life_article,A,일본 주거 환경의 다다미 곰팡이; 출처·실측 근거는 보강 필요,0.973
+https://eolmaji.com/ja/life/home-care/window-frame-mold,/ja/life/home-care/window-frame-mold,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/kitchen,/ja/life/kitchen,new,ja,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ja/life/kitchen/burnt-pot,/ja/life/kitchen/burnt-pot,new,ja,life_article,A,냄비 소재·탄 자국별 처리; 출처·실측 근거는 보강 필요,0.966
+https://eolmaji.com/ja/life/kitchen/cutting-board-smell,/ja/life/kitchen/cutting-board-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/kitchen/kettle-limescale,/ja/life/kitchen/kettle-limescale,new,ja,life_article,A,물때 특성·재질별 청소 절차; 출처·실측 근거는 보강 필요,0.964
+https://eolmaji.com/ja/life/kitchen/pan-grease,/ja/life/kitchen/pan-grease,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.974
+https://eolmaji.com/ja/life/kitchen/sponge-care,/ja/life/kitchen/sponge-care,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/kitchen/stainless-stain,/ja/life/kitchen/stainless-stain,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.966
+https://eolmaji.com/ja/life/laundry,/ja/life/laundry,new,ja,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ja/life/laundry/bedding-washing,/ja/life/laundry/bedding-washing,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.951
+https://eolmaji.com/ja/life/laundry/black-clothes-fading,/ja/life/laundry/black-clothes-fading,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.931
+https://eolmaji.com/ja/life/laundry/indoor-drying,/ja/life/laundry/indoor-drying,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.957
+https://eolmaji.com/ja/life/laundry/jeans-washing,/ja/life/laundry/jeans-washing,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/laundry/knit-washing,/ja/life/laundry/knit-washing,new,ja,life_article,A,니트 소재·수축별 처리; 출처·실측 근거는 보강 필요,0.974
+https://eolmaji.com/ja/life/laundry/laundry-smell,/ja/life/laundry/laundry-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/laundry/lint-removal,/ja/life/laundry/lint-removal,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.971
+https://eolmaji.com/ja/life/laundry/padding-washing,/ja/life/laundry/padding-washing,new,ja,life_article,A,패딩 충전재·건조별 처리; 출처·실측 근거는 보강 필요,0.949
+https://eolmaji.com/ja/life/laundry/sneaker-washing,/ja/life/laundry/sneaker-washing,new,ja,life_article,A,운동화 소재별 세탁 판단; 출처·실측 근거는 보강 필요,0.949
+https://eolmaji.com/ja/life/laundry/towel-smell,/ja/life/laundry/towel-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.938
+https://eolmaji.com/ja/life/laundry/white-clothes-care,/ja/life/laundry/white-clothes-care,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.928
+https://eolmaji.com/ja/life/odor,/ja/life/odor,new,ja,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ja/life/odor/drain-smell,/ja/life/odor/drain-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.963
+https://eolmaji.com/ja/life/odor/fridge-smell,/ja/life/odor/fridge-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.958
+https://eolmaji.com/ja/life/odor/room-food-smell,/ja/life/odor/room-food-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.972
+https://eolmaji.com/ja/life/odor/shoe-smell,/ja/life/odor/shoe-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.957
+https://eolmaji.com/ja/life/odor/washing-machine-smell,/ja/life/odor/washing-machine-smell,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.956
+https://eolmaji.com/ja/life/stains,/ja/life/stains,new,ja,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ja/life/stains/ballpen-stain,/ja/life/stains/ballpen-stain,new,ja,life_article,A,잉크 얼룩의 소재별 처리 경로; 출처·실측 근거는 보강 필요,0.935
+https://eolmaji.com/ja/life/stains/chocolate-stain,/ja/life/stains/chocolate-stain,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.889
+https://eolmaji.com/ja/life/stains/coffee-stain,/ja/life/stains/coffee-stain,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.878
+https://eolmaji.com/ja/life/stains/food-stain-basics,/ja/life/stains/food-stain-basics,new,ja,life_article,A,얼룩 종류를 구분하는 진단 틀; 출처·실측 근거는 보강 필요,0.874
+https://eolmaji.com/ja/life/stains/makeup-stain,/ja/life/stains/makeup-stain,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.910
+https://eolmaji.com/ja/life/stains/oil-stain-clothes,/ja/life/stains/oil-stain-clothes,new,ja,life_article,A,유분 얼룩의 전처리와 섬유별 조건; 출처·실측 근거는 보강 필요,0.927
+https://eolmaji.com/ja/life/stains/sweat-stain,/ja/life/stains/sweat-stain,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.899
+https://eolmaji.com/ja/life/stains/white-clothes-yellowing,/ja/life/stains/white-clothes-yellowing,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.915
+https://eolmaji.com/ja/life/storage,/ja/life/storage,new,ja,life_category_hub,C,하위 문서 2편만 연결되어 독립 허브 가치·통합 여부 검토,
+https://eolmaji.com/ja/life/storage/bedding-storage,/ja/life/storage/bedding-storage,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.973
+https://eolmaji.com/ja/life/storage/seasonal-clothes-storage,/ja/life/storage/seasonal-clothes-storage,new,ja,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.964
+https://eolmaji.com/ja/margin,/ja/margin,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/privacy,/ja/privacy,baseline,ja,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/target-price,/ja/target-price,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/terms,/ja/terms,baseline,ja,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/tools,/ja/tools,baseline,ja,tool_hub,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ja/unit-price-100g,/ja/unit-price-100g,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ja/unit-price-each,/ja/unit-price-each,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,0.969
+https://eolmaji.com/ja/unit-price-ml,/ja/unit-price-ml,baseline,ja,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko,/ko,baseline,ko,home,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/about,/ko/about,baseline,ko,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/aircon-electricity,/ko/aircon-electricity,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.721
+https://eolmaji.com/ko/appliance-electricity,/ko/appliance-electricity,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.694
+https://eolmaji.com/ko/area-converter,/ko/area-converter,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/bogo-1plus1,/ko/bogo-1plus1,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.973
+https://eolmaji.com/ko/bogo-2plus1,/ko/bogo-2plus1,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/ko/break-even,/ko/break-even,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/bulk-vs-small,/ko/bulk-vs-small,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.974
+https://eolmaji.com/ko/bundle-price,/ko/bundle-price,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.968
+https://eolmaji.com/ko/camping-food,/ko/camping-food,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.913
+https://eolmaji.com/ko/card-coupon-price,/ko/card-coupon-price,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/category/business,/ko/category/business,baseline,ko,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/category/food,/ko/category/food,baseline,ko,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/category/home,/ko/category/home,baseline,ko,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/category/shopping,/ko/category/shopping,baseline,ko,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/category/utilities,/ko/category/utilities,baseline,ko,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/category/work,/ko/category/work,baseline,ko,tool_category,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/compare-price,/ko/compare-price,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/contact,/ko/contact,baseline,ko,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/cost-ratio,/ko/cost-ratio,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/disclaimer,/ko/disclaimer,baseline,ko,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/discount-price,/ko/discount-price,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/ko/electricity-cost,/ko/electricity-cost,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.742
+https://eolmaji.com/ko/grocery-budget,/ko/grocery-budget,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/guide,/ko/guide,baseline,ko,guide_hub,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/guide/aircon-cost-guide,/ko/guide/aircon-cost-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.975
+https://eolmaji.com/ko/guide/bogo-real-discount,/ko/guide/bogo-real-discount,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.974
+https://eolmaji.com/ko/guide/break-even-guide,/ko/guide/break-even-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.975
+https://eolmaji.com/ko/guide/bulk-not-always-cheaper,/ko/guide/bulk-not-always-cheaper,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.977
+https://eolmaji.com/ko/guide/coupon-and-card-discount,/ko/guide/coupon-and-card-discount,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.976
+https://eolmaji.com/ko/guide/electricity-bill-basics,/ko/guide/electricity-bill-basics,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.978
+https://eolmaji.com/ko/guide/family-budget-basics,/ko/guide/family-budget-basics,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/ko/guide/kimjang-guide,/ko/guide/kimjang-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.977
+https://eolmaji.com/ko/guide/margin-basics,/ko/guide/margin-basics,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.977
+https://eolmaji.com/ko/guide/meat-per-person-guide,/ko/guide/meat-per-person-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.972
+https://eolmaji.com/ko/guide/pricing-guide,/ko/guide/pricing-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.974
+https://eolmaji.com/ko/guide/roas-guide,/ko/guide/roas-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.975
+https://eolmaji.com/ko/guide/salary-net-guide,/ko/guide/salary-net-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.979
+https://eolmaji.com/ko/guide/unit-price-basics,/ko/guide/unit-price-basics,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.979
+https://eolmaji.com/ko/guide/weekly-holiday-pay-guide,/ko/guide/weekly-holiday-pay-guide,baseline,ko,guide_article,,생활백과 추가 전 114개 URL,0.971
+https://eolmaji.com/ko/heating-cost,/ko/heating-cost,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.698
+https://eolmaji.com/ko/holiday-food,/ko/holiday-food,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.945
+https://eolmaji.com/ko/hourly-wage,/ko/hourly-wage,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.768
+https://eolmaji.com/ko/kimjang-cabbage,/ko/kimjang-cabbage,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/kimjang-sauce,/ko/kimjang-sauce,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/life,/ko/life,new,ko,life_hub,A,문제 선택과 주제별 탐색 기능이 있는 진입점,
+https://eolmaji.com/ko/life/cleaning,/ko/life/cleaning,new,ko,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ko/life/cleaning/airfryer-cleaning,/ko/life/cleaning/airfryer-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.949
+https://eolmaji.com/ko/life/cleaning/bathroom-cleaning,/ko/life/cleaning/bathroom-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.957
+https://eolmaji.com/ko/life/cleaning/drum-washer-cleaning,/ko/life/cleaning/drum-washer-cleaning,new,ko,life_article,A,드럼세탁기 구조별 관리 순서; 출처·실측 근거는 보강 필요,0.946
+https://eolmaji.com/ko/life/cleaning/fridge-cleaning,/ko/life/cleaning/fridge-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.912
+https://eolmaji.com/ko/life/cleaning/gas-stove-cleaning,/ko/life/cleaning/gas-stove-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.938
+https://eolmaji.com/ko/life/cleaning/humidifier-cleaning,/ko/life/cleaning/humidifier-cleaning,new,ko,life_article,A,가습기 부품·재질별 관리; 출처·실측 근거는 보강 필요,0.942
+https://eolmaji.com/ko/life/cleaning/microwave-cleaning,/ko/life/cleaning/microwave-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.938
+https://eolmaji.com/ko/life/cleaning/range-hood-cleaning,/ko/life/cleaning/range-hood-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.934
+https://eolmaji.com/ko/life/cleaning/sink-cleaning,/ko/life/cleaning/sink-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.956
+https://eolmaji.com/ko/life/cleaning/top-loader-cleaning,/ko/life/cleaning/top-loader-cleaning,new,ko,life_article,A,통돌이세탁기 구조별 관리 순서; 출처·실측 근거는 보강 필요,0.908
+https://eolmaji.com/ko/life/cleaning/window-frame-cleaning,/ko/life/cleaning/window-frame-cleaning,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.930
+https://eolmaji.com/ko/life/home-care,/ko/life/home-care,new,ko,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ko/life/home-care/balcony-mold,/ko/life/home-care/balcony-mold,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.877
+https://eolmaji.com/ko/life/home-care/bathroom-mold,/ko/life/home-care/bathroom-mold,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.939
+https://eolmaji.com/ko/life/home-care/condensation,/ko/life/home-care/condensation,new,ko,life_article,A,결로 원인별 진단과 대응; 출처·실측 근거는 보강 필요,0.961
+https://eolmaji.com/ko/life/home-care/humidity-control,/ko/life/home-care/humidity-control,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.959
+https://eolmaji.com/ko/life/home-care/window-frame-mold,/ko/life/home-care/window-frame-mold,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.899
+https://eolmaji.com/ko/life/kitchen,/ko/life/kitchen,new,ko,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ko/life/kitchen/burnt-pot,/ko/life/kitchen/burnt-pot,new,ko,life_article,A,냄비 소재·탄 자국별 처리; 출처·실측 근거는 보강 필요,0.946
+https://eolmaji.com/ko/life/kitchen/cutting-board-smell,/ko/life/kitchen/cutting-board-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.953
+https://eolmaji.com/ko/life/kitchen/kettle-limescale,/ko/life/kitchen/kettle-limescale,new,ko,life_article,A,물때 특성·재질별 청소 절차; 출처·실측 근거는 보강 필요,0.931
+https://eolmaji.com/ko/life/kitchen/pan-grease,/ko/life/kitchen/pan-grease,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.932
+https://eolmaji.com/ko/life/kitchen/sponge-care,/ko/life/kitchen/sponge-care,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.951
+https://eolmaji.com/ko/life/kitchen/stainless-stain,/ko/life/kitchen/stainless-stain,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.933
+https://eolmaji.com/ko/life/laundry,/ko/life/laundry,new,ko,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ko/life/laundry/bedding-washing,/ko/life/laundry/bedding-washing,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.955
+https://eolmaji.com/ko/life/laundry/black-clothes-fading,/ko/life/laundry/black-clothes-fading,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.940
+https://eolmaji.com/ko/life/laundry/indoor-drying,/ko/life/laundry/indoor-drying,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.936
+https://eolmaji.com/ko/life/laundry/jeans-washing,/ko/life/laundry/jeans-washing,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.931
+https://eolmaji.com/ko/life/laundry/knit-washing,/ko/life/laundry/knit-washing,new,ko,life_article,A,니트 소재·수축별 처리; 출처·실측 근거는 보강 필요,0.945
+https://eolmaji.com/ko/life/laundry/laundry-smell,/ko/life/laundry/laundry-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.905
+https://eolmaji.com/ko/life/laundry/lint-removal,/ko/life/laundry/lint-removal,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.950
+https://eolmaji.com/ko/life/laundry/padding-washing,/ko/life/laundry/padding-washing,new,ko,life_article,A,패딩 충전재·건조별 처리; 출처·실측 근거는 보강 필요,0.957
+https://eolmaji.com/ko/life/laundry/sneaker-washing,/ko/life/laundry/sneaker-washing,new,ko,life_article,A,운동화 소재별 세탁 판단; 출처·실측 근거는 보강 필요,0.964
+https://eolmaji.com/ko/life/laundry/towel-smell,/ko/life/laundry/towel-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.962
+https://eolmaji.com/ko/life/laundry/white-clothes-care,/ko/life/laundry/white-clothes-care,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.917
+https://eolmaji.com/ko/life/odor,/ko/life/odor,new,ko,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ko/life/odor/drain-smell,/ko/life/odor/drain-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.962
+https://eolmaji.com/ko/life/odor/fridge-smell,/ko/life/odor/fridge-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.907
+https://eolmaji.com/ko/life/odor/room-food-smell,/ko/life/odor/room-food-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.955
+https://eolmaji.com/ko/life/odor/shoe-smell,/ko/life/odor/shoe-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.945
+https://eolmaji.com/ko/life/odor/washing-machine-smell,/ko/life/odor/washing-machine-smell,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.955
+https://eolmaji.com/ko/life/stains,/ko/life/stains,new,ko,life_category_hub,B,범주별 판단 기준은 있으나 출처·편집 근거와 차별성 보강 필요; 9월 23일 본문 보강,
+https://eolmaji.com/ko/life/stains/ballpen-stain,/ko/life/stains/ballpen-stain,new,ko,life_article,A,잉크 얼룩의 소재별 처리 경로; 출처·실측 근거는 보강 필요,0.946
+https://eolmaji.com/ko/life/stains/chocolate-stain,/ko/life/stains/chocolate-stain,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.884
+https://eolmaji.com/ko/life/stains/coffee-stain,/ko/life/stains/coffee-stain,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.863
+https://eolmaji.com/ko/life/stains/food-stain-basics,/ko/life/stains/food-stain-basics,new,ko,life_article,A,얼룩 종류를 구분하는 진단 틀; 출처·실측 근거는 보강 필요,0.933
+https://eolmaji.com/ko/life/stains/gochujang-stain,/ko/life/stains/gochujang-stain,new,ko,life_article,A,한국 식생활 특유 점성 얼룩 처리; 출처·실측 근거는 보강 필요,0.945
+https://eolmaji.com/ko/life/stains/kimchi-stain,/ko/life/stains/kimchi-stain,new,ko,life_article,A,한국 식생활 특유 얼룩 처리; 출처·실측 근거는 보강 필요,0.949
+https://eolmaji.com/ko/life/stains/makeup-stain,/ko/life/stains/makeup-stain,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.931
+https://eolmaji.com/ko/life/stains/oil-stain-clothes,/ko/life/stains/oil-stain-clothes,new,ko,life_article,A,유분 얼룩의 전처리와 섬유별 조건; 출처·실측 근거는 보강 필요,0.934
+https://eolmaji.com/ko/life/stains/sweat-stain,/ko/life/stains/sweat-stain,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.909
+https://eolmaji.com/ko/life/stains/white-clothes-yellowing,/ko/life/stains/white-clothes-yellowing,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.955
+https://eolmaji.com/ko/life/storage,/ko/life/storage,new,ko,life_category_hub,C,하위 문서 2편만 연결되어 독립 허브 가치·통합 여부 검토,
+https://eolmaji.com/ko/life/storage/bedding-storage,/ko/life/storage/bedding-storage,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.954
+https://eolmaji.com/ko/life/storage/seasonal-clothes-storage,/ko/life/storage/seasonal-clothes-storage,new,ko,life_article,B,문제별 고유 설명이 있으나 출처·실측·지역별 제품/제도 검증을 보강해야 함,0.963
+https://eolmaji.com/ko/living-cost,/ko/living-cost,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/margin,/ko/margin,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/meat-per-person,/ko/meat-per-person,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.971
+https://eolmaji.com/ko/monthly-salary,/ko/monthly-salary,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.712
+https://eolmaji.com/ko/moving-cost,/ko/moving-cost,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/privacy,/ko/privacy,baseline,ko,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/rice-per-person,/ko/rice-per-person,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/roas,/ko/roas,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/salary-net,/ko/salary-net,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.761
+https://eolmaji.com/ko/severance-pay,/ko/severance-pay,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/target-price,/ko/target-price,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/terms,/ko/terms,baseline,ko,static,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/tools,/ko/tools,baseline,ko,tool_hub,,생활백과 추가 전 114개 URL,
+https://eolmaji.com/ko/unit-price-100g,/ko/unit-price-100g,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/unit-price-each,/ko/unit-price-each,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.974
+https://eolmaji.com/ko/unit-price-ml,/ko/unit-price-ml,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/wallpaper,/ko/wallpaper,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,1.000
+https://eolmaji.com/ko/weekly-holiday-pay,/ko/weekly-holiday-pay,baseline,ko,tool_article,,생활백과 추가 전 114개 URL,0.761

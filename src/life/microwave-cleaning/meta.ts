@@ -9,7 +9,7 @@ export const meta: LifeArticleMeta = {
   updatedAt: '2026-08-25',
   weight: 79,
   relatedArticles: ['airfryer-cleaning', 'gas-stove-cleaning', 'fridge-cleaning'],
-  relatedTools: ['appliance-electricity'],
+  relatedTools: [],
   places: ['kitchen', 'appliance'],
   problems: ['grease', 'smell'],
 };

@@ -37,6 +37,8 @@ export interface LifeArticleMeta {
   locales: readonly Locale[];
   publishedAt: string;
   updatedAt: string;
+  /** 일부 언어만 수정한 경우, 변경되지 않은 언어의 실제 수정일. */
+  updatedAtByLocale?: Partial<Record<Locale, string>>;
   /** 목록 노출 우선순위 (클수록 먼저) */
   weight?: number;
   /** 직접 지정한 관련 문서 slug (우선순위 1) */
@@ -91,4 +93,8 @@ export interface LifeContent {
 export interface LifeArticleModule {
   meta: LifeArticleMeta;
   content: Partial<Record<Locale, LifeContent>>;
+}
+
+export function lifeUpdatedAt(meta: LifeArticleMeta, locale: Locale): string {
+  return meta.updatedAtByLocale?.[locale] ?? meta.updatedAt;
 }

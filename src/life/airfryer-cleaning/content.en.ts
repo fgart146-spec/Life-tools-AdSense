@@ -18,7 +18,7 @@ export const content: LifeContent = {
     'Air fryers are nonstick, so scrubbing is the worst approach. Soak the basket in warm soapy water and wipe the heating element above the basket — that element is usually the source of any burnt smell.',
   quickAnswer: [
     'Unplug it and let it cool completely.',
-    'Remove the basket and tray and soak them in warm water with dish soap for 20–30 minutes.',
+    'Remove the basket and tray and soak them in warm water with dish soap for at least 5–10 minutes; leave stubborn residue longer if the manual allows.',
     'Wipe with a soft sponge. No steel wool, no metal utensils.',
     'Wipe the interior and the heating element above the basket with a well-wrung damp cloth.',
     'Dry everything fully before reassembling.',
@@ -40,7 +40,7 @@ export const content: LifeContent = {
     {
       title: '2. Soak rather than scrub',
       description:
-        'Fill the sink with warm water and dish soap and submerge the basket and tray for 20–30 minutes. Baked-on grease softens and comes away with almost no pressure. Trying to scrub it off cold is what damages coatings.',
+        'Fill the sink with warm water and dish soap and soak the removable basket and tray. Philips advises five to ten minutes for stuck food on its models; other parts and coatings may need different care. Let the residue soften before wiping with a soft sponge.',
     },
     {
       title: '3. Wipe with something soft',
@@ -76,7 +76,7 @@ export const content: LifeContent = {
     {
       title: 'A burnt smell that will not go away',
       description:
-        'If the basket is clean but the smell persists, trace grease on the heating element is the cause. Put a little water in the basket with lemon slices or a spoonful of vinegar and run it at 160°C / 320°F for five to ten minutes. Then open the drawer and let it air out.',
+        'If the basket is clean but the smell persists, inspect the area around the heating element after unplugging and cooling the unit. Follow your model’s manual for access and cleaning. Do not heat water, vinegar or other cleaning liquids in the basket unless that model’s instructions explicitly allow it.',
     },
     {
       title: 'Cooking fatty foods often',
@@ -129,6 +129,7 @@ export const content: LifeContent = {
     },
   ],
   sources: [
+    { label: 'How to clean my Philips Airfryer (model-specific example)', url: 'https://www.usa.philips.com/c-f/XC000012903/how-to-clean-my-philips-airfryer', publisher: 'Philips Support', accessedAt: '2026-10-02' },
     { label: 'Check the manufacturer manual for dishwasher safety and permitted disassembly.' },
   ],
   searchTerms: [

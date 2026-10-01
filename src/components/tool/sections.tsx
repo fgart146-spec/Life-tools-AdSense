@@ -3,6 +3,7 @@ import { localePath, type Locale } from '@/lib/i18n/config';
 import { formatDate } from '@/lib/format/number';
 import type { Dictionary } from '@/lib/i18n/types';
 import type { FaqItem, FormulaLine, SourceRef, WorkedExample } from '@/lib/tools/types';
+import { SourceReferences } from '@/components/content/SourceReferences';
 
 /**
  * 도구 상세 페이지의 설명 섹션들 (서버 컴포넌트).
@@ -177,29 +178,7 @@ export function SourceInfo({
         <span className="font-semibold text-ink-700">{dict.common.updatedAt}:</span>{' '}
         {formatDate(basisDate ?? updatedAt, locale)}
       </p>
-      {sources && sources.length > 0 && (
-        <div className="mt-2">
-          <span className="font-semibold text-ink-700">{dict.common.sources}:</span>
-          <ul className="mt-1 grid gap-1">
-            {sources.map((source) => (
-              <li key={source.label}>
-                {source.url ? (
-                  <a
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-brand-700 underline underline-offset-2 hover:text-brand-800"
-                  >
-                    {source.label}
-                  </a>
-                ) : (
-                  source.label
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <SourceReferences locale={locale} dict={dict} sources={sources} />
       <p className="mt-3 leading-relaxed">{dict.tool.disclaimer}</p>
     </section>
   );

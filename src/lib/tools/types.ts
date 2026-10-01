@@ -55,8 +55,14 @@ export interface FaqItem {
 }
 
 export interface SourceRef {
+  /** 독자에게 표시할 문서명 또는 기존의 확인 안내 문구 */
   label: string;
+  /** 검증 가능한 원문 자료일 때만 설정한다. URL이 없으면 확인 안내로 표시된다. */
   url?: string;
+  /** 원문 발행기관·제조사. URL에서 확인한 경우에만 설정한다. */
+  publisher?: string;
+  /** 자료 확인일 (YYYY-MM-DD). 페이지 수정일과 구분한다. */
+  accessedAt?: string;
 }
 
 /**

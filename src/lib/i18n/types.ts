@@ -23,6 +23,8 @@ export interface Dictionary {
     home: string;
     updatedAt: string;
     sources: string;
+    sourceNotes: string;
+    sourceAccessedAt: string;
     loading: string;
     required: string;
     optional: string;
@@ -149,6 +151,7 @@ export interface Dictionary {
       site: string;
     };
     about: string;
+    editorialPolicy: string;
     contact: string;
     privacy: string;
     terms: string;

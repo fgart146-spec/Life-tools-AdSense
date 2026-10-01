@@ -16,6 +16,8 @@ export const en: Dictionary = {
     home: 'Home',
     updatedAt: 'Last reviewed',
     sources: 'Basis & sources',
+    sourceNotes: 'What to check',
+    sourceAccessedAt: 'Accessed',
     loading: 'Loading',
     required: 'Required',
     optional: 'Optional',
@@ -33,12 +35,12 @@ export const en: Dictionary = {
     changeLanguage: 'Change language',
   },
   home: {
-    metaTitle: 'Everyday money tools — check the numbers before you spend',
+    metaTitle: 'Everyday calculations and household guides',
     metaDescription:
-      'Free unit price, discount, margin and everyday budget calculators. No sign-up, instant results, worked examples included.',
-    heading: 'What are we working out today?',
+      'Compare prices and costs with free calculators, then find practical steps for stains, laundry, cleaning and other household problems.',
+    heading: 'Calculate the cost. Work through the household problem.',
     subheading:
-      'Compare unit prices, check what a discount is really worth, and price your products — all in your browser, no account needed.',
+      'Use a calculator for prices and budgets, or find a step-by-step guide for cleaning, laundry and home care. No account is needed to calculate.',
     quickActionsTitle: 'Popular calculations',
     popularTitle: 'Most used tools',
     seasonalTitle: 'Picked for this month',
@@ -75,7 +77,7 @@ export const en: Dictionary = {
     metaDescription:
       'Every calculator on the site: shopping and unit price, household bills, pay, selling and pricing, home and moving.',
     heading: 'All tools',
-    lead: 'Pick a category below. Everything runs instantly in your browser.',
+    lead: 'Choose a tool when you need a number for a price, cost or business decision. Inputs are calculated in your browser.',
     countLabel: 'tools',
   },
   tool: {
@@ -117,7 +119,7 @@ export const en: Dictionary = {
     indexMetaDescription:
       'Step-by-step fixes for the household problems that come up most often: stains, laundry smells, appliance cleaning and mold.',
     indexHeading: 'Life guide',
-    indexLead: 'Everyday household problems, solved step by step.',
+    indexLead: 'Find steps for stains, laundry, cleaning and home care that fit the material and situation.',
     searchHeading: 'What is the problem?',
     searchPlaceholder: 'towel smell, oil stain, washer cleaning...',
     searchLabel: 'Search household problems',
@@ -156,13 +158,14 @@ export const en: Dictionary = {
     homeCta: 'Open the life guide',
   },
   footer: {
-    tagline: 'Check the numbers before you spend.',
+    tagline: 'Everyday calculations and practical household guides.',
     sections: {
       tools: 'Tools',
       content: 'Content',
       site: 'Site',
     },
     about: 'About',
+    editorialPolicy: 'Editorial policy',
     contact: 'Contact',
     privacy: 'Privacy policy',
     terms: 'Terms of use',

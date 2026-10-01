@@ -9,7 +9,7 @@ export const meta: LifeArticleMeta = {
   updatedAt: '2026-08-25',
   weight: 84,
   relatedArticles: ['humidity-control', 'window-frame-mold', 'balcony-mold'],
-  relatedTools: ['wallpaper', 'heating-cost'],
+  relatedTools: ['heating-cost'],
   places: ['etc'],
   problems: ['mold'],
 };

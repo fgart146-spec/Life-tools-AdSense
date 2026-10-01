@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { LifeContent } from '@/lib/life/types';
 import type { Dictionary } from '@/lib/i18n/types';
 import type { FaqItem, SourceRef } from '@/lib/tools/types';
+import { SourceReferences } from '@/components/content/SourceReferences';
 import { formatDate } from '@/lib/format/number';
 import type { Locale } from '@/lib/i18n/config';
 
@@ -264,29 +265,7 @@ export function LifeSourceInfo({
         <span className="font-semibold text-ink-700">{dict.common.updatedAt}:</span>{' '}
         {formatDate(updatedAt, locale)}
       </p>
-      {sources && sources.length > 0 && (
-        <div className="mt-2">
-          <span className="font-semibold text-ink-700">{dict.common.sources}:</span>
-          <ul className="mt-1 grid gap-1">
-            {sources.map((source) => (
-              <li key={source.label}>
-                {source.url ? (
-                  <a
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-brand-700 underline underline-offset-2 hover:text-brand-800"
-                  >
-                    {source.label}
-                  </a>
-                ) : (
-                  source.label
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <SourceReferences locale={locale} dict={dict} sources={sources} />
     </section>
   );
 }

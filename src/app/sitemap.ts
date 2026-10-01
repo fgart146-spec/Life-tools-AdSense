@@ -20,6 +20,7 @@ interface SitemapPage {
   /** 실제로 존재하는 로케일 */
   pageLocales: readonly Locale[];
   lastModified?: string;
+  lastModifiedByLocale?: Partial<Record<Locale, string>>;
   changeFrequency?: MetadataRoute.Sitemap[number]['changeFrequency'];
   priority?: number;
 }
@@ -114,6 +115,7 @@ function collectPages(): SitemapPage[] {
         path: lifeArticlePath(lifeCategories[article.category].slug, article.slug),
         pageLocales: article.locales,
         lastModified: article.updatedAt,
+        lastModifiedByLocale: article.updatedAtByLocale,
         changeFrequency: 'monthly',
         priority: 0.8,
       });
@@ -150,7 +152,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of page.pageLocales) {
       entries.push({
         url: absoluteUrl(localePath(locale, page.path)),
-        lastModified: page.lastModified ? new Date(page.lastModified) : undefined,
+        lastModified: page.lastModified
+          ? new Date(page.lastModifiedByLocale?.[locale] ?? page.lastModified)
+          : undefined,
         changeFrequency: page.changeFrequency,
         priority: page.priority,
         alternates: { languages },

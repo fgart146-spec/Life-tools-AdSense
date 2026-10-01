@@ -8,7 +8,7 @@ export const meta: LifeArticleMeta = {
   publishedAt: '2026-08-25',
   updatedAt: '2026-08-25',
   weight: 70,
-  relatedArticles: ['towel-smell', 'bathroom-mold'],
+  relatedArticles: ['bedding-storage', 'humidity-control'],
   relatedTools: [],
   places: ['clothes'],
   problems: ['store', 'smell'],

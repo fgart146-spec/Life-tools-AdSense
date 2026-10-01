@@ -1,6 +1,6 @@
 import type { Locale } from '@/lib/i18n/config';
 import { lifeIndex } from '@/lib/life';
-import type { LifeArticleModule, LifeContent } from '@/lib/life/types';
+import { lifeUpdatedAt, type LifeArticleModule, type LifeContent } from '@/lib/life/types';
 import { findLifeCategoryBySlug, lifeCategories } from '@/lib/life/categories';
 import { toolDefinitions } from '@/lib/tools/definitions';
 import { lifeArticleModules } from '@/life';
@@ -52,7 +52,7 @@ function toListItem(article: LifeArticleModule, locale: Locale): LifeListItem {
     categorySlug: category.slug,
     categoryLabel: category.label[locale],
     categoryEmoji: category.emoji,
-    updatedAt: article.meta.updatedAt,
+    updatedAt: lifeUpdatedAt(article.meta, locale),
     weight: article.meta.weight ?? 0,
   };
 }

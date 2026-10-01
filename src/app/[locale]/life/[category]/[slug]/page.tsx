@@ -23,6 +23,7 @@ import {
   relatedLifeArticles,
   relatedToolIdsFor,
 } from '@/lib/life/registry';
+import { lifeUpdatedAt } from '@/lib/life/types';
 import { listTools } from '@/lib/tools/registry';
 import { Container } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
@@ -77,7 +78,7 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
     availableLocales: resolved.article.meta.locales,
     type: 'article',
     publishedTime: resolved.article.meta.publishedAt,
-    modifiedTime: resolved.article.meta.updatedAt,
+    modifiedTime: lifeUpdatedAt(resolved.article.meta, locale),
   });
 }
 
@@ -89,6 +90,7 @@ export default async function LifeArticlePage({ params }: PageParams) {
   const resolved = resolve(locale, categorySlug, slug);
   if (!resolved) notFound();
   const { article, category, content } = resolved;
+  const updatedAt = lifeUpdatedAt(article.meta, locale);
 
   const dict = getDictionary(locale);
   const path = lifeArticlePath(category.slug, slug);
@@ -128,7 +130,7 @@ export default async function LifeArticlePage({ params }: PageParams) {
               description: content.seoDescription,
               path,
               publishedAt: article.meta.publishedAt,
-              updatedAt: article.meta.updatedAt,
+              updatedAt,
             }),
           ),
         }}
@@ -180,7 +182,7 @@ export default async function LifeArticlePage({ params }: PageParams) {
           <LifeSourceInfo
             locale={locale}
             dict={dict}
-            updatedAt={article.meta.updatedAt}
+            updatedAt={updatedAt}
             sources={content.sources}
           />
         </article>

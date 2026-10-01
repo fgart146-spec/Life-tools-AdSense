@@ -1,167 +1,162 @@
 import type { LifeContent } from '@/lib/life/types';
 
 export const content: LifeContent = {
-  title: 'How to Descale and Clean a Humidifier (Citric Acid Method)',
-  seoTitle: 'How to Descale a Humidifier With Citric Acid — Ratio, Soak Time, Rinse',
+  title: 'How to Clean a Humidifier: Water Tank, Scale and Filter by Model',
+  seoTitle: 'How to Clean a Humidifier — Daily Water Care and Model-Specific Descaling',
   seoDescription:
-    'Descale a humidifier with 1 tablespoon of citric acid per quart of warm water: fill the tank and base, soak 30–60 minutes, scrub the base corners, rinse until odorless. Plus the daily rinse routine, the white-dust fix, and what never to mix.',
+    'Empty and dry a portable humidifier daily, clean deposits regularly, and check the manual before using a descaler. Learn how tank, base and filter care differ, and what white dust means.',
   primaryKeyword: 'how to descale humidifier',
   secondaryKeywords: [
     'how to clean a humidifier',
     'how to clean humidifier with citric acid',
-    'citric acid humidifier ratio',
     'humidifier white dust',
     'humidifier smells bad',
     'ultrasonic humidifier cleaning',
   ],
   searchIntent:
-    'The humidifier smells, has a slimy film in the tank, or is leaving white powder on the furniture. Wants to know how often to clean it and what is actually safe.',
+    'The humidifier smells, has deposits in the tank, or leaves white dust. The reader needs a safe cleaning routine for their type of unit and wants to know whether a descaler is appropriate.',
   summary:
-    'A humidifier atomizes tank water into the air, so bacteria and mineral buildup inside it go straight into your lungs. Emptying and drying the tank every day matters more than any deep clean, and a weekly citric acid soak handles the scale.',
+    'Empty and dry the water tank of a portable humidifier daily. The US EPA advises cleaning portable units every third day and following the manufacturer’s cleaner instructions. There is no citric-acid concentration that is safe to prescribe for every tank, wick and base.',
   quickAnswer: [
-    'Unplug it. Empty any leftover water every single day rather than topping it up.',
-    'Rinse the tank and wipe the inside with a soft brush or cloth, especially the corners and the neck.',
-    'Once a week, fill the tank and base with a citric acid solution (about 1 tablespoon per quart of warm water), leave 30 minutes to an hour, then scrub and rinse thoroughly.',
-    'Rinse until you cannot smell the acid, then leave every part open to air-dry completely before refilling.',
-    'Use fresh water at each fill. Water left standing for even a day grows a measurable bacterial film.',
+    'Unplug the unit. Empty the old water, wipe accessible wet surfaces dry, and refill with fresh water each day.',
+    'Check the model manual before removing a filter or putting any cleaner in the tank or base. Keep electrical parts dry.',
+    'Clean accessible deposits regularly; the US EPA advises cleaning portable humidifiers every third day.',
+    'If the manual permits a descaler, use its exact product, dilution, contact time and rinse instructions. Rinse with several changes of water after any cleaner.',
+    'Dry the parts before storage. If white dust appears, check whether low-mineral water is appropriate for your model.',
   ],
   supplies: [
-    'Citric acid (or white vinegar for light scale)',
-    'A soft bottle brush and an old toothbrush',
-    'A soft cloth or sponge, non-abrasive',
-    'A drying rack or towel to lay the parts out on',
-    'Cotton swabs for the nozzle and sensor areas',
+    'The model number and its cleaning instructions',
+    'Fresh water; low-mineral water if the manual permits it and white dust is a problem',
+    'A soft brush or cloth for the surfaces the manual says you may clean',
+    'Only a cleaner expressly approved for that model and part',
   ],
   steps: [
     {
-      title: '1. Unplug it and take it apart as far as the manual allows',
+      title: '1. Identify the unit and the part that needs cleaning',
       description:
-        'Separate the tank, the base reservoir, the nozzle and any tray or wick. Only remove what the manual shows as removable — the base contains the electronics and the transducer or heating element, and it is not something to open up. Everything you can lift off is what you clean.',
+        'An ultrasonic model may have a tank and a transducer area; an evaporative model may also have a wick; a warm-mist model can have hot components. Locate the model number and learn which parts the manual says are removable. Do not open the electrical housing.',
     },
     {
-      title: '2. Dump the old water, do not top it up',
+      title: '2. Empty the water every day',
       description:
-        'Pour out anything left in the tank and the base rather than adding fresh water on top. Standing water at room temperature builds a bacterial population within a day, and the base reservoir is warmer and more contaminated than the tank. Topping up carries yesterday population into today water.',
+        'Unplug the unit, discard leftover water and wipe the accessible wet surfaces dry before refilling. The US EPA recommends this daily routine for portable humidifiers to reduce microbial growth. Do not simply top up yesterday’s water.',
     },
     {
-      title: '3. Soak with citric acid weekly',
+      title: '3. Clean the accessible wet surfaces regularly',
       description:
-        'Dissolve citric acid in warm water and fill both the tank and the base, then leave it 30 to 60 minutes. The chalky ring and the crust on the transducer are calcium carbonate, which only an acid dissolves — scrubbing dry scale just polishes it. Warm water speeds the reaction; boiling water can warp plastic tanks.',
+        'The US EPA advises cleaning portable humidifiers every third day: empty the tank, brush away visible film or deposits and wipe the accessible surfaces dry. The model manual takes priority for the specific parts and permitted tools.',
     },
     {
-      title: '4. Scrub the parts you normally cannot see',
+      title: '4. Descale only as the manual allows',
       description:
-        'Use a bottle brush on the tank interior and a toothbrush on the base corners, the float, the nozzle underside and the seam around the cap. Slime forms fastest in exactly those low-flow spots. A cotton swab handles the small metal disc in an ultrasonic base, which needs a gentle touch and no scraping.',
+        'Scale treatment varies by model and component. A removable wick, plastic tank and electrical base need different handling. For example, Philips gives a vinegar soak for the filter on specified models and tells owners to use their own model manual. That filter instruction is not permission to pour vinegar or citric acid into every base.',
     },
     {
-      title: '5. Rinse far more than feels necessary',
+      title: '5. Rinse and dry before use or storage',
       description:
-        'Any acid or cleaner left behind gets aerosolized into the room on the next run. Rinse the tank three or four times and swirl water around the base until the smell is gone completely. This is the step where a quick job turns into a room that smells of vinegar all evening.',
-    },
-    {
-      title: '6. Dry every part fully before reassembling',
-      description:
-        'Stand the tank upside down and lay the small parts out separately so air reaches all the surfaces. Reassembling while damp seals moisture into the joints and restarts the growth immediately. If you are not using the unit for a few days, store it dry and empty rather than full.',
-    },
-    {
-      title: '7. Check the filter or wick on its own schedule',
-      description:
-        'Evaporative models have a wick filter that is a consumable, not a cleanable part. Rinsing it may clear surface dust but it stiffens with mineral deposits and loses output. Replace it on the interval in the manual — typically every one to three months depending on water hardness.',
+        'After any approved cleaning agent, the US EPA advises rinsing the tank thoroughly with several changes of water so chemicals are not dispersed during use. Reassemble only as the manual directs. Clean and dry all parts before seasonal storage.',
     },
   ],
   cautions: [
-    'Never mix chlorine bleach with citric acid, vinegar or any descaler. The combination releases toxic chlorine gas. If you use a diluted bleach rinse at all, do it in a separate session with a full rinse in between.',
-    'Do not put essential oils, fragrance or any additive into a tank unless the manufacturer designed the unit for it. Oils degrade plastic seals and can damage an ultrasonic transducer.',
-    'Do not open or wash the base housing, the fan, or any part containing wiring. Wipe the exterior with a damp cloth only and check the manual for anything further.',
-    'Skip abrasive pads and metal tools inside the base. Scratching the transducer disc reduces output permanently.',
-    'Steam humidifiers produce boiling water and hot vapor. Let the unit cool fully before cleaning and keep it out of reach of children.',
-    'Do not run the humidifier continuously to very high humidity. Above roughly 60 percent indoor humidity you encourage mold on walls and in furnishings, which is a bigger problem than dry air.',
+    'Never mix bleach or another disinfectant with vinegar, citric acid or a different cleaner. The CDC warns against mixing household cleaning products.',
+    'Do not pour cleaner into the motor or electrical base or soak a component unless the model manual specifically permits it.',
+    'Let a warm-mist or steam unit cool before handling it. Hot water and steam can burn.',
+    'Do not add oils or fragrance to the water unless the model is designed for them.',
+    'The US EPA advises keeping indoor relative humidity at or below 50%. If windows or nearby fabric become damp, reduce output or move the unit.',
+    'If you have respiratory symptoms that seem linked to humidifier use, stop using it and seek medical advice; cleaning advice cannot diagnose the cause.',
   ],
   situationTips: [
     {
-      title: 'White dust on the furniture',
+      title: 'White dust appears on furniture',
       description:
-        'That is dissolved minerals from your tap water, sprayed out as fine particles by an ultrasonic unit and settling as powder. It is a hard water issue rather than a dirty machine. Distilled or demineralized water eliminates it; a demineralization cartridge reduces it. Evaporative and steam models do not produce it at all.',
+        'Ultrasonic and impeller units can disperse minerals from tap water. The US EPA recommends lower-mineral water, such as distilled water, or a compatible demineralization cartridge if the model supports one. White dust does not by itself tell you whether the tank is clean.',
     },
     {
-      title: 'Ultrasonic versus evaporative versus steam',
+      title: 'A musty smell returns after cleaning',
       description:
-        'Ultrasonic units atomize water cold, so anything living in the tank goes out with the mist — they need the strictest daily routine. Evaporative units blow air through a wet wick, so most minerals stay in the wick, but the wick itself grows mold if it stays damp and unused. Steam units boil the water, which kills organisms, but they scale up fastest and need the most frequent descaling.',
+        'Inspect the tank and other removable wet parts the manual allows you to reach. Empty, clean and dry them as directed. If the smell persists despite correct care, stop running the unit and contact the manufacturer rather than adding stronger chemicals.',
     },
     {
-      title: 'A sour or musty smell from the output',
+      title: 'The unit has a wick or filter',
       description:
-        'That is bacterial growth in the base reservoir, almost always. Do the full citric acid soak, scrub the base corners specifically, and dry it completely. If the smell returns within a couple of days, water is sitting somewhere you have not reached — check under the float and inside the nozzle.',
+        'Check whether your exact filter may be rinsed, descaled or must be replaced. Philips provides a vinegar soak for certain removable humidification filters, while other models have different instructions. Do not treat the filter and tank as the same part.',
     },
     {
-      title: 'Output has dropped but nothing looks dirty',
+      title: 'Output has dropped',
       description:
-        'On an ultrasonic model, a thin invisible scale layer on the transducer disc cuts output sharply. On an evaporative model, a stiffened wick does the same. Both are mineral problems: descale the disc gently, replace the wick.',
+        'Visible deposits or a worn filter may affect performance, but low output can have other causes. Check the model’s troubleshooting guide before scraping a transducer or replacing a part.',
     },
   ],
   cause: [
-    'Room-temperature standing water is an ideal growth medium. A humidifier tank refills that medium every day and rarely dries out, which is why growth is fast even in a unit that looks clean.',
-    'The base reservoir stays wetter and warmer than the tank and is harder to see into, so it is usually the source of the smell rather than the tank people actually rinse.',
-    'Tap water minerals concentrate as water evaporates, so scale forms even though the incoming water looks clear. Harder water means faster buildup.',
-    'Unlike most appliances, a humidifier deliberately aerosolizes its contents. Contamination inside it does not stay inside it, which is why the cleaning standard is higher than for, say, a kettle.',
+    'Water standing in a tank can support microbial growth. The US EPA notes that ultrasonic and impeller humidifiers can disperse microorganisms and minerals from tank water into indoor air.',
+    'Minerals in water can leave scale on wetted parts and appear as white dust with some types of humidifier. Cleaning the unit and choosing suitable water address different parts of that problem.',
   ],
   prevention: [
-    'Empty, rinse and dry the tank daily rather than topping it up. This is the single highest-value habit.',
-    'Fill with fresh water each time, and use distilled water if white dust or heavy scale is an issue.',
-    'Descale weekly with citric acid during the season you use it, before deposits harden.',
-    'Keep indoor humidity around 40 to 50 percent and use a cheap hygrometer rather than guessing.',
-    'Run the unit away from walls and fabric so the mist disperses instead of soaking one surface.',
-    'At the end of the season, clean it fully, dry every part for a day, and store it disassembled with the tank cap off.',
+    'For portable units, empty and wipe the tank dry daily and clean accessible surfaces every third day, as the US EPA advises, unless the manufacturer requires a more specific routine.',
+    'Use the type of water recommended for the unit. Low-mineral water can reduce scale and white dust in suitable models.',
+    'Measure room humidity and lower output if condensation appears; the US EPA advises not exceeding 50% relative humidity.',
+    'At the end of the season, follow the manual’s cleaning instructions and store all parts dry.',
   ],
   faq: [
     {
-      question: 'What is the citric acid ratio for descaling a humidifier?',
+      question: 'What citric acid ratio should I use in my humidifier?',
       answer:
-        'About 1 tablespoon (roughly 15 g) of citric acid per quart or liter of warm water. Heavy scale on a steam unit can take 2 tablespoons per liter. Dissolve it completely before pouring it in, and do not use boiling water — it can warp the tank and cloud the plastic.',
+        'There is no reliable universal ratio for every tank, base and wick. Check the exact model manual for an approved descaler, dilution, contact time and rinse method. If it does not authorize citric acid, do not substitute an internet recipe.',
     },
     {
-      question: 'Citric acid or vinegar — which is better for descaling a humidifier?',
+      question: 'How often should I clean a portable humidifier?',
       answer:
-        'Both are acids that dissolve calcium scale. Citric acid is odorless once rinsed and a little stronger on thick deposits, so it is the better weekly choice. White vinegar works for light scale: use it undiluted or half-and-half with water, soak the same 30 to 60 minutes, and expect to rinse longer to clear the smell. Never use either in the same session as bleach.',
+        'The US EPA advises emptying and wiping the tank dry daily and cleaning portable humidifiers every third day. Follow any more specific instructions for your model, especially for its filter and electrical base.',
     },
     {
-      question: 'How often does a humidifier really need cleaning?',
+      question: 'Can I use bleach or vinegar?',
       answer:
-        'Rinse and dry daily, descale weekly while in use. That sounds like a lot, but the daily part takes under a minute and it is what prevents the weekly job from becoming a scrubbing session. Skipping the daily rinse is why units start smelling within a week.',
+        'Use only what the manufacturer approves for the particular part. Do not mix bleach with vinegar, citric acid or any other cleaner. Rinse thoroughly with several changes of water after an approved cleaner.',
     },
     {
-      question: 'Can I use bleach to disinfect the tank?',
+      question: 'Is white dust proof of mold?',
       answer:
-        'Some manufacturers do specify a heavily diluted bleach rinse. If yours does, follow their dilution and rinse exhaustively afterward, and never combine or alternate it with an acid descaler in the same session. For most home use, citric acid plus daily emptying keeps growth low without that risk.',
+        'No. Some ultrasonic and impeller humidifiers disperse minerals from tap water as white dust. If you also see film or smell an odor, clean the accessible wet parts as directed; do not assume the dust identifies a microorganism.',
     },
     {
-      question: 'Is white dust harmful?',
+      question: 'Does every wick need replacement?',
       answer:
-        'It is mineral particulate rather than mold or bacteria, and the main practical effect is dust on surfaces and in electronics. People with asthma or respiratory sensitivity often notice it. Using distilled water removes the cause rather than managing the symptom.',
-    },
-    {
-      question: 'Can I put essential oils in the water?',
-      answer:
-        'Only in a unit specifically designed with an oil tray. In a standard tank, oils attack the plastic and seals and can coat an ultrasonic transducer, reducing output and voiding the warranty.',
-    },
-    {
-      question: 'Does the wick filter need washing?',
-      answer:
-        'It is a replaceable part, not a washable one. Rinsing removes loose dust but not the mineral stiffening that reduces its capacity. When it feels crusty or output drops, replace it on the schedule in your manual.',
+        'No single rule fits every model. Some manufacturers describe cleaning a removable filter; others specify replacement. Use the part number and interval in your unit’s manual.',
     },
   ],
   sources: [
-    { label: 'Follow your humidifier manufacturer manual for disassembly limits, approved cleaners and filter replacement intervals.' },
+    {
+      label: 'Use and Care of Home Humidifiers',
+      url: 'https://www.epa.gov/indoor-air-quality-iaq/use-and-care-home-humidifiers',
+      publisher: 'US Environmental Protection Agency',
+      accessedAt: '2026-10-02',
+    },
+    {
+      label: 'Preventing Waterborne Germs at Home',
+      url: 'https://www.cdc.gov/drinking-water/prevention/preventing-waterborne-germs-at-home.html',
+      publisher: 'US Centers for Disease Control and Prevention',
+      accessedAt: '2026-10-02',
+    },
+    {
+      label: 'How to store selected Philips humidifiers, including model-specific filter care',
+      url: 'https://www.usa.philips.com/c-f/XC000005764/how-to-store-my-philips-humidifier-or-combi-purifier-humidifier',
+      publisher: 'Philips',
+      accessedAt: '2026-10-02',
+    },
+    {
+      label: 'Cleaning and Disinfecting with Bleach',
+      url: 'https://www.cdc.gov/hygiene/about/cleaning-and-disinfecting-with-bleach.html',
+      publisher: 'US Centers for Disease Control and Prevention',
+      accessedAt: '2026-10-02',
+    },
+    { label: 'For approved cleaners, filter intervals and removable parts, check the manual for your exact model.' },
   ],
   searchTerms: [
     'descale humidifier',
     'humidifier descaler',
-    'humidifier citric acid',
     'how to descale a humidifier',
-    'humidifier mold',
+    'humidifier white dust',
     'clean humidifier tank',
     'humidifier maintenance',
-    'vaporizer cleaning',
-    'humidifier limescale',
   ],
 };

@@ -15,6 +15,8 @@ export const ja: Dictionary = {
     home: 'ホーム',
     updatedAt: '基準日',
     sources: '算出基準・出典',
+    sourceNotes: '製品・資料の確認案内',
+    sourceAccessedAt: '確認日',
     loading: '読み込み中',
     required: '必須',
     optional: '任意',
@@ -32,12 +34,12 @@ export const ja: Dictionary = {
     changeLanguage: '言語を変更',
   },
   home: {
-    metaTitle: 'くらしの計算ツール — 買う前に、ひと計算',
+    metaTitle: '暮らしの計算と困りごとガイド',
     metaDescription:
-      '単価比較、割引率、利益率、暮らしの費用まで。登録不要ですぐ使える無料の計算ツール集です。',
-    heading: '今日は何を計算しますか？',
+      '買い物や費用の計算から、シミ・洗濯・掃除の手順まで。暮らしの判断に使える計算ツールと情報をまとめています。',
+    heading: '暮らしの数字を計算し、身近な困りごとを解決する',
     subheading:
-      '買う前にひと計算。単価の比較から割引の実質、販売の利益率まで、ブラウザだけで完結します。',
+      '価格や費用は計算ツールで確認。シミ・洗濯・掃除は素材や状況に合った手順を探せます。計算に登録は不要です。',
     quickActionsTitle: 'よく使う計算',
     popularTitle: 'よく使われているツール',
     seasonalTitle: '今月のおすすめ',
@@ -74,7 +76,7 @@ export const ja: Dictionary = {
     metaDescription:
       '買い物の単価比較、暮らしの費用、給与、販売・価格設定、住まいまで。すべての計算ツールを一覧で。',
     heading: 'すべてのツール',
-    lead: 'カテゴリから選んでください。計算はすべてブラウザ内で即時に行われます。',
+    lead: '価格・費用・販売の数字を判断するときに使うツールです。入力値はブラウザ内で計算します。',
     countLabel: '件',
   },
   tool: {
@@ -116,7 +118,7 @@ export const ja: Dictionary = {
     indexMetaDescription:
       'タオルのニオイ、シミ抜き、洗濯機の掃除、カビ対策など、家でよくある困りごとの解決手順をまとめました。',
     indexHeading: '暮らしの百科',
-    indexLead: '家で起きる困りごとを、手早く解決しましょう。',
+    indexLead: 'シミ・洗濯・掃除など、素材や状況に合う手順を探せます。',
     searchHeading: 'どんなお困りですか？',
     searchPlaceholder: 'タオル ニオイ、油シミ、洗濯機 掃除...',
     searchLabel: '暮らしの困りごとを検索',
@@ -155,13 +157,14 @@ export const ja: Dictionary = {
     homeCta: '暮らしの百科を見る',
   },
   footer: {
-    tagline: '買う前に、ひと計算。',
+    tagline: '暮らしの計算と、家の困りごとの手順。',
     sections: {
       tools: 'ツール',
       content: 'コンテンツ',
       site: 'サイト',
     },
     about: 'サイトについて',
+    editorialPolicy: '編集・訂正方針',
     contact: 'お問い合わせ',
     privacy: 'プライバシーポリシー',
     terms: '利用規約',

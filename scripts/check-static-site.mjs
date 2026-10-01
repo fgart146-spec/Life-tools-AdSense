@@ -5,8 +5,8 @@
  * 검사 항목
  *  1) 내부 링크가 실제로 생성된 페이지를 가리키는지 (깨진 링크 0)
  *  2) 페이지마다 H1이 정확히 하나인지
- *  3) canonical / hreflang / title / description 이 있는지
- *  4) 클라이언트 번들에 비밀키가 섞이지 않았는지
+ *  3) 공개 URL의 self canonical / 상호 hreflang / noindex / sitemap 일치
+ *  4) 공개 페이지의 고아 여부와 클라이언트 번들 비밀키
  *
  * 사용: node scripts/check-static-site.mjs
  */
@@ -71,6 +71,9 @@ async function main() {
 
   const problems = [];
   let checkedLinks = 0;
+  const inbound = new Map();
+  const alternatesByRoute = new Map();
+  const publicRoutes = new Set([...routes].filter((route) => /^\/(ko|en|ja)(\/|$)/.test(route)));
 
   for (const file of files) {
     const route = toRoute(file);
@@ -86,6 +89,8 @@ async function main() {
       checkedLinks += 1;
       if (!routes.has(clean)) {
         problems.push(`깨진 링크: ${route} → ${href}`);
+      } else if (route !== clean && publicRoutes.has(route) && publicRoutes.has(clean)) {
+        inbound.set(clean, (inbound.get(clean) ?? 0) + 1);
       }
     }
 
@@ -100,6 +105,40 @@ async function main() {
     }
     if (!/<title>[^<]+<\/title>/.test(html)) problems.push(`title 없음: ${route}`);
     if (!/name="description"/.test(html)) problems.push(`description 없음: ${route}`);
+
+    if (publicRoutes.has(route)) {
+      const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
+      if (canonical && new URL(canonical[1]).pathname.replace(/\/$/, '') !== route) {
+        problems.push(`self canonical 불일치: ${route} → ${canonical[1]}`);
+      }
+      if (/<meta[^>]+name="(?:robots|googlebot)"[^>]+content="[^"]*noindex/i.test(html)) {
+        problems.push(`공개 URL에 noindex: ${route}`);
+      }
+      const alternates = new Map();
+      for (const match of html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/g)) {
+        alternates.set(match[1], new URL(match[2]).pathname.replace(/\/$/, ''));
+      }
+      alternatesByRoute.set(route, alternates);
+    }
+  }
+
+  const sitemapXml = await readFile(path.join(APP_DIR, 'sitemap.xml.body'), 'utf8');
+  const sitemapRoutes = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+    .map((match) => new URL(match[1]).pathname.replace(/\/$/, '')));
+  for (const route of publicRoutes) {
+    if (!sitemapRoutes.has(route)) problems.push(`사이트맵에서 빠진 공개 URL: ${route}`);
+    if (!inbound.has(route)) problems.push(`내부 유입 링크가 없는 공개 URL: ${route}`);
+    const sourceLocale = route.split('/')[1];
+    for (const [locale, target] of alternatesByRoute.get(route) ?? []) {
+      if (locale === 'x-default') continue;
+      if (!publicRoutes.has(target)) problems.push(`hreflang 대상 없음: ${route} → ${target}`);
+      else if (alternatesByRoute.get(target)?.get(sourceLocale) !== route) {
+        problems.push(`hreflang 상호 연결 불일치: ${route} ↔ ${target}`);
+      }
+    }
+  }
+  for (const route of sitemapRoutes) {
+    if (!publicRoutes.has(route)) problems.push(`공개 HTML이 없는 사이트맵 URL: ${route}`);
   }
 
   // 4) 클라이언트 번들 비밀키 점검

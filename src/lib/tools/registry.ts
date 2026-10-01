@@ -172,6 +172,7 @@ const RESERVED_SLUGS = new Set([
   'life',
   'category',
   'about',
+  'editorial-policy',
   'contact',
   'privacy',
   'terms',

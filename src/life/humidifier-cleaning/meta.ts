@@ -6,10 +6,11 @@ export const meta: LifeArticleMeta = {
   status: 'published',
   locales: ['ko', 'en', 'ja'],
   publishedAt: '2026-08-25',
-  updatedAt: '2026-09-12',
+  updatedAt: '2026-10-02',
+  updatedAtByLocale: { ko: '2026-09-12', ja: '2026-09-12' },
   weight: 74,
   relatedArticles: ['humidity-control', 'condensation', 'microwave-cleaning'],
-  relatedTools: ['appliance-electricity'],
+  relatedTools: [],
   places: ['appliance'],
   problems: ['mold', 'smell'],
 };

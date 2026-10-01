@@ -9,7 +9,7 @@ export const meta: LifeArticleMeta = {
   updatedAt: '2026-08-25',
   weight: 81,
   relatedArticles: ['drum-washer-cleaning', 'washing-machine-smell', 'laundry-smell'],
-  relatedTools: ['appliance-electricity'],
+  relatedTools: [],
   places: ['appliance'],
   problems: ['smell', 'mold'],
 };

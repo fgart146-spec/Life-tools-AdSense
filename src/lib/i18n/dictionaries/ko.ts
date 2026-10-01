@@ -16,6 +16,8 @@ export const ko: Dictionary = {
     home: '홈',
     updatedAt: '업데이트 기준일',
     sources: '자료 출처·기준',
+    sourceNotes: '제품·자료 확인 안내',
+    sourceAccessedAt: '확인일',
     loading: '불러오는 중',
     required: '필수',
     optional: '선택',
@@ -33,12 +35,12 @@ export const ko: Dictionary = {
     changeLanguage: '언어 변경',
   },
   home: {
-    metaTitle: '생활·경제 실용도구 — 돈 쓰기 전에 한 번 계산해보세요',
+    metaTitle: '생활의 계산과 집안 문제 해결',
     metaDescription:
-      '단가 비교, 할인율, 전기요금, 생활비, 실수령액, 판매 마진까지. 회원가입 없이 바로 쓰는 무료 생활·경제 계산기 모음.',
-    heading: '오늘 뭐 계산해볼까요?',
+      '장보기·생활비·급여 계산부터 얼룩·세탁·청소 문제 해결까지. 필요한 계산기와 단계별 생활 정보를 한곳에서 찾으세요.',
+    heading: '생활의 숫자를 계산하고, 집안의 문제를 해결하세요',
     subheading:
-      '돈 쓰기 전에 한 번. 장보기 단가부터 전기요금, 급여, 판매 마진까지 회원가입 없이 바로 계산합니다.',
+      '가격과 비용은 직접 계산하고, 얼룩·세탁·청소는 상황에 맞는 방법을 찾아보세요. 계산에는 가입이 필요하지 않습니다.',
     quickActionsTitle: '자주 찾는 계산',
     popularTitle: '지금 많이 쓰는 도구',
     seasonalTitle: '이번 달 추천',
@@ -75,7 +77,7 @@ export const ko: Dictionary = {
     metaDescription:
       '장보기·생활비·가족·급여·사업·집 관련 실용 계산기를 한 곳에서 찾아보세요.',
     heading: '전체 도구',
-    lead: '필요한 계산을 카테고리에서 골라보세요. 모든 계산은 브라우저에서 즉시 처리됩니다.',
+    lead: '가격·비용·급여처럼 숫자로 판단할 때 쓰는 도구입니다. 입력값은 브라우저에서 계산합니다.',
     countLabel: '개 도구',
   },
   tool: {
@@ -117,7 +119,7 @@ export const ko: Dictionary = {
     indexMetaDescription:
       '수건 쉰내, 김치국물 얼룩, 세탁기 냄새, 욕실 곰팡이처럼 집에서 자주 생기는 생활 문제의 해결 방법을 단계별로 정리했습니다.',
     indexHeading: '생활백과',
-    indexLead: '집에서 생기는 생활 문제, 쉽고 빠르게 해결하세요.',
+    indexLead: '얼룩·세탁·청소 등 집에서 생기는 문제를 상황과 소재에 따라 살펴보세요.',
     searchHeading: '어떤 문제가 있으신가요?',
     searchPlaceholder: '수건 냄새, 김치 얼룩, 세탁기 청소...',
     searchLabel: '생활 문제 검색',
@@ -156,13 +158,14 @@ export const ko: Dictionary = {
     homeCta: '생활백과 보기',
   },
   footer: {
-    tagline: '돈 쓰기 전에 한 번 계산해보세요.',
+    tagline: '생활의 숫자를 계산하고, 집안의 문제를 살펴봅니다.',
     sections: {
       tools: '도구',
       content: '콘텐츠',
       site: '사이트',
     },
     about: '사이트 소개',
+    editorialPolicy: '콘텐츠 제작·수정 원칙',
     contact: '문의',
     privacy: '개인정보처리방침',
     terms: '이용약관',

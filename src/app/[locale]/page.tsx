@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { isLocale, localePath, type Locale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionary';
 import { buildMetadata } from '@/lib/seo/metadata';
-import { serializeJsonLd, webSiteJsonLd } from '@/lib/seo/jsonld';
+import { organizationJsonLd, serializeJsonLd, webSiteJsonLd } from '@/lib/seo/jsonld';
 import { categoryPath } from '@/lib/tools/categories';
 import { categoriesForLocale } from '@/lib/tools/definitions';
 import { listTools } from '@/lib/tools/registry';
@@ -79,7 +79,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: serializeJsonLd(webSiteJsonLd(locale)) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(webSiteJsonLd(locale, dict.home.metaDescription)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd(locale, dict.home.metaDescription)) }}
       />
 
       {/* 히어로: 장식 없이 '무엇을 하는 곳인지' + '바로 쓸 수 있는 입구'만 둔다. */}

@@ -8,7 +8,7 @@ export const meta: LifeArticleMeta = {
   publishedAt: '2026-08-25',
   updatedAt: '2026-08-25',
   weight: 78,
-  relatedArticles: ['airfryer-cleaning', 'oil-stain-clothes'],
+  relatedArticles: ['pan-grease', 'stainless-stain'],
   relatedTools: [],
   places: ['kitchen'],
   problems: ['grease'],

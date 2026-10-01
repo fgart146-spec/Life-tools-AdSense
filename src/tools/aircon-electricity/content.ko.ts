@@ -6,8 +6,8 @@ export const contentKo: ToolContent<ApplianceElectricityCopy> = {
   title: '에어컨 전기료 계산기',
   seoTitle: '에어컨 전기료 계산기 — 하루 몇 시간 켜면 얼마 나올까',
   seoDescription:
-    '에어컨 소비전력과 사용 시간을 넣으면 한 달 추가 전기요금을 계산합니다. 누진 구간까지 반영해 실제로 늘어나는 금액을 보여줍니다.',
-  lead: '에어컨을 하루 몇 시간 켜면 전기요금이 얼마나 늘어나는지 계산합니다. 기존 사용량을 함께 넣으면 누진 구간까지 반영한 실제 증가액이 나옵니다.',
+    '에어컨 제품 라벨의 소비전력과 사용 시간을 넣어 한 달 추가 전기요금을 추정합니다. 기존 사용량을 함께 입력하면 누진 구간 차이도 계산합니다.',
+  lead: '먼저 제품 라벨이나 사양표의 소비전력을 확인해 직접 입력하세요. 아래 종류별 W값은 제품 사양이 아닌 계산 예시입니다. 기존 사용량을 함께 넣으면 누진 구간을 반영한 예상 증가액을 볼 수 있습니다.',
   summary: '에어컨 사용 시간에 따른 한 달 추가 전기요금을 계산합니다.',
   keywords: {
     primaryKeyword: '에어컨 전기료',
@@ -26,7 +26,7 @@ export const contentKo: ToolContent<ApplianceElectricityCopy> = {
     '전기요금은 누진제이므로, 추가 요금은 "기존 사용량 + 추가 사용량"의 요금에서 "기존 사용량"의 요금을 뺀 값입니다. 기존 사용량이 많을수록 추가 요금이 커집니다.',
     '기존 월 사용량을 비워 두면 에어컨만 사용했을 때의 요금으로 계산합니다.',
     '7~8월은 누진 구간이 완화되어 같은 사용량이라도 요금이 낮아집니다.',
-    '인버터 에어컨은 설정 온도 도달 후 소비전력이 크게 떨어지므로, 정격 소비전력을 그대로 넣으면 실제보다 높게 나옵니다.',
+    '입력한 W가 사용 시간 내내 일정하다고 가정합니다. 인버터 제품은 실제 전력이 운전 조건에 따라 바뀌므로, 정격값을 넣은 결과를 실제 청구액으로 받아들이지 마세요.',
   ],
   formula: [
     { label: '추가 사용량', expression: 'kWh = 소비전력(W) × 시간 × 일수 ÷ 1,000' },
@@ -39,18 +39,18 @@ export const contentKo: ToolContent<ApplianceElectricityCopy> = {
   ],
   example: {
     scenario:
-      '소비전력 1,800W 스탠드형 에어컨을 하루 8시간, 30일 사용합니다. 기존 사용량은 250kWh(아파트 고압, 8월)입니다.',
+      '1,800W가 사용 시간 내내 유지된다고 가정한 계산 예시입니다. 하루 8시간, 30일 사용하고 기존 사용량은 250kWh(고압 계약, 8월)입니다.',
     steps: [
       '추가 사용량: 1,800 × 8 × 30 ÷ 1,000 = 432kWh',
       '기존 250kWh 요금과 682kWh 요금을 각각 계산',
       '두 금액의 차이가 에어컨으로 늘어난 요금',
     ],
     conclusion:
-      '누진 3단계까지 올라가기 때문에 추가 요금이 사용량 비율보다 훨씬 크게 늘어납니다. 사용 시간을 하루 2시간만 줄여도 체감 차이가 큽니다.',
+      '432kWh는 일정한 1,800W를 가정한 추가 사용량입니다. 실제 제품의 평균 소비전력이 다르면 계산 결과도 달라지므로, 제품 표시와 고지서 사용량을 대조하세요.',
   },
   notes: [
-    '인버터 에어컨의 실제 평균 소비전력은 정격의 30~60% 수준인 경우가 많습니다. 제품 라벨의 "냉방 소비전력"과 "월간 소비전력량"을 참고해 조정하세요.',
-    '구형 정속형 에어컨은 켜고 끄기를 반복하면 오히려 전력 소모가 큽니다. 인버터는 계속 켜두는 편이 유리한 경우가 많습니다.',
+    '종류별 기본 W값은 특정 제조사 모델에서 측정한 값이 아닙니다. 가능하면 해당 제품의 냉방 소비전력·전력 사용량 표시를 확인하고 직접 입력하세요.',
+    '인버터 에어컨의 전력은 설정 온도, 실내외 온도, 운전 상태에 따라 달라집니다. 켜두는 편이 항상 유리하다는 규칙으로 계산하지 않습니다.',
     '실외기 주변 환기, 필터 청소 상태에 따라 소비전력이 달라집니다.',
     '아파트는 관리비에 전기요금이 포함되어 개별 고지서가 없을 수 있습니다. 관리비 명세서의 사용량을 확인하세요.',
     `요금 기준은 ${ELECTRICITY_BASIS.basisDate} 적용 요금표입니다.`,
@@ -59,12 +59,12 @@ export const contentKo: ToolContent<ApplianceElectricityCopy> = {
     {
       question: '에어컨 소비전력은 어디서 확인하나요?',
       answer:
-        '제품 옆면이나 뒷면의 에너지소비효율 라벨, 또는 제품 사양표에 "냉방 소비전력(W)"으로 표시되어 있습니다. 인버터 제품은 최소~최대 범위로 적혀 있기도 한데, 이 경우 중간값을 넣으면 현실에 가깝습니다.',
+        '제품의 에너지소비효율 라벨, 사양표 또는 모델 설명서에서 냉방 소비전력을 확인하세요. 최소~최대 범위만 있다면 임의의 중간값이 실제 평균이라는 보장은 없습니다. 해당 모델의 사용량 자료가 있으면 그것을 우선하고, 없다면 여러 W값을 넣어 범위로 비교하세요.',
     },
     {
       question: '인버터 에어컨은 계속 켜두는 게 나은가요?',
       answer:
-        '설정 온도에 도달하면 소비전력이 크게 낮아지므로, 짧은 간격으로 껐다 켜는 것보다 계속 켜두는 편이 유리한 경우가 많습니다. 다만 몇 시간 이상 자리를 비운다면 끄는 것이 낫습니다.',
+        '이 계산기는 전원을 끄고 다시 켤 때의 운전 변화를 따로 모델링하지 않습니다. 같은 평균 소비전력을 가정한 사용 시간만 비교할 수 있으므로, 어느 운전 방식이 유리한지는 제품 자료와 실제 사용량으로 확인해야 합니다.',
     },
     {
       question: '왜 사용량이 2배 늘면 요금은 2배 이상 늘어나나요?',
@@ -78,21 +78,29 @@ export const contentKo: ToolContent<ApplianceElectricityCopy> = {
     },
   ],
   basisDate: ELECTRICITY_BASIS.basisDate,
-  sources: [{ label: ELECTRICITY_BASIS.sourceLabel, url: ELECTRICITY_BASIS.sourceUrl }],
+  sources: [
+    { label: ELECTRICITY_BASIS.sourceLabel, url: ELECTRICITY_BASIS.sourceUrl },
+    {
+      label: '전기냉방기의 에너지소비효율등급 표시 적용 범위',
+      url: 'https://eep.energy.or.kr/business_introduction/effi_standard.aspx',
+      publisher: '한국에너지공단',
+      accessedAt: '2026-10-02',
+    },
+    { label: '에어컨 소비전력은 계산 예시 대신 사용 중인 모델의 라벨·사양표·설명서에서 확인하세요.' },
+  ],
   relatedGuides: ['aircon-cost-guide', 'electricity-bill-basics'],
   ui: {
-    presetLabel: '에어컨 종류',
-    presetCustom: '직접 입력',
+    presetLabel: '소비전력 예시 (제품값 우선)',
+    presetCustom: '제품값 직접 입력',
     presets: [
       { label: '벽걸이형', watt: 700 },
       { label: '스탠드형', watt: 1800 },
       { label: '스탠드형(대형)', watt: 2500 },
       { label: '창문형', watt: 800 },
-      { label: '인버터 평균 사용', watt: 900 },
     ],
     wattLabel: '소비전력',
     wattUnit: 'W',
-    wattHint: '제품 라벨의 냉방 소비전력',
+    wattHint: '제품 라벨·사양표의 냉방 소비전력을 직접 입력하세요. 기본값은 예시입니다.',
     wattPlaceholder: '예: 1,800',
     hoursLabel: '하루 사용시간',
     hoursUnit: '시간',
@@ -117,7 +125,7 @@ export const contentKo: ToolContent<ApplianceElectricityCopy> = {
     noteUsage: '추가 사용량은 약 %{usage}kWh입니다.',
     notePerDay: '하루로 나누면 약 %{perDay}입니다.',
     noteProgressive: '기존 사용량이 많을수록 같은 시간을 켜도 추가 요금이 커집니다.',
-    noteEstimate: '인버터 제품은 실제 소비전력이 정격보다 낮아 계산보다 적게 나올 수 있습니다.',
+    noteEstimate: '입력한 W가 일정하다고 가정한 추정치입니다. 실제 평균 소비전력과 요금 조건에 따라 차이가 납니다.',
     issueWatt: '소비전력은 0보다 크게 입력해 주세요.',
     issueHours: '하루 사용시간은 1~24 사이로 입력해 주세요.',
     issueDays: '사용일수는 1~31 사이로 입력해 주세요.',

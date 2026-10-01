@@ -25,13 +25,24 @@ export function breadcrumbJsonLd(locale: Locale, entries: BreadcrumbEntry[]) {
   };
 }
 
-export function webSiteJsonLd(locale: Locale) {
+export function webSiteJsonLd(locale: Locale, description: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: brandName(locale),
+    description,
     url: absoluteUrl(localePath(locale, '/')),
     inLanguage: locale,
+  };
+}
+
+export function organizationJsonLd(locale: Locale, description: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: brandName(locale),
+    description,
+    url: absoluteUrl(localePath(locale, '/')),
   };
 }
 
